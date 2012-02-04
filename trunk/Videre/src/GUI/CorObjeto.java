@@ -14,7 +14,7 @@ public class CorObjeto extends TelaJogo {
 			Musica = java.applet.Applet.newAudioClip(som);
 			Musica.loop();
 		} catch (MalformedURLException erro) {
-			System.out.println("Caminho do �udio n�o especificado! " + erro);
+			System.out.println("Caminho do áudio não especificado! " + erro);
 		}
 	}
 
@@ -239,7 +239,7 @@ public class CorObjeto extends TelaJogo {
         add(Fase15);
         Fase15.setBounds(170, 360, 10, 10);
 
-        Fase16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/coresobjeto/ma�a.jpg")));
+        Fase16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/coresobjeto/maca.jpg")));
         Fase16.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0)));
         add(Fase16);
         Fase16.setBounds(110, 370, 10, 10);
@@ -289,7 +289,7 @@ public class CorObjeto extends TelaJogo {
         add(Fase25);
         Fase25.setBounds(130, 380, 10, 10);
 
-        Fase26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/coresobjeto/l�pis.jpg")));
+        Fase26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/coresobjeto/lapis.jpg")));
         Fase26.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0)));
         add(Fase26);
         Fase26.setBounds(140, 380, 10, 10);
@@ -386,7 +386,7 @@ public class CorObjeto extends TelaJogo {
     private void AjudaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AjudaMouseClicked
 		Musica.stop();
 		Ajuda a = new Ajuda();
-		texto = "- Em cada fase aparecer� um desenho.\n\n- Observe o tom predominante da cor deste desenho.\n\n- Em seguida clique em cima da cor correta, logo abaixo da figura";
+		texto = "- Em cada fase aparecerá um desenho.\n\n- Observe o tom predominante da cor deste desenho.\n\n- Em seguida clique em cima da cor correta, logo abaixo da figura";
 		a.textoajuda.setText(texto);
 		a.aj = 4;
 		a.setVisible(true);
@@ -665,7 +665,7 @@ public class CorObjeto extends TelaJogo {
 					fase = 16;
 					figfase = Fase16.getIcon();
 					Objeto.setIcon(figfase);
-					Objeto.setText("MA��");
+					Objeto.setText("MAÇÃ");
 					break;
 				} else {
 					ChamaErro();
@@ -777,7 +777,7 @@ public class CorObjeto extends TelaJogo {
 					fase = 24;
 					figfase = Fase24.getIcon();
 					Objeto.setIcon(figfase);
-					NomeObjeto.setText("LIM�O");
+					NomeObjeto.setText("LIMÃO");
 					break;
 				} else {
 					ChamaErro();
@@ -805,7 +805,7 @@ public class CorObjeto extends TelaJogo {
 					fase = 26;
 					figfase = Fase26.getIcon();
 					Objeto.setIcon(figfase);
-					NomeObjeto.setText("L�PIS");
+					NomeObjeto.setText("LÁPIS");
 					break;
 				} else {
 					ChamaErro();
@@ -819,7 +819,7 @@ public class CorObjeto extends TelaJogo {
 					fase = 27;
 					figfase = Fase27.getIcon();
 					Objeto.setIcon(figfase);
-					NomeObjeto.setText("P�SSARO");
+					NomeObjeto.setText("PÁSSARO");
 					break;
 				} else {
 					ChamaErro();
@@ -875,7 +875,7 @@ public class CorObjeto extends TelaJogo {
 					fase = 31;
 					figfase = Fase31.getIcon();
 					Objeto.setIcon(figfase);
-					NomeObjeto.setText("MEL�O");
+					NomeObjeto.setText("MELÃO");
 					break;
 				} else {
 					ChamaErro();
@@ -889,7 +889,7 @@ public class CorObjeto extends TelaJogo {
 					fase = 32;
 					figfase = Fase32.getIcon();
 					Objeto.setIcon(figfase);
-					NomeObjeto.setText("AVI�O");
+					NomeObjeto.setText("AVIÃO");
 					break;
 				} else {
 					ChamaErro();
@@ -973,7 +973,7 @@ public class CorObjeto extends TelaJogo {
 					fase = 38;
 					figfase = Fase38.getIcon();
 					Objeto.setIcon(figfase);
-					NomeObjeto.setText("TUBAR�O");
+					NomeObjeto.setText("TUBARÃO");
 					break;
 				} else {
 					ChamaErro();

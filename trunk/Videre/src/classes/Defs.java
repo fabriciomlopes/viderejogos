@@ -14,4 +14,7 @@ public abstract class Defs {
 	public static String imagesPath = "/imagens/";
 	public static String audioPath = "/sons/";
 	public static String defaultFontFamily = "Comic Sans MS";
+
+
+	
 }

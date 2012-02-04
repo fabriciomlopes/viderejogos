@@ -5,6 +5,22 @@ import java.awt.*;
 
 public class Ajuda extends TelaPadrao {
 
+	// <editor-fold defaultstate="collapsed" desc="Singleton">
+	private static Ajuda instance;
+
+	public static Ajuda GetInsance() {
+		InicializarSingleton();
+		return instance;
+	}
+
+	public static void InicializarSingleton(){
+		if (instance == null) {
+			instance = new Ajuda();
+		}
+	}
+	// </editor-fold>
+
+
 	public int aj;
 	//aj recebe o numero que identificara o jogo que chamou a ajuda
 	//fs recebe o numero da fase em que o jogo estava ao clicar em ajuda
@@ -18,7 +34,7 @@ public class Ajuda extends TelaPadrao {
 			Musica = java.applet.Applet.newAudioClip(som);
 			Musica.loop();
 		} catch (MalformedURLException erro) {
-			System.out.println("Caminho do �udio n�o especificado! " + erro);
+			System.out.println("Caminho do áudio não especificado! " + erro);
 		}
 	}
 
@@ -83,17 +99,17 @@ public class Ajuda extends TelaPadrao {
 		Volta_Jogo();
     }//GEN-LAST:event_VoltarMouseClicked
 
-	//o bot�o fica amarelo quando passamos o mouse em cima
+	//o botao fica amarelo quando passamos o mouse em cima
     private void VoltarMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VoltarMouseMoved
 		Voltar.setBackground(new java.awt.Color(255, 255, 102));
     }//GEN-LAST:event_VoltarMouseMoved
 
-	//o bot�o fica verde quando pressionado
+	//o botao fica verde quando pressionado
     private void VoltarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VoltarMousePressed
 		Voltar.setBackground(new java.awt.Color(102, 204, 0));
     }//GEN-LAST:event_VoltarMousePressed
 
-	//o bot�o volta a cor normal quando o mouse sai de cima do bot�o
+	//o botao volta a cor normal quando o mouse sai de cima do botao
     private void VoltarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VoltarMouseExited
 		Voltar.setBackground(new java.awt.Color(244, 244, 246));
     }//GEN-LAST:event_VoltarMouseExited
@@ -106,61 +122,62 @@ public class Ajuda extends TelaPadrao {
 	//fun��o para voltar ao jogo que chamou a ajuda
 	//o jogo � reiniciado
 	private void Volta_Jogo() {
-		Musica.stop();
-
-		if (aj == 1) {
-			Contagem co = new Contagem();
-			co.setVisible(true);
-			this.setVisible(false);
-		}
-
-		if (aj == 2) {
-			Contagem1 co1 = new Contagem1();
-			co1.setVisible(true);
-			this.setVisible(false);
-		}
-
-		if (aj == 3) {
-			Contagem2 co2 = new Contagem2();
-			co2.setVisible(true);
-			this.setVisible(false);
-		}
-
-		if (aj == 4) {
-			CorObjeto cor = new CorObjeto();
-			cor.setVisible(true);
-			this.setVisible(false);
-		}
-
-		if (aj == 5) {
-			Luzes lu = new Luzes();
-			lu.setVisible(true);
-			this.setVisible(false);
-		}
-
-		if (aj == 6) {
-			MatrizFigura mf = new MatrizFigura();
-			mf.setVisible(true);
-			this.setVisible(false);
-		}
-
-		if (aj == 7) {
-			MatrizGeometrica mg = new MatrizGeometrica();
-			mg.setVisible(true);
-			this.setVisible(false);
-		}
-
-		if (aj == 8) {
-			Numeros num = new Numeros();
-			num.setVisible(true);
-			this.setVisible(false);
-		}
-
-		if (aj == 9) {
-			Sombras so = new Sombras();
-			so.setVisible(true);
-			this.setVisible(false);
-		}
+//		Musica.stop();
+//
+//		if (aj == 1) {
+//			Contagem co = new Contagem();
+//			co.setVisible(true);
+//			this.setVisible(false);
+//		}
+//
+//		if (aj == 2) {
+//			Contagem1 co1 = new Contagem1();
+//			co1.setVisible(true);
+//			this.setVisible(false);
+//		}
+//
+//		if (aj == 3) {
+//			Contagem2 co2 = new Contagem2();
+//			co2.setVisible(true);
+//			this.setVisible(false);
+//		}
+//
+//		if (aj == 4) {
+//			CorObjeto cor = new CorObjeto();
+//			cor.setVisible(true);
+//			this.setVisible(false);
+//		}
+//
+//		if (aj == 5) {
+//			Luzes lu = new Luzes();
+//			lu.setVisible(true);
+//			this.setVisible(false);
+//		}
+//
+//		if (aj == 6) {
+//			MatrizFigura mf = new MatrizFigura();
+//			mf.setVisible(true);
+//			this.setVisible(false);
+//		}
+//
+//		if (aj == 7) {
+//			MatrizGeometrica mg = new MatrizGeometrica();
+//			mg.setVisible(true);
+//			this.setVisible(false);
+//		}
+//
+//		if (aj == 8) {
+//			Numeros num = new Numeros();
+//			num.setVisible(true);
+//			this.setVisible(false);
+//		}
+//
+//		if (aj == 9) {
+//			Sombras so = new Sombras();
+//			so.setVisible(true);
+//			this.setVisible(false);
+//		}
+		VoltarMenu();
 	}
 
 	public static void main(String args[]) {
@@ -182,4 +199,13 @@ public class Ajuda extends TelaPadrao {
     private javax.swing.JLabel ZoioAjuda;
     protected javax.swing.JTextPane textoajuda;
     // End of variables declaration//GEN-END:variables
+
+
+
+	/**
+	 * @param texto
+	 */
+	public void SetTextoAjuda(String texto){
+		textoajuda.setText(texto);
+	}
 }

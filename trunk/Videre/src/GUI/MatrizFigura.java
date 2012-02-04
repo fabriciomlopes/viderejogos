@@ -13,7 +13,7 @@ public class MatrizFigura extends TelaJogo {
             Musica = java.applet.Applet.newAudioClip(som);
             Musica.loop();
         }catch(MalformedURLException erro){
-            System.out.println("Caminho do �udio n�o especificado! "+erro);
+            System.out.println("Caminho do áudio não especificado! "+erro);
         }
     }
     
@@ -144,7 +144,7 @@ public class MatrizFigura extends TelaJogo {
 
         setTitle("Matriz de Figuras1");
         Aviao2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Aviao2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de aviao2.jpg")));
+        Aviao2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de aviao2.jpg")));
         Aviao2.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Aviao2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -156,7 +156,7 @@ public class MatrizFigura extends TelaJogo {
         Aviao2.setBounds(50, 70, 50, 50);
 
         Celular4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Celular4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de celular4.jpg")));
+        Celular4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de celular4.jpg")));
         Celular4.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Celular4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -168,7 +168,7 @@ public class MatrizFigura extends TelaJogo {
         Celular4.setBounds(100, 70, 50, 50);
 
         Televisao.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Televisao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de televisao.jpg")));
+        Televisao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de televisao.jpg")));
         Televisao.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Televisao.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -180,7 +180,7 @@ public class MatrizFigura extends TelaJogo {
         Televisao.setBounds(150, 70, 50, 50);
 
         SapoJpg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        SapoJpg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de sapo.jpg")));
+        SapoJpg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de sapo.jpg")));
         SapoJpg.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         SapoJpg.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -192,7 +192,7 @@ public class MatrizFigura extends TelaJogo {
         SapoJpg.setBounds(200, 70, 50, 50);
 
         Cachorro7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Cachorro7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de cachorro7.jpg")));
+        Cachorro7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de cachorro7.jpg")));
         Cachorro7.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Cachorro7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -204,7 +204,7 @@ public class MatrizFigura extends TelaJogo {
         Cachorro7.setBounds(250, 70, 50, 50);
 
         Livro2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Livro2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de livro2.jpg")));
+        Livro2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de livro2.jpg")));
         Livro2.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Livro2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -216,7 +216,7 @@ public class MatrizFigura extends TelaJogo {
         Livro2.setBounds(300, 70, 50, 50);
 
         Carro16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Carro16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de carro16.jpg")));
+        Carro16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de carro16.jpg")));
         Carro16.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Carro16.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -228,7 +228,7 @@ public class MatrizFigura extends TelaJogo {
         Carro16.setBounds(350, 70, 50, 50);
 
         Peixe2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Peixe2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de peixe2.jpg")));
+        Peixe2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de peixe2.jpg")));
         Peixe2.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Peixe2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -240,7 +240,7 @@ public class MatrizFigura extends TelaJogo {
         Peixe2.setBounds(400, 70, 50, 50);
 
         Blusinha2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Blusinha2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de blusinha2.jpg")));
+        Blusinha2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de blusinha2.jpg")));
         Blusinha2.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Blusinha2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -252,7 +252,7 @@ public class MatrizFigura extends TelaJogo {
         Blusinha2.setBounds(450, 70, 50, 50);
 
         Flor4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Flor4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de flor4.jpg")));
+        Flor4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de flor4.jpg")));
         Flor4.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Flor4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -264,7 +264,7 @@ public class MatrizFigura extends TelaJogo {
         Flor4.setBounds(500, 70, 50, 50);
 
         Carro5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Carro5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de carro5.jpg")));
+        Carro5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de carro5.jpg")));
         Carro5.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Carro5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -276,7 +276,7 @@ public class MatrizFigura extends TelaJogo {
         Carro5.setBounds(550, 70, 50, 50);
 
         Tambor1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Tambor1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de tambor1.jpg")));
+        Tambor1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de tambor1.jpg")));
         Tambor1.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Tambor1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -288,7 +288,7 @@ public class MatrizFigura extends TelaJogo {
         Tambor1.setBounds(600, 70, 50, 50);
 
         Televisao4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Televisao4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de televisao4.jpg")));
+        Televisao4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de televisao4.jpg")));
         Televisao4.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Televisao4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -300,7 +300,7 @@ public class MatrizFigura extends TelaJogo {
         Televisao4.setBounds(650, 70, 50, 50);
 
         Caneta2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Caneta2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de caneta2.jpg")));
+        Caneta2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de caneta2.jpg")));
         Caneta2.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Caneta2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -312,7 +312,7 @@ public class MatrizFigura extends TelaJogo {
         Caneta2.setBounds(700, 70, 50, 50);
 
         Mulher1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Mulher1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de mulher1.jpg")));
+        Mulher1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de mulher1.jpg")));
         Mulher1.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Mulher1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -324,7 +324,7 @@ public class MatrizFigura extends TelaJogo {
         Mulher1.setBounds(50, 120, 50, 50);
 
         Blusa9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Blusa9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de blusa9.jpg")));
+        Blusa9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de blusa9.jpg")));
         Blusa9.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Blusa9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -336,7 +336,7 @@ public class MatrizFigura extends TelaJogo {
         Blusa9.setBounds(100, 120, 50, 50);
 
         Aviao3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Aviao3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de aviao3.jpg")));
+        Aviao3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de aviao3.jpg")));
         Aviao3.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Aviao3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -348,7 +348,7 @@ public class MatrizFigura extends TelaJogo {
         Aviao3.setBounds(150, 120, 50, 50);
 
         Celular5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Celular5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de celular5.jpg")));
+        Celular5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de celular5.jpg")));
         Celular5.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Celular5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -360,7 +360,7 @@ public class MatrizFigura extends TelaJogo {
         Celular5.setBounds(200, 120, 50, 50);
 
         Televisao2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Televisao2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de televisao2.jpg")));
+        Televisao2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de televisao2.jpg")));
         Televisao2.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Televisao2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -372,7 +372,7 @@ public class MatrizFigura extends TelaJogo {
         Televisao2.setBounds(250, 120, 50, 50);
 
         Sapo1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Sapo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de sapo1.jpg")));
+        Sapo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de sapo1.jpg")));
         Sapo1.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Sapo1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -384,7 +384,7 @@ public class MatrizFigura extends TelaJogo {
         Sapo1.setBounds(300, 120, 50, 50);
 
         Cachorro9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Cachorro9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de cachorro9.jpg")));
+        Cachorro9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de cachorro9.jpg")));
         Cachorro9.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Cachorro9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -396,7 +396,7 @@ public class MatrizFigura extends TelaJogo {
         Cachorro9.setBounds(350, 120, 50, 50);
 
         Livro5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Livro5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de livro5.jpg")));
+        Livro5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de livro5.jpg")));
         Livro5.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Livro5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -408,7 +408,7 @@ public class MatrizFigura extends TelaJogo {
         Livro5.setBounds(400, 120, 50, 50);
 
         Blusa1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Blusa1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de blusa1.jpg")));
+        Blusa1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de blusa1.jpg")));
         Blusa1.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Blusa1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -420,7 +420,7 @@ public class MatrizFigura extends TelaJogo {
         Blusa1.setBounds(450, 120, 50, 50);
 
         Peixe4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Peixe4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de peixe4.jpg")));
+        Peixe4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de peixe4.jpg")));
         Peixe4.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Peixe4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -432,7 +432,7 @@ public class MatrizFigura extends TelaJogo {
         Peixe4.setBounds(500, 120, 50, 50);
 
         Blusinha3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Blusinha3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de blusinha3.jpg")));
+        Blusinha3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de blusinha3.jpg")));
         Blusinha3.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Blusinha3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -444,7 +444,7 @@ public class MatrizFigura extends TelaJogo {
         Blusinha3.setBounds(550, 120, 50, 50);
 
         Flor5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Flor5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de flor5.jpg")));
+        Flor5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de flor5.jpg")));
         Flor5.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Flor5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -456,7 +456,7 @@ public class MatrizFigura extends TelaJogo {
         Flor5.setBounds(600, 120, 50, 50);
 
         Celular2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Celular2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de celular2.jpg")));
+        Celular2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de celular2.jpg")));
         Celular2.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Celular2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -468,7 +468,7 @@ public class MatrizFigura extends TelaJogo {
         Celular2.setBounds(650, 120, 50, 50);
 
         Tambor2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Tambor2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de tambor2.jpg")));
+        Tambor2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de tambor2.jpg")));
         Tambor2.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Tambor2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -480,7 +480,7 @@ public class MatrizFigura extends TelaJogo {
         Tambor2.setBounds(700, 120, 50, 50);
 
         SapoGif.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        SapoGif.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de sapo.gif")));
+        SapoGif.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de sapo.gif")));
         SapoGif.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         SapoGif.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -492,7 +492,7 @@ public class MatrizFigura extends TelaJogo {
         SapoGif.setBounds(50, 170, 50, 50);
 
         Caneta4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Caneta4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de caneta4.jpg")));
+        Caneta4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de caneta4.jpg")));
         Caneta4.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Caneta4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -504,7 +504,7 @@ public class MatrizFigura extends TelaJogo {
         Caneta4.setBounds(100, 170, 50, 50);
 
         Blusinha.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Blusinha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de blusinha.jpg")));
+        Blusinha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de blusinha.jpg")));
         Blusinha.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Blusinha.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -516,7 +516,7 @@ public class MatrizFigura extends TelaJogo {
         Blusinha.setBounds(150, 170, 50, 50);
 
         Mulher2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Mulher2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de mulher2.jpg")));
+        Mulher2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de mulher2.jpg")));
         Mulher2.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Mulher2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -528,7 +528,7 @@ public class MatrizFigura extends TelaJogo {
         Mulher2.setBounds(200, 170, 50, 50);
 
         Aviao5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Aviao5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de aviao5.jpg")));
+        Aviao5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de aviao5.jpg")));
         Aviao5.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Aviao5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -540,7 +540,7 @@ public class MatrizFigura extends TelaJogo {
         Aviao5.setBounds(250, 170, 50, 50);
 
         Celular9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Celular9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de celular9.jpg")));
+        Celular9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de celular9.jpg")));
         Celular9.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Celular9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -552,7 +552,7 @@ public class MatrizFigura extends TelaJogo {
         Celular9.setBounds(300, 170, 50, 50);
 
         Televisao3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Televisao3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de televisao3.jpg")));
+        Televisao3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de televisao3.jpg")));
         Televisao3.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Televisao3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -564,7 +564,7 @@ public class MatrizFigura extends TelaJogo {
         Televisao3.setBounds(350, 170, 50, 50);
 
         Sapo3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Sapo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de sapo3.jpg")));
+        Sapo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de sapo3.jpg")));
         Sapo3.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Sapo3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -576,7 +576,7 @@ public class MatrizFigura extends TelaJogo {
         Sapo3.setBounds(400, 170, 50, 50);
 
         Caneta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Caneta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de caneta.jpg")));
+        Caneta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de caneta.jpg")));
         Caneta.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Caneta.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -588,7 +588,7 @@ public class MatrizFigura extends TelaJogo {
         Caneta.setBounds(450, 170, 50, 50);
 
         Livro7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Livro7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de livro7.jpg")));
+        Livro7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de livro7.jpg")));
         Livro7.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Livro7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -600,7 +600,7 @@ public class MatrizFigura extends TelaJogo {
         Livro7.setBounds(500, 170, 50, 50);
 
         Blusa4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Blusa4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de blusa4.jpg")));
+        Blusa4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de blusa4.jpg")));
         Blusa4.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Blusa4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -612,7 +612,7 @@ public class MatrizFigura extends TelaJogo {
         Blusa4.setBounds(550, 170, 50, 50);
 
         Peixe5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Peixe5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de peixe5.jpg")));
+        Peixe5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de peixe5.jpg")));
         Peixe5.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Peixe5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -624,7 +624,7 @@ public class MatrizFigura extends TelaJogo {
         Peixe5.setBounds(600, 170, 50, 50);
 
         Cachorro1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Cachorro1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de cachorro1.gif")));
+        Cachorro1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de cachorro1.gif")));
         Cachorro1.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Cachorro1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -636,7 +636,7 @@ public class MatrizFigura extends TelaJogo {
         Cachorro1.setBounds(650, 170, 50, 50);
 
         Flor6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Flor6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de flor6.jpg")));
+        Flor6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de flor6.jpg")));
         Flor6.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Flor6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -648,7 +648,7 @@ public class MatrizFigura extends TelaJogo {
         Flor6.setBounds(700, 170, 50, 50);
 
         Tambor3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Tambor3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de tambor3.jpg")));
+        Tambor3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de tambor3.jpg")));
         Tambor3.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Tambor3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -660,7 +660,7 @@ public class MatrizFigura extends TelaJogo {
         Tambor3.setBounds(50, 220, 50, 50);
 
         Cachorro6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Cachorro6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de cachorro6.jpg")));
+        Cachorro6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de cachorro6.jpg")));
         Cachorro6.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Cachorro6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -672,7 +672,7 @@ public class MatrizFigura extends TelaJogo {
         Cachorro6.setBounds(100, 220, 50, 50);
 
         Livro1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Livro1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de livro1.jpg")));
+        Livro1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de livro1.jpg")));
         Livro1.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Livro1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -684,7 +684,7 @@ public class MatrizFigura extends TelaJogo {
         Livro1.setBounds(150, 220, 50, 50);
 
         Carro14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Carro14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de carro14.jpg")));
+        Carro14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de carro14.jpg")));
         Carro14.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Carro14.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -696,7 +696,7 @@ public class MatrizFigura extends TelaJogo {
         Carro14.setBounds(200, 220, 50, 50);
 
         Mulher4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Mulher4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de mulher4.jpg")));
+        Mulher4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de mulher4.jpg")));
         Mulher4.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Mulher4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -708,7 +708,7 @@ public class MatrizFigura extends TelaJogo {
         Mulher4.setBounds(250, 220, 50, 50);
 
         Blusinha1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Blusinha1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de blusinha1.jpg")));
+        Blusinha1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de blusinha1.jpg")));
         Blusinha1.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Blusinha1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -720,7 +720,7 @@ public class MatrizFigura extends TelaJogo {
         Blusinha1.setBounds(300, 220, 50, 50);
 
         Aviao6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Aviao6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de aviao6.jpg")));
+        Aviao6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de aviao6.jpg")));
         Aviao6.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Aviao6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -732,7 +732,7 @@ public class MatrizFigura extends TelaJogo {
         Aviao6.setBounds(350, 220, 50, 50);
 
         Flor2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Flor2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de flor2.jpg")));
+        Flor2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de flor2.jpg")));
         Flor2.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Flor2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -744,7 +744,7 @@ public class MatrizFigura extends TelaJogo {
         Flor2.setBounds(400, 220, 50, 50);
 
         Carro22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Carro22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de carro22.jpg")));
+        Carro22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de carro22.jpg")));
         Carro22.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Carro22.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -756,7 +756,7 @@ public class MatrizFigura extends TelaJogo {
         Carro22.setBounds(450, 220, 50, 50);
 
         Tambor.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Tambor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de tambor.jpg")));
+        Tambor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de tambor.jpg")));
         Tambor.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Tambor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -768,7 +768,7 @@ public class MatrizFigura extends TelaJogo {
         Tambor.setBounds(500, 220, 50, 50);
 
         Caneta1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Caneta1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de caneta1.jpg")));
+        Caneta1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de caneta1.jpg")));
         Caneta1.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Caneta1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -780,7 +780,7 @@ public class MatrizFigura extends TelaJogo {
         Caneta1.setBounds(550, 220, 50, 50);
 
         Mulher.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Mulher.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de mulher.jpg")));
+        Mulher.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de mulher.jpg")));
         Mulher.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Mulher.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -792,7 +792,7 @@ public class MatrizFigura extends TelaJogo {
         Mulher.setBounds(600, 220, 50, 50);
 
         Blusa8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Blusa8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de blusa8.jpg")));
+        Blusa8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de blusa8.jpg")));
         Blusa8.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Blusa8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -804,7 +804,7 @@ public class MatrizFigura extends TelaJogo {
         Blusa8.setBounds(650, 220, 50, 50);
 
         Peixe7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Peixe7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/C�pia de peixe7.jpg")));
+        Peixe7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/matriz/pequenas/Copia de peixe7.jpg")));
         Peixe7.setToolTipText("clique em cima da figura para selecion\u00e1-la");
         Peixe7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1512,7 +1512,7 @@ public class MatrizFigura extends TelaJogo {
     
     private void AjudaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AjudaMouseClicked
         Musica.stop();
-        texto="-Em cada fase aparecem quatro figuras.\n\n-Voc� dever� repetir a mesma seq��ncia, que est� sendo mostrada.\n\n-Para isso, clique nas figurinhas logo acima.Preste aten��o na ordem dos cliques. A seq��ncia dever� ser a mesma!";
+        texto="-Em cada fase aparecem quatro figuras.\n\n-você deverá repetir a mesma sequência, que está sendo mostrada.\n\n-Para isso, clique nas figurinhas logo acima.Preste atenção na ordem dos cliques. A sequência deverá ser a mesma!";
         Ajuda a=new Ajuda();
         a.textoajuda.setText(texto);
         a.aj=6;

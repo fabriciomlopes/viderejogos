@@ -17,7 +17,7 @@ public class Zoio1 extends TelaPadrao {
             Musica= java.applet.Applet.newAudioClip(som);
             Musica.loop();
         }catch(MalformedURLException erro){
-            System.out.println("Caminho do �udio n�o especificado! "+erro);
+            System.out.println("Caminho do áudio não especificado! "+erro);
         }
     }
     
@@ -144,7 +144,7 @@ public class Zoio1 extends TelaPadrao {
         add(textoestoria);
         textoestoria.setBounds(440, 50, 340, 440);
 
-        maezoio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/zoio/m�ezoio.jpg")));
+        maezoio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/zoio/maezoio.jpg")));
         maezoio.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0)));
         add(maezoio);
         maezoio.setBounds(750, 110, 15, 15);
@@ -169,7 +169,7 @@ public class Zoio1 extends TelaPadrao {
         add(escolazoio);
         escolazoio.setBounds(750, 190, 15, 15);
 
-        criancas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/zoio/crian�as.jpg")));
+        criancas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/zoio/criancas.jpg")));
         criancas.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0)));
         add(criancas);
         criancas.setBounds(750, 210, 15, 15);
@@ -216,70 +216,70 @@ public class Zoio1 extends TelaPadrao {
             if (tela==0){
                 des=planeta.getIcon();
                 quadro.setIcon(des);
-                textoestoria.setText("    Eu sou de um planeta muito distante, chamado Retin�ide. � bem parecido com a Terra. Gosto muito daqui. Mas, resolvi fazer esta visitinha ao seu planeta, para que todos  conhe�am um pouquinho mais sobre os m�todos de Estimula��o Visual que nossa alta tecnologia inventou.");
+                textoestoria.setText("    Eu sou de um planeta muito distante, chamado Retinóide. É bem parecido com a Terra. Gosto muito daqui. Mas, resolvi fazer esta visitinha ao seu planeta, para que todos  conheçam um pouquinho mais sobre os métodos de Estimulação Visual que nossa alta tecnologia inventou.");
                 break;
             }
             
             if (tela==1){
                 des=maezoio.getIcon();
                 quadro.setIcon(des);
-                textoestoria.setText("\n\n    Essa � a minha mam�e. Ela � professora. \n\n    Eu a admiro muito, pois dar aulas e saber ensinar � realmente um dom de Deus!");
+                textoestoria.setText("\n\n    Essa é a minha mamãe. Ela é professora. \n\n    Eu a admiro muito, pois dar aulas e saber ensinar é realmente um dom de Deus!");
                 break;
             }
             
             if (tela==2){
                 des=paizoio.getIcon();
                 quadro.setIcon(des);
-                textoestoria.setText("\n\n    Esse � o meu papai. � um grande empres�rio.\n\n    Ele � o meu grande amigo para todas as horas, um grande companheiro!");
+                textoestoria.setText("\n\n    Esse é o meu papai. É um grande empresário.\n\n    Ele é o meu grande amigo para todas as horas, um grande companheiro!");
                 break;
             }
             
             if (tela==3){
                 des=zoiobebe.getIcon();
                 quadro.setIcon(des);
-                textoestoria.setText("\n\n    Eu nasci no ano de 10010. E, hoje j� tenho 4 aninhos.\n\n    Esse a� do lado sou eu, quando ainda era beb�.\n\n    Voc� me acha fofinho? ");
+                textoestoria.setText("\n\n    Eu nasci no ano de 10010. E, hoje já tenho 4 aninhos.\n\n    Esse aí do lado sou eu, quando ainda era bebê.\n\n    você me acha fofinho? ");
                 break;
             }
             
             if (tela==4){
                 des=criancas.getIcon();
                 quadro.setIcon(des);
-                textoestoria.setText("    Eu tenho uma defici�ncia visual chamada Kortrokada. A� no planeta Terra, chamam isso de Daltonismo.\n    Na verdade, todos aqui em Retin�ide nascem com esta defici�ncia. Por isso � que aqui temos os melhores m�todos de estimula��o visual, que quero mostrar a todos voc�s do Planeta Terra.");
+                textoestoria.setText("    Eu tenho uma deficiência visual chamada Kortrokada. Aí no planeta Terra, chamam isso de Daltonismo.\n    Na verdade, todos aqui em Retinóide nascem com esta deficiência. Por isso é que aqui temos os melhores métodos de estimulação visual, que quero mostrar a todos vocês do Planeta Terra.");
                 break;
             }
             
             if (tela==5){
                 des=escolazoio.getIcon();
                 quadro.setIcon(des);
-                textoestoria.setText("    Duas vezes por semana eu freq��nto uma escola especializada no tratamento de doen�as visuais. Eu gosto muito de l�.\n    N�s aprendemos tudo, de uma maneira divertida e alegre. Fazemos tudo brincando!");
+                textoestoria.setText("    Duas vezes por semana eu frequento uma escola especializada no tratamento de doenças visuais. Eu gosto muito de lá.\n    Nós aprendemos tudo, de uma maneira divertida e alegre. Fazemos tudo brincando!");
                 break;
             }
             
             if (tela==6){
                 des=pontos.getIcon();
                 quadro.setIcon(des);
-                textoestoria.setText("    Eu estou falando de estimula��o visual desde que a est�rinha come�ou. Mas voc� sabe o que �?\n    N�o?!\n    Ah! N�o tem problema, eu vou te ensinar!");
+                textoestoria.setText("    Eu estou falando de estimulação visual desde que a estorinha começou. Mas você sabe o que é?\n    Não?!\n    Ah! Não tem problema, eu vou te ensinar!");
                 break;
             }
             
             if (tela==7){
                 des=coresformas.getIcon();
                 quadro.setIcon(des);
-                textoestoria.setText("    A estimula��o visual, aproveita ao m�ximo o pouquinho de vis�o que temos. J� que n�o temos um desenvolvimento visual natural, � necess�rio que algu�m nos ensine a reconhecer as diferentes formas, tamanhos e cores.");    
+                textoestoria.setText("    A estimulação visual, aproveita ao máximo o pouquinho de visão que temos. Já que não temos um desenvolvimento visual natural, é necessário que alguém nos ensine a reconhecer as diferentes formas, tamanhos e cores.");    
                 break;
             }
             
             if (tela==8){
                 des=computador.getIcon();
                 quadro.setIcon(des);
-                textoestoria.setText("    V�rios m�todos podem ser usados para que isso aconte�a. Mas eu gosto mesmo � de brincar! Ent�o eu trouxe para as crian�as terrestres, os jogos para computador que desenvolveram aqui em Retin�ide. Eles trabalham com alguns m�todos de estimula��o e s�o Super Legais! Espero que voc�s aproveitem!");    
+                textoestoria.setText("    Vários métodos podem ser usados para que isso aconteça. Mas eu gosto mesmo é de brincar! Então eu trouxe para as crianças terrestres, os jogos para computador que desenvolveram aqui em Retinóide. Eles trabalham com alguns métodos de estimulação e são Super Legais! Espero que vocês aproveitem!");    
                 break;
             }            
             
             if (tela==9){
                 des=familiazoio.getIcon();
                 quadro.setIcon(des);
-                textoestoria.setText("    Esse � um pedacinho da minha vida. Para quem quiser me conhecer melhor, ou fazer uma visitinha ao meu planeta, � s� dar uma perguntadinha para o pessoal do CEFET de Corn�lio Proc�pio, que eles tem o meu endere�o, telefone e e-mail. Estou esperando voc� para a gente brincar.\n Tchauzinho...");
+                textoestoria.setText("    Esse é um pedacinho da minha vida. Para quem quiser me conhecer melhor, ou fazer uma visitinha ao meu planeta, é só dar uma perguntadinha para o pessoal do CEFET de Cornélio Procópio, que eles tem o meu endereço, telefone e e-mail. Estou esperando você para a gente brincar.\n Tchauzinho...");
                 break;
             }
         }
@@ -293,11 +293,13 @@ public class Zoio1 extends TelaPadrao {
     }                                      
 
     private void telainicialMouseClicked(java.awt.event.MouseEvent evt) {                                         
-        Musica.stop();
-        
-        Inicial ini=new Inicial();
-        ini.setVisible(true);
-        this.setVisible(false);
+
+//		Musica.stop();
+//
+//        Inicial ini=new Inicial();
+//        ini.setVisible(true);
+//        this.setVisible(false);
+		VoltarMenu();
     }                                        
 
     private void avancatelaMousePressed(java.awt.event.MouseEvent evt) {                                        
@@ -333,11 +335,12 @@ public class Zoio1 extends TelaPadrao {
     
  
     private void exitForm(java.awt.event.WindowEvent evt) {                          
-        Musica.stop();
-        
-        Inicial ini=new Inicial();
-        ini.setVisible(true);
-        this.setVisible(false);
+//        Musica.stop();
+//
+//        Inicial ini=new Inicial();
+//        ini.setVisible(true);
+//        this.setVisible(false);
+		VoltarMenu();
     }                         
     
   

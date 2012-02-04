@@ -16,7 +16,7 @@ public class Contagem extends TelaJogo {
 			Musica = java.applet.Applet.newAudioClip(som);
 			Musica.loop();
 		} catch (MalformedURLException erro) {
-			System.out.println("Caminho do �udio n�o especificado! " + erro);
+			System.out.println("Caminho do áudio não especificado! " + erro);
 		}
 	}
 
@@ -789,12 +789,12 @@ public class Contagem extends TelaJogo {
 		Ajuda.setBackground(new java.awt.Color(102, 204, 0));
     }//GEN-LAST:event_AjudaMousePressed
 
-	//muda a cor do bot�o para amarelo quando o mouse passa em cima
+	//muda a cor do botao para amarelo quando o mouse passa em cima
     private void AjudaMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AjudaMouseMoved
 		Ajuda.setBackground(new java.awt.Color(255, 255, 102));
     }//GEN-LAST:event_AjudaMouseMoved
 
-	//volta a cor do bot�o ao normal quando o mouse n�o est� em cima
+	//volta a cor do botao ao normal quando o mouse não está em cima
     private void AjudaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AjudaMouseExited
 		Ajuda.setBackground(new java.awt.Color(244, 244, 246));
     }//GEN-LAST:event_AjudaMouseExited

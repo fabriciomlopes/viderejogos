@@ -16,7 +16,7 @@ public class Contagem2 extends TelaJogo {
 			Musica = java.applet.Applet.newAudioClip(som);
 			Musica.loop();
 		} catch (MalformedURLException erro) {
-			System.out.println("Caminho do �udio n�o especificado! " + erro);
+			System.out.println("Caminho do áudio não especificado! " + erro);
 		}
 	}
 
@@ -421,7 +421,7 @@ public class Contagem2 extends TelaJogo {
 
     private void AjudaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AjudaMouseClicked
 		Musica.stop();
-		texto = "-A cada fase, voc� dever� achar quatro figuras. Clique em cima delas com o mouse.\n\n- O nome das figuras que voc� deve achar aparece escrito ao lado direito da imagem.\n\n- Cuidado! Ao clicar em cima do fundo, fora das figuras que voc� precisa encontrar, os pontos diminuem e voc� perde uma vida!.";
+		texto = "-A cada fase, você deverá achar quatro figuras. Clique em cima delas com o mouse.\n\n- O nome das figuras que você deve achar aparece escrito ao lado direito da imagem.\n\n- Cuidado! Ao clicar em cima do fundo, fora das figuras que você precisa encontrar, os pontos diminuem e você perde uma vida!.";
 		Ajuda a = new Ajuda();
 		a.textoajuda.setText(texto);
 		a.aj = 3;
@@ -502,7 +502,7 @@ public class Contagem2 extends TelaJogo {
 		while (fase <= 23) {
 			if (fase == 1) {
 				fase = 2;
-				NomeFigura.setText("Bal�o");
+				NomeFigura.setText("Balão");
 				fundo = Fase2.getIcon();
 				FundoMesclado.setIcon(fundo);
 				des = FigFase2.getIcon();
@@ -516,7 +516,7 @@ public class Contagem2 extends TelaJogo {
 
 			if (fase == 2) {
 				fase = 3;
-				NomeFigura.setText("Bon�");
+				NomeFigura.setText("Boné");
 				fundo = Fase3.getIcon();
 				FundoMesclado.setIcon(fundo);
 				des = FigFase3.getIcon();
@@ -642,7 +642,7 @@ public class Contagem2 extends TelaJogo {
 
 			if (fase == 11) {
 				fase = 12;
-				NomeFigura.setText("�m�");
+				NomeFigura.setText("Ímã");
 				fundo = Fase12.getIcon();
 				FundoMesclado.setIcon(fundo);
 				des = FigFase12.getIcon();

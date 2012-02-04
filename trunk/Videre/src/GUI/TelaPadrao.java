@@ -45,5 +45,41 @@ public class TelaPadrao extends java.awt.Frame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     protected javax.swing.JLabel Fundo;
     // End of variables declaration//GEN-END:variables
-    
+
+	public TelaPadrao menuAnterior;
+
+	/**
+	 * Abre um menu, para a musica e fecha o menu atual.
+	 * @param <T>
+	 * @param menu
+	 */
+	public <T extends TelaPadrao> void AbrirMenu(T menu){
+		
+		// parar de tocar a musica
+		Musica.stop();
+
+		// #TODO: fazer funfar
+		//Carregando.Mostrar();
+
+
+		menu.setVisible(true);
+		menu.menuAnterior = this;
+		this.setVisible(false);
+
+		menu.OnOpen();
+		//Carregando.Ocultar();
+	}
+
+	protected void VoltarMenu(){
+		AbrirMenu(menuAnterior);
+	}
+
+	/**
+	 * chamada manual para quando abre uma TelaPadrao.
+	 * usei isso para nao ter que ficar criando listeners em cada JFrame
+	 */
+	protected void OnOpen() {
+		
+	}
+
 }

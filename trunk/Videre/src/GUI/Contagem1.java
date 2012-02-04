@@ -15,7 +15,7 @@ public class Contagem1 extends TelaJogo {
 			Musica = java.applet.Applet.newAudioClip(som);
 			Musica.loop();
 		} catch (MalformedURLException erro) {
-			System.out.println("Caminho do �udio n�o especificado! " + erro);
+			System.out.println("Caminho do áudio não especificado! " + erro);
 		}
 	}
 
@@ -377,7 +377,7 @@ public class Contagem1 extends TelaJogo {
 
     private void AjudaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AjudaMouseClicked
 		Musica.stop();
-		texto = "-Em cada fase aparecer� uma imagem com 1 n�mero.\n\n-Identifique o n�mero que aparece na imagem e clique em cima dele no grupo de n�meros do lado direito";
+		texto = "-Em cada fase aparecerá uma imagem com 1 número.\n\n-Identifique o número que aparece na imagem e clique em cima dele no grupo de números do lado direito";
 		Ajuda aj = new Ajuda();
 		aj.textoajuda.setText(texto);
 		aj.aj = 2;

@@ -125,28 +125,29 @@ public class TelaFim extends TelaPadrao {
         setBounds((screenSize.width-800)/2, (screenSize.height-600)/2, 800, 600);
     }//GEN-END:initComponents
     
-    //quando o mouse passa em cima do bot�o elel fica amarelo
+    //quando o mouse passa em cima do botao elel fica amarelo
     private void TelaInicialMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TelaInicialMouseMoved
         TelaInicial.setBackground(new java.awt.Color(255,255,102));
     }//GEN-LAST:event_TelaInicialMouseMoved
     
-    //quando o bot�o � pressionado muda para a cor verde
+    //quando o botao é pressionado muda para a cor verde
     private void TelaInicialMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TelaInicialMousePressed
         TelaInicial.setBackground(new java.awt.Color(102,204,0));
     }//GEN-LAST:event_TelaInicialMousePressed
     
-    //volta o bot�o para a cor normal quando o mouse sai de cima
+    //volta o botao para a cor normal quando o mouse sai de cima
     private void TelaInicialMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TelaInicialMouseExited
         TelaInicial.setBackground(new java.awt.Color(244,244,246));
     }//GEN-LAST:event_TelaInicialMouseExited
     
-    //retorna a Tela Inicial do sistema V�dere
+    //retorna a Tela Inicial do sistema Videre
     private void TelaInicialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TelaInicialMouseClicked
-        Musica.stop();
-        
-        Inicial ini=new Inicial();
-        ini.setVisible(true);
-        this.setVisible(false);
+//        Musica.stop();
+//
+//        Inicial ini=new Inicial();
+//        ini.setVisible(true);
+//        this.setVisible(false);
+		AbrirMenu(Inicial.GetInsance());
     }//GEN-LAST:event_TelaInicialMouseClicked
     
     //sai do sistema
@@ -154,78 +155,87 @@ public class TelaFim extends TelaPadrao {
         System.exit(0);
     }//GEN-LAST:event_SairMouseClicked
     
-    //muda a cor do bot�o para amarela quando o mouse passa em cima
+    //muda a cor do botao para amarela quando o mouse passa em cima
     private void SairMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SairMouseMoved
         Sair.setBackground(new java.awt.Color(255,255,102));
     }//GEN-LAST:event_SairMouseMoved
     
-    //muda a cor do bot�o para verde quando � pressionado
+    //muda a cor do botao para verde quando é pressionado
     private void SairMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SairMousePressed
         Sair.setBackground(new java.awt.Color(102,204,0));
     }//GEN-LAST:event_SairMousePressed
     
-    //volta a cor do bot�o ao normal quando o mouse n�o est� em cima
+    //volta a cor do botao ao normal quando o mouse não está em cima
     private void SairMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SairMouseExited
         Sair.setBackground(new java.awt.Color(244,244,246));
     }//GEN-LAST:event_SairMouseExited
     
     //volta para o jogo que chamou tela fim
     protected void Jogar_Novamente(){
-        Musica.stop();
-        
-        if (FlagJogo==1){
-            Contagem co=new Contagem();
-            co.setVisible(true);
-            this.setVisible(false);
-        }
-        
-        if (FlagJogo==2){
-            Contagem1 co1=new Contagem1();
-            co1.setVisible(true);
-            this.setVisible(false);
-        }
-        
-        if (FlagJogo==3){
-            Contagem2 co2=new Contagem2();
-            co2.setVisible(true);
-            this.setVisible(false);
-        }
-        
-        if (FlagJogo==4){
-            CorObjeto cor=new CorObjeto();
-            cor.setVisible(true);
-            this.setVisible(false);
-        }
-        
-        if (FlagJogo==5){
-            Luzes lu=new Luzes();
-            lu.setVisible(true);
-            this.setVisible(false);
-        }
-        
-        if (FlagJogo==6){
-            MatrizFigura mf=new MatrizFigura();
-            mf.setVisible(true);
-            this.setVisible(false);
-        }
-        
-        if (FlagJogo==7){
-            MatrizGeometrica mg=new MatrizGeometrica();
-            mg.setVisible(true);
-            this.setVisible(false);
-        }
-        
-        if (FlagJogo==8){
-            Numeros num=new Numeros();
-            num.setVisible(true);
-            this.setVisible(false);
-        }
-        
-        if (FlagJogo==9){
-            Sombras so=new Sombras();
-            so.setVisible(true);
-            this.setVisible(false);
-        }
+
+//        Musica.stop();
+//
+//        if (FlagJogo==1){
+//            Contagem co=new Contagem();
+//            co.setVisible(true);
+//            this.setVisible(false);
+//        }
+//
+//        if (FlagJogo==2){
+//            Contagem1 co1=new Contagem1();
+//            co1.setVisible(true);
+//            this.setVisible(false);
+//        }
+//
+//        if (FlagJogo==3){
+//            Contagem2 co2=new Contagem2();
+//            co2.setVisible(true);
+//            this.setVisible(false);
+//        }
+//
+//        if (FlagJogo==4){
+//            CorObjeto cor=new CorObjeto();
+//            cor.setVisible(true);
+//            this.setVisible(false);
+//        }
+//
+//        if (FlagJogo==5){
+//            Luzes lu=new Luzes();
+//            lu.setVisible(true);
+//            this.setVisible(false);
+//        }
+//
+//        if (FlagJogo==6){
+//            MatrizFigura mf=new MatrizFigura();
+//            mf.setVisible(true);
+//            this.setVisible(false);
+//        }
+//
+//        if (FlagJogo==7){
+//            MatrizGeometrica mg=new MatrizGeometrica();
+//            mg.setVisible(true);
+//            this.setVisible(false);
+//        }
+//
+//        if (FlagJogo==8){
+//            Numeros num=new Numeros();
+//            num.setVisible(true);
+//            this.setVisible(false);
+//        }
+//
+//        if (FlagJogo==9){
+//            Sombras so=new Sombras();
+//            so.setVisible(true);
+//            this.setVisible(false);
+//        }
+
+		VoltarMenu();
+		
+//		if (menuAnterior instanceof TelaJogo) {
+//			// reinicia a fase.
+//			((TelaJogo) menuAnterior).IniciarFase();
+//		}
+		
     }
     
     //chama a funcao jogar novamente
@@ -239,17 +249,17 @@ public class TelaFim extends TelaPadrao {
         JogarNovamente.setBackground(new java.awt.Color(244,244,246));
     }//GEN-LAST:event_JogarNovamenteMouseExited
     
-    //muda a cor do bot�o para verde quando pressionado
+    //muda a cor do botao para verde quando pressionado
     private void JogarNovamenteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JogarNovamenteMousePressed
         JogarNovamente.setBackground(new java.awt.Color(102,204,0));
     }//GEN-LAST:event_JogarNovamenteMousePressed
     
-    //volta o bot�o a cor nornal quando o mouse sai de cima
+    //volta o botao a cor nornal quando o mouse sai de cima
     private void JogarNovamenteMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JogarNovamenteMouseMoved
         JogarNovamente.setBackground(new java.awt.Color(255,255,102));
     }//GEN-LAST:event_JogarNovamenteMouseMoved
     
-    //volta para a Tela Inicial do sistema V�dere    
+    //volta para a Tela Inicial do sistema Videre    
     private void exitForm(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_exitForm
         Musica.stop();
         
@@ -259,7 +269,7 @@ public class TelaFim extends TelaPadrao {
     }//GEN-LAST:event_exitForm
     
     
-    //sobrescreve a fun��o add para que as figuras fiquem na ordem correta
+    //sobrescreve a funcao add para que as figuras fiquem na ordem correta
     public Component add(Component comp) {
         Component retValue;
         if (comp.getName() == null){
@@ -283,5 +293,14 @@ public class TelaFim extends TelaPadrao {
     private javax.swing.JButton TelaInicial;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
-    
+
+
+	/**
+	 * Apenas seta o texto da pontuacao
+	 * @param iPontos
+	 */
+	public void SetPontos(int iPontos) {
+		//Pontos.setText(String.valueOf(iPontos));
+		Pontuacao.setText(String.valueOf(iPontos));
+	}
 }
