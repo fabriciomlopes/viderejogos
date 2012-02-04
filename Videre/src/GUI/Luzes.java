@@ -20,7 +20,7 @@ public class Luzes extends TelaJogo {
 			Musica = java.applet.Applet.newAudioClip(som);
 			Musica.loop();
 		} catch (MalformedURLException erro) {
-			System.out.println("Caminho do �udio n�o especificado! " + erro);
+			System.out.println("Caminho do áudio não especificado! " + erro);
 		}
 	}
 
@@ -81,27 +81,27 @@ public class Luzes extends TelaJogo {
         add(Comecar);
         Comecar.setBounds(50, 80, 150, 50);
 
-        LAmarelo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/figuras geom�tricas/lamarela.jpg")));
+        LAmarelo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/figuras geométricas/lamarela.jpg")));
         LAmarelo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0)));
         add(LAmarelo);
         LAmarelo.setBounds(60, 80, 20, 20);
 
-        LAzul.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/figuras geom�tricas/lazul.jpg")));
+        LAzul.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/figuras geométricas/lazul.jpg")));
         LAzul.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0)));
         add(LAzul);
         LAzul.setBounds(80, 80, 20, 20);
 
-        LBranco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/figuras geom�tricas/lbranca.jpg")));
+        LBranco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/figuras geométricas/lbranca.jpg")));
         LBranco.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0)));
         add(LBranco);
         LBranco.setBounds(100, 80, 20, 20);
 
-        LVerde.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/figuras geom�tricas/lverde.jpg")));
+        LVerde.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/figuras geométricas/lverde.jpg")));
         LVerde.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0)));
         add(LVerde);
         LVerde.setBounds(60, 100, 20, 20);
 
-        LVermelho.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/figuras geom�tricas/lvermelha.jpg")));
+        LVermelho.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/figuras geométricas/lvermelha.jpg")));
         LVermelho.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0)));
         add(LVermelho);
         LVermelho.setBounds(80, 100, 20, 20);
@@ -194,7 +194,7 @@ public class Luzes extends TelaJogo {
         add(Clique13);
         Clique13.setBounds(725, 180, 25, 25);
 
-        Vermelho.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/figuras geom�tricas/lvermelha.jpg")));
+        Vermelho.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/figuras geométricas/lvermelha.jpg")));
         Vermelho.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 VermelhoMouseClicked(evt);
@@ -204,7 +204,7 @@ public class Luzes extends TelaJogo {
         add(Vermelho);
         Vermelho.setBounds(130, 370, 100, 100);
 
-        Branco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/figuras geom�tricas/lbranca.jpg")));
+        Branco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/figuras geométricas/lbranca.jpg")));
         Branco.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BrancoMouseClicked(evt);
@@ -214,7 +214,7 @@ public class Luzes extends TelaJogo {
         add(Branco);
         Branco.setBounds(230, 370, 100, 100);
 
-        Azul.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/figuras geom�tricas/lazul.jpg")));
+        Azul.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/figuras geométricas/lazul.jpg")));
         Azul.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 AzulMouseClicked(evt);
@@ -224,7 +224,7 @@ public class Luzes extends TelaJogo {
         add(Azul);
         Azul.setBounds(330, 370, 100, 100);
 
-        Amarelo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/figuras geom�tricas/lamarela.jpg")));
+        Amarelo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/figuras geométricas/lamarela.jpg")));
         Amarelo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 AmareloMouseClicked(evt);
@@ -234,7 +234,7 @@ public class Luzes extends TelaJogo {
         add(Amarelo);
         Amarelo.setBounds(430, 370, 100, 100);
 
-        Verde.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/figuras geom�tricas/lverde.jpg")));
+        Verde.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/figuras geométricas/lverde.jpg")));
         Verde.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 VerdeMouseClicked(evt);
@@ -292,7 +292,7 @@ public class Luzes extends TelaJogo {
 
     private void AjudaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AjudaMouseClicked
 		Musica.stop();
-		texto = "-Quando estiver pronto para iniciar o jogo clique no bot�o Comecar.\n-Uma seq��ncia de cores aparecer�. Repita a mesma seq��ncia usando os bot�es coloridos.\n-Caso voc� tenha errado alguma cor, a mesma seq��ncia ir� se repetir.\n-Conforme voc� constr�i a sua seq��ncia, os quadradinhos do canto direito v�o sendo preenchidos.Assim, voc� pode conferir se est� clicando direitinho em cima dos bot�es.";
+		texto = "-Quando estiver pronto para iniciar o jogo clique no botao Comecar.\n-Uma sequência de cores aparecerá. Repita a mesma sequência usando os botões coloridos.\n-Caso você tenha errado alguma cor, a mesma sequência irá se repetir.\n-Conforme você constrói a sua sequência, os quadradinhos do canto direito vão sendo preenchidos.Assim, você pode conferir se está clicando direitinho em cima dos botões.";
 		Ajuda a = new Ajuda();
 		a.textoajuda.setText(texto);
 		a.aj = 5;

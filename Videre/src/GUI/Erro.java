@@ -4,6 +4,21 @@ import java.net.*;
 
 public class Erro extends TelaFim {
 
+	// <editor-fold defaultstate="collapsed" desc="Singleton">
+	private static Erro instance;
+
+	public static Erro GetInsance() {
+		InicializarSingleton();
+		return instance;
+	}
+
+	public static void InicializarSingleton(){
+		if (instance == null) {
+			instance = new Erro();
+		}
+	}
+	// </editor-fold>
+
 	public Erro() {
 		initComponents();
 
@@ -13,7 +28,7 @@ public class Erro extends TelaFim {
 			Musica = java.applet.Applet.newAudioClip(som);
 			Musica.loop();
 		} catch (MalformedURLException erro) {
-			System.out.println("Caminho do �udio n�o especificado! " + erro);
+			System.out.println("Caminho do áudio não especificado! " + erro);
 		}
 	}
 

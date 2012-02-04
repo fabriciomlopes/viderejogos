@@ -2,36 +2,48 @@ package GUI;
 
 import java.net.*;
 import java.awt.*;
-
 public class Inicial extends TelaPadrao {
+
+	// <editor-fold defaultstate="collapsed" desc="Singleton">
+	private static Inicial instance;
+
+	public static Inicial GetInsance() {
+		return instance;
+	}
+	// </editor-fold>
 
 	public Inicial() {
 		initComponents();
 
+		
 		//inicia a m�sica tema do sistema
 		try {
 			URL som = new URL((getClass().getResource("/sons/circleoflife.mid")).toString());
 			Musica = java.applet.Applet.newAudioClip(som);
 			Musica.loop();
 		} catch (MalformedURLException erro) {
-			System.out.println("Caminho do �udio n�o especificado! " + erro);
+			System.out.println("Caminho do áudio não especificado! " + erro);
 		}
+		
+		
 	}
 
-    private void initComponents() {//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
         ConhecaZoio = new javax.swing.JButton();
         Cores = new javax.swing.JButton();
         Esconder = new javax.swing.JButton();
         Luzes = new javax.swing.JButton();
         Matriz = new javax.swing.JButton();
         Numeros = new javax.swing.JButton();
-        Sombras = new javax.swing.JButton();
+        jlSombras = new javax.swing.JButton();
         Sair = new javax.swing.JButton();
         FiguraZoio = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
-        setTitle("V\u00eddere - Jogos de Estimula\u00e7\u00e3o Visual");
+        setTitle("Vídere - Jogos de Estimulação Visual");
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 formWindowClosing(evt);
@@ -41,7 +53,7 @@ public class Inicial extends TelaPadrao {
         ConhecaZoio.setBackground(new java.awt.Color(244, 244, 246));
         ConhecaZoio.setFont(new java.awt.Font("Comic Sans MS", 1, 33));
         ConhecaZoio.setForeground(new java.awt.Color(255, 0, 0));
-        ConhecaZoio.setText("CONHE\u00c7A O Z\u00d4IO");
+        ConhecaZoio.setText("CONHEÇA O ZÔIO");
         ConhecaZoio.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.darkGray, java.awt.Color.gray));
         ConhecaZoio.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -59,7 +71,6 @@ public class Inicial extends TelaPadrao {
                 ConhecaZoioMouseMoved(evt);
             }
         });
-
         add(ConhecaZoio);
         ConhecaZoio.setBounds(370, 470, 350, 60);
 
@@ -84,7 +95,6 @@ public class Inicial extends TelaPadrao {
                 CoresMouseMoved(evt);
             }
         });
-
         add(Cores);
         Cores.setBounds(50, 90, 210, 60);
 
@@ -109,7 +119,6 @@ public class Inicial extends TelaPadrao {
                 EsconderMouseMoved(evt);
             }
         });
-
         add(Esconder);
         Esconder.setBounds(50, 150, 210, 60);
 
@@ -117,7 +126,7 @@ public class Inicial extends TelaPadrao {
         Luzes.setFont(new java.awt.Font("Comic Sans MS", 1, 33));
         Luzes.setForeground(new java.awt.Color(255, 0, 0));
         Luzes.setText("LUZES");
-        Luzes.setToolTipText("Cuidado para n\u00e3o esquecer a seq\u00fc\u00eancia das luzes!");
+        Luzes.setToolTipText("Cuidado para não esquecer a seqüência das luzes!");
         Luzes.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 LuzesMouseClicked(evt);
@@ -134,7 +143,6 @@ public class Inicial extends TelaPadrao {
                 LuzesMouseMoved(evt);
             }
         });
-
         add(Luzes);
         Luzes.setBounds(50, 210, 210, 60);
 
@@ -142,7 +150,7 @@ public class Inicial extends TelaPadrao {
         Matriz.setFont(new java.awt.Font("Comic Sans MS", 1, 33));
         Matriz.setForeground(new java.awt.Color(255, 0, 0));
         Matriz.setText("MATRIZ");
-        Matriz.setToolTipText("Monte uma seq\u00fc\u00eancia de objetos");
+        Matriz.setToolTipText("Monte uma seqüência de objetos");
         Matriz.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 MatrizMouseClicked(evt);
@@ -159,15 +167,14 @@ public class Inicial extends TelaPadrao {
                 MatrizMouseMoved(evt);
             }
         });
-
         add(Matriz);
         Matriz.setBounds(50, 270, 210, 60);
 
         Numeros.setBackground(new java.awt.Color(244, 244, 246));
         Numeros.setFont(new java.awt.Font("Comic Sans MS", 1, 33));
         Numeros.setForeground(new java.awt.Color(255, 0, 0));
-        Numeros.setText("N\u00daMEROS");
-        Numeros.setToolTipText("Brinque com o domin\u00f3 dos n\u00fameros");
+        Numeros.setText("NÚMEROS");
+        Numeros.setToolTipText("Brinque com o dominó dos números");
         Numeros.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 NumerosMouseClicked(evt);
@@ -184,40 +191,38 @@ public class Inicial extends TelaPadrao {
                 NumerosMouseMoved(evt);
             }
         });
-
         add(Numeros);
         Numeros.setBounds(50, 330, 210, 60);
 
-        Sombras.setBackground(new java.awt.Color(244, 244, 246));
-        Sombras.setFont(new java.awt.Font("Comic Sans MS", 1, 33));
-        Sombras.setForeground(new java.awt.Color(255, 0, 0));
-        Sombras.setText("SOMBRAS");
-        Sombras.setToolTipText("Ache o desenho correspondente a sombra");
-        Sombras.addMouseListener(new java.awt.event.MouseAdapter() {
+        jlSombras.setBackground(new java.awt.Color(244, 244, 246));
+        jlSombras.setFont(new java.awt.Font("Comic Sans MS", 1, 33));
+        jlSombras.setForeground(new java.awt.Color(255, 0, 0));
+        jlSombras.setText("SOMBRAS");
+        jlSombras.setToolTipText("Ache o desenho correspondente a sombra");
+        jlSombras.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                SombrasMouseClicked(evt);
+                jlSombrasMouseClicked(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                SombrasMouseExited(evt);
+                jlSombrasMouseExited(evt);
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                SombrasMousePressed(evt);
+                jlSombrasMousePressed(evt);
             }
         });
-        Sombras.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        jlSombras.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                SombrasMouseMoved(evt);
+                jlSombrasMouseMoved(evt);
             }
         });
-
-        add(Sombras);
-        Sombras.setBounds(50, 390, 210, 60);
+        add(jlSombras);
+        jlSombras.setBounds(50, 390, 210, 60);
 
         Sair.setBackground(new java.awt.Color(244, 244, 246));
         Sair.setFont(new java.awt.Font("Comic Sans MS", 1, 33));
         Sair.setForeground(new java.awt.Color(255, 0, 0));
         Sair.setText("SAIR");
-        Sair.setToolTipText("Sair dos jogos V\u00eddere");
+        Sair.setToolTipText("Sair dos jogos Vídere");
         Sair.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 SairMouseClicked(evt);
@@ -234,41 +239,40 @@ public class Inicial extends TelaPadrao {
                 SairMouseMoved(evt);
             }
         });
-
         add(Sair);
         Sair.setBounds(50, 450, 210, 60);
 
-        FiguraZoio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/zoio.gif")));
+        FiguraZoio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/zoio.gif"))); // NOI18N
         add(FiguraZoio);
         FiguraZoio.setBounds(430, 60, 209, 300);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/skate.gif")));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/skate.gif"))); // NOI18N
         add(jLabel1);
         jLabel1.setBounds(390, 310, 280, 150);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/home.jpg")));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/home.jpg"))); // NOI18N
         add(jLabel3);
         jLabel3.setBounds(0, 0, 800, 580);
 
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
         setBounds((screenSize.width-800)/2, (screenSize.height-600)/2, 800, 600);
-    }//GEN-END:initComponents
+    }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
 		System.exit(0);
     }//GEN-LAST:event_formWindowClosing
 
-	//muda a cor do bot�o para amarelo quando o mouse passa em cima
+	//muda a cor do botao para amarelo quando o mouse passa em cima
     private void SairMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SairMouseMoved
 		Sair.setBackground(new java.awt.Color(255, 255, 102));
     }//GEN-LAST:event_SairMouseMoved
 
-	//muda a cor do bot�o para verde quando � pressionado
+	//muda a cor do botao para verde quando é pressionado
     private void SairMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SairMousePressed
 		Sair.setBackground(new java.awt.Color(102, 204, 0));
     }//GEN-LAST:event_SairMousePressed
 
-	//volta a cor do bot�o ao normal quando o mouse n�o est� em cima
+	//volta a cor do botao ao normal quando o mouse não está em cima
     private void SairMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SairMouseExited
 		Sair.setBackground(new java.awt.Color(244, 244, 246));
     }//GEN-LAST:event_SairMouseExited
@@ -278,177 +282,168 @@ public class Inicial extends TelaPadrao {
 		System.exit(0);
     }//GEN-LAST:event_SairMouseClicked
 
-	//muda a cor do bot�o para amarelo quando o mouse est� em cima
-    private void SombrasMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SombrasMouseMoved
-		Sombras.setBackground(new java.awt.Color(255, 255, 102));
-    }//GEN-LAST:event_SombrasMouseMoved
+	//muda a cor do botao para amarelo quando o mouse est� em cima
+    private void jlSombrasMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlSombrasMouseMoved
+		jlSombras.setBackground(new java.awt.Color(255, 255, 102));
+    }//GEN-LAST:event_jlSombrasMouseMoved
 
-	//muda a cor do bot�o para verde quando � pressionado
-    private void SombrasMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SombrasMousePressed
-		Sombras.setBackground(new java.awt.Color(102, 204, 0));
-    }//GEN-LAST:event_SombrasMousePressed
+	//muda a cor do botao para verde quando é pressionado
+    private void jlSombrasMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlSombrasMousePressed
+		jlSombras.setBackground(new java.awt.Color(102, 204, 0));
+    }//GEN-LAST:event_jlSombrasMousePressed
 
-	//volta cor do bot�o ao normal quando o mouse n�o est� em cima
-    private void SombrasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SombrasMouseExited
-		Sombras.setBackground(new java.awt.Color(244, 244, 246));
-    }//GEN-LAST:event_SombrasMouseExited
+	//volta cor do botao ao normal quando o mouse não está em cima
+    private void jlSombrasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlSombrasMouseExited
+		jlSombras.setBackground(new java.awt.Color(244, 244, 246));
+    }//GEN-LAST:event_jlSombrasMouseExited
 
 	//chama o jogo das sombras
-    private void SombrasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SombrasMouseClicked
-		Musica.stop();
+    private void jlSombrasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlSombrasMouseClicked
+		
+		AbrirMenu(Sombras.GetInsance());
+		
+    }//GEN-LAST:event_jlSombrasMouseClicked
 
-		Sombras so = new Sombras();
-		so.setVisible(true);
-		this.setVisible(false);
-    }//GEN-LAST:event_SombrasMouseClicked
-
-	//muda a cor do bot�o para amarelo quando o mouse passa em cima
+	//muda a cor do botao para amarelo quando o mouse passa em cima
     private void NumerosMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NumerosMouseMoved
 		Numeros.setBackground(new java.awt.Color(255, 255, 102));
     }//GEN-LAST:event_NumerosMouseMoved
 
-	//muda a cor do bot�o para verde quando � pressionado
+	//muda a cor do botao para verde quando é pressionado
     private void NumerosMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NumerosMousePressed
 		Numeros.setBackground(new java.awt.Color(102, 204, 0));
     }//GEN-LAST:event_NumerosMousePressed
 
-	//volta a cor do bot�o ao normal quando o mouse sai de cima
+	//volta a cor do botao ao normal quando o mouse sai de cima
     private void NumerosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NumerosMouseExited
 		Numeros.setBackground(new java.awt.Color(244, 244, 246));
     }//GEN-LAST:event_NumerosMouseExited
 
 	//chama o jogo dos numeros
     private void NumerosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NumerosMouseClicked
-		Musica.stop();
-
-		Numeros nm = new Numeros();
-		nm.setVisible(true);
-		this.setVisible(false);
+		
+		AbrirMenu(new Numeros());
     }//GEN-LAST:event_NumerosMouseClicked
 
-	//muda a cor do bot�o para amarelo quando o mouse passa em cima
+	//muda a cor do botao para amarelo quando o mouse passa em cima
     private void MatrizMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MatrizMouseMoved
 		Matriz.setBackground(new java.awt.Color(255, 255, 102));
     }//GEN-LAST:event_MatrizMouseMoved
 
-	//muda a cor do bot�o para verde quando � pressionado
+	//muda a cor do botao para verde quando é pressionado
     private void MatrizMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MatrizMousePressed
 		Matriz.setBackground(new java.awt.Color(102, 204, 0));
     }//GEN-LAST:event_MatrizMousePressed
 
-	//volta a cor do bot�o ao normal quando o mouse sai de cima
+	//volta a cor do botao ao normal quando o mouse sai de cima
     private void MatrizMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MatrizMouseExited
 		Matriz.setBackground(new java.awt.Color(244, 244, 246));
     }//GEN-LAST:event_MatrizMouseExited
 
 	//chama o ambiente de escolha dos jogos Matriz
     private void MatrizMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MatrizMouseClicked
-		Musica.stop();
-
-		MatrizAmbiente ma = new MatrizAmbiente();
-		ma.setVisible(true);
+		
+		AbrirMenu(new MatrizAmbiente());
     }//GEN-LAST:event_MatrizMouseClicked
 
-	//muda a cor do bot�o para amarelo quando � pressionado
+	//muda a cor do botao para amarelo quando é pressionado
     private void LuzesMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LuzesMouseMoved
 		Luzes.setBackground(new java.awt.Color(255, 255, 102));
     }//GEN-LAST:event_LuzesMouseMoved
 
-	//muda a cor do bot�o pra verde quando � pressionado
+	//muda a cor do botao pra verde quando é pressionado
     private void LuzesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LuzesMousePressed
 		Luzes.setBackground(new java.awt.Color(102, 204, 0));
     }//GEN-LAST:event_LuzesMousePressed
 
-	//volta a cor do bot�o ao normal quando o mouse n�o est� em cima
+	//volta a cor do botao ao normal quando o mouse não está em cima
     private void LuzesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LuzesMouseExited
 		Luzes.setBackground(new java.awt.Color(244, 244, 246));
     }//GEN-LAST:event_LuzesMouseExited
 
 	//chama o jogo das luzes
     private void LuzesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LuzesMouseClicked
-		Musica.stop();
-
-		Luzes lu = new Luzes();
-		lu.setVisible(true);
-		this.setVisible(false);
+		
+		AbrirMenu(new Luzes());
     }//GEN-LAST:event_LuzesMouseClicked
 
-	//muda a cor do bot�o para amarelo quando o mouse passa em cima
+	//muda a cor do botao para amarelo quando o mouse passa em cima
     private void EsconderMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EsconderMouseMoved
 		Esconder.setBackground(new java.awt.Color(255, 255, 102));
     }//GEN-LAST:event_EsconderMouseMoved
 
-	//muda a cor do bot�o para verde quando � pressionado
+	//muda a cor do botao para verde quando é pressionado
     private void EsconderMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EsconderMousePressed
 		Esconder.setBackground(new java.awt.Color(102, 204, 0));
     }//GEN-LAST:event_EsconderMousePressed
 
-	//volta a cor do bot�o ao normal quando o mouse sai de cima
+	//volta a cor do botao ao normal quando o mouse sai de cima
     private void EsconderMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EsconderMouseExited
 		Esconder.setBackground(new java.awt.Color(244, 244, 246));
     }//GEN-LAST:event_EsconderMouseExited
 
 	//chama a tela de escolha dos jogos esconder
     private void EsconderMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EsconderMouseClicked
-		Musica.stop();
-
-		ContagemAmbiente coa = new ContagemAmbiente();
-		coa.setVisible(true);
+		
+		AbrirMenu(new ContagemAmbiente());
     }//GEN-LAST:event_EsconderMouseClicked
 
-	//muda a cor do bot�o para amarelo quando o mouse passa em cima
+	//muda a cor do botao para amarelo quando o mouse passa em cima
     private void CoresMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CoresMouseMoved
 		Cores.setBackground(new java.awt.Color(255, 255, 102));
     }//GEN-LAST:event_CoresMouseMoved
 
-	//muda a cor do bot�o para verde quando o bot�o � pressionado
+	//muda a cor do botao para verde quando o botao é pressionado
     private void CoresMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CoresMousePressed
 		Cores.setBackground(new java.awt.Color(102, 204, 0));
     }//GEN-LAST:event_CoresMousePressed
 
-	//volta a cor do bot�o para o normal quando o mouse sai de cima
+	//volta a cor do botao para o normal quando o mouse sai de cima
     private void CoresMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CoresMouseExited
 		Cores.setBackground(new java.awt.Color(244, 244, 246));
     }//GEN-LAST:event_CoresMouseExited
 
 	//chama o jogo das cores
     private void CoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CoresMouseClicked
-		Musica.stop();
 
-		CorObjeto co = new CorObjeto();
-		co.setVisible(true);
-		this.setVisible(false);
+		AbrirMenu(new CorObjeto());
+		
+		
     }//GEN-LAST:event_CoresMouseClicked
 
-	//muda a cor do bot�o para amarelo quando o mouse passa em cima
+	//muda a cor do botao para amarelo quando o mouse passa em cima
     private void ConhecaZoioMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ConhecaZoioMouseMoved
 		ConhecaZoio.setBackground(new java.awt.Color(255, 255, 102));
     }//GEN-LAST:event_ConhecaZoioMouseMoved
 
-	//muda a cor do bot�o para verde quando � pressionado
+	//muda a cor do botao para verde quando é pressionado
     private void ConhecaZoioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ConhecaZoioMousePressed
 		ConhecaZoio.setBackground(new java.awt.Color(102, 204, 0));
     }//GEN-LAST:event_ConhecaZoioMousePressed
 
-	//muda a cor do bot�o para amarelo quando o mouse passa por cima
-	//muda a cor do bot�o para verde quando � pressionado
-	//volta o bot�o a sua cor normal quando o mouse n�o est� em cima
+	//muda a cor do botao para amarelo quando o mouse passa por cima
+	//muda a cor do botao para verde quando é pressionado
+	//volta o botao a sua cor normal quando o mouse não está em cima
     private void ConhecaZoioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ConhecaZoioMouseExited
 		ConhecaZoio.setBackground(new java.awt.Color(244, 244, 246));
     }//GEN-LAST:event_ConhecaZoioMouseExited
 
 	//chama a tela Zoio1
     private void ConhecaZoioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ConhecaZoioMouseClicked
-		Musica.stop();
 
-		Zoio1 z1 = new Zoio1();
-		z1.setVisible(true);
-		this.setVisible(false);
+		AbrirMenu(new Zoio1());
     }//GEN-LAST:event_ConhecaZoioMouseClicked
 
 	//sai do sistema v�dere
 	public static void main(String args[]) {
-		new Inicial().show();
+		Inicial i = new Inicial();
+		i.show();
+		
+		// inicializando instancia do singleton
+		Inicial.instance = i;
+
+		
+		Acerto.InicializarSingleton();
 	}
 
 	public Component add(Component comp) {
@@ -470,8 +465,8 @@ public class Inicial extends TelaPadrao {
     private javax.swing.JButton Matriz;
     private javax.swing.JButton Numeros;
     private javax.swing.JButton Sair;
-    private javax.swing.JButton Sombras;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JButton jlSombras;
     // End of variables declaration//GEN-END:variables
 }

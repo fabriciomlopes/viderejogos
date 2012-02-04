@@ -17,7 +17,7 @@ public class Numeros extends TelaJogo {
 			Musica = java.applet.Applet.newAudioClip(som);
 			Musica.loop();
 		} catch (MalformedURLException erro) {
-			System.out.println("Caminho do �udio n�o especificado! " + erro);
+			System.out.println("Caminho do áudio não especificado! " + erro);
 		}
 
 	}
@@ -509,7 +509,7 @@ public class Numeros extends TelaJogo {
 
     private void AjudaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AjudaMouseClicked
 		Musica.stop();
-		texto = "-Voc� dever� completar a cada fase, o domin� dos n�meros.\n\n-Escolha primeiro uma pe�a que contenha uma figura b�sica e depois uma com um objeto.\n\n-O n�mero de desenhos que aparece em cada uma das pe�as, deve ser o mesmo.\n\n- As pe�as com figuras b�sicas devem sempre ficar no meio da seq��ncia.";
+		texto = "-você deverá completar a cada fase, o dominó dos números.\n\n-Escolha primeiro uma peça que contenha uma figura básica e depois uma com um objeto.\n\n-O número de desenhos que aparece em cada uma das peças, deve ser o mesmo.\n\n- As peças com figuras básicas devem sempre ficar no meio da sequência.";
 		Ajuda a = new Ajuda();
 		a.textoajuda.setText(texto);
 		a.aj = 8;

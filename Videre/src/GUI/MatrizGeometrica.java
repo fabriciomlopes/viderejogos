@@ -14,7 +14,7 @@ public class MatrizGeometrica extends TelaJogo {
             Musica= java.applet.Applet.newAudioClip(som);
             Musica.loop();
         }catch(MalformedURLException erro){
-            System.out.println("Caminho do �udio n�o especificado! "+erro);
+            System.out.println("Caminho do áudio não especificado! "+erro);
         }
     }
     
@@ -399,7 +399,7 @@ public class MatrizGeometrica extends TelaJogo {
     
     private void AjudaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AjudaMouseClicked
         Musica.stop();
-        texto="-Em cada fase aparecem quatro figuras.\n\n-Voc� dever� repetir a mesma seq��ncia, que est� sendo mostrada.\n\n-Para isso, clique nas figurinhas do lado direito.Preste aten��o na ordem dos cliques. A seq��ncia dever� ser a mesma!";
+        texto="-Em cada fase aparecem quatro figuras.\n\n-você dever� repetir a mesma sequência, que est� sendo mostrada.\n\n-Para isso, clique nas figurinhas do lado direito.Preste aten��o na ordem dos cliques. A sequência dever� ser a mesma!";
         Ajuda a=new Ajuda();
         a.textoajuda.setText(texto);
         a.aj=7;

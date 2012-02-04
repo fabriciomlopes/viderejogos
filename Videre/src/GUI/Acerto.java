@@ -4,6 +4,23 @@ import java.net.*;
 
 public class Acerto extends TelaFim {
 
+
+	// <editor-fold defaultstate="collapsed" desc="Singleton">
+	private static Acerto instance;
+
+	public static Acerto GetInsance() {
+		InicializarSingleton();
+		return instance;
+	}
+
+	public static void InicializarSingleton(){
+		if (instance == null) {
+			instance = new Acerto();
+		}
+	}
+	// </editor-fold>
+
+
 	public Acerto() {
 		initComponents();
 
@@ -12,7 +29,7 @@ public class Acerto extends TelaFim {
 			Musica = java.applet.Applet.newAudioClip(som);
 			Musica.loop();
 		} catch (MalformedURLException erro) {
-			System.out.println("Caminho do �udio n�o especificado! " + erro);
+			System.out.println("Caminho do áudio não especificado! " + erro);
 		}
 	}
 
@@ -39,10 +56,16 @@ public class Acerto extends TelaFim {
 
 	public static void main(String args[]) {
 //        new Acerto().show();
-		new Acerto().initComponents();
+		
+		//new Acerto().initComponents();
+		Acerto.GetInsance().initComponents();
 	}
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel FiguraAcerto;
     private javax.swing.JLabel FiguraZoio;
     // End of variables declaration//GEN-END:variables
+
+	public void a(){
+		Pontuacao.setText("");
+	}
 }
