@@ -29,14 +29,22 @@ public class Ajuda extends TelaPadrao {
 		initComponents();
 
 		//inicia a musica da ajuda
-		try {
-			URL som = new URL((getClass().getResource("/sons/muppet.mid")).toString());
-			Musica = java.applet.Applet.newAudioClip(som);
-			Musica.loop();
-		} catch (MalformedURLException erro) {
-			System.out.println("Caminho do áudio não especificado! " + erro);
-		}
+//		try {
+//			URL som = new URL((getClass().getResource("/sons/muppet.mid")).toString());
+//			Musica = java.applet.Applet.newAudioClip(som);
+//			Musica.loop();
+//		} catch (MalformedURLException erro) {
+//			System.out.println("Caminho do áudio não especificado! " + erro);
+//		}
+		//classes.UtilidadesVidere.TocarMusicaMIDI("muppet");
 	}
+
+	@Override
+	protected String GetAudioName() {
+		return "muppet";
+	}
+
+
 
     private void initComponents() {//GEN-BEGIN:initComponents
         ZoioAjuda = new javax.swing.JLabel();

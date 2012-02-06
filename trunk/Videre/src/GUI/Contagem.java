@@ -11,13 +11,18 @@ public class Contagem extends TelaJogo {
 		initComponents();
 
 		//inicia a musica
-		try {
-			URL som = new URL((getClass().getResource("/sons/animaniacs.mid")).toString());
-			Musica = java.applet.Applet.newAudioClip(som);
-			Musica.loop();
-		} catch (MalformedURLException erro) {
-			System.out.println("Caminho do áudio não especificado! " + erro);
-		}
+//		try {
+//			URL som = new URL((getClass().getResource("/sons/animaniacs.mid")).toString());
+//			Musica = java.applet.Applet.newAudioClip(som);
+//			Musica.loop();
+//		} catch (MalformedURLException erro) {
+//			System.out.println("Caminho do áudio não especificado! " + erro);
+//		}
+	}
+
+	@Override
+	protected String GetAudioName() {
+		return "animaniacs";
 	}
 
     private void initComponents() {//GEN-BEGIN:initComponents
@@ -801,13 +806,15 @@ public class Contagem extends TelaJogo {
 
 	//chama a ajuda para o jogo Ache as Letras
     private void AjudaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AjudaMouseClicked
-		Musica.stop();
-		texto = "-Em cada fase aparecer� uma imagem com duas letras.\n\n-Identifique as letras que aparecem na imagem e clique em cima delas no grupo de letras do lado direito";
-		Ajuda a = new Ajuda();
-		a.textoajuda.setText(texto);
-		a.aj = 1;
-		a.setVisible(true);
-		this.setVisible(false);
+//		Musica.stop();
+//		texto = "-Em cada fase aparecer� uma imagem com duas letras.\n\n-Identifique as letras que aparecem na imagem e clique em cima delas no grupo de letras do lado direito";
+//		Ajuda a = new Ajuda();
+//		a.textoajuda.setText(texto);
+//		a.aj = 1;
+//		a.setVisible(true);
+//		this.setVisible(false);
+
+		AbrirAjuda("-Em cada fase aparecer� uma imagem com duas letras.\n\n-Identifique as letras que aparecem na imagem e clique em cima delas no grupo de letras do lado direito");
     }//GEN-LAST:event_AjudaMouseClicked
 
 	//muda a cor das label�s para amarelo quando o mouse passa em cima delas
@@ -1217,7 +1224,7 @@ public class Contagem extends TelaJogo {
 			Erro er = new Erro();
 			er.Pontuacao.setText(String.valueOf(ptos));
 			er.FlagJogo = 1;
-			Musica.stop();
+//			Musica.stop();
 			er.setVisible(true);
 			this.setVisible(false);
 		}
@@ -1421,7 +1428,7 @@ public class Contagem extends TelaJogo {
 					Acerto ac = new Acerto();
 					ac.Pontuacao.setText(String.valueOf(ptos));
 					ac.FlagJogo = 1;
-					Musica.stop();
+//					Musica.stop();
 					ac.setVisible(true);
 					this.setVisible(false);
 					break;

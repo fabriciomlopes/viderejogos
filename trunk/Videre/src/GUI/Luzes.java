@@ -2,7 +2,6 @@ package GUI;
 
 import javax.swing.*;
 import java.awt.event.*;
-import java.net.*;
 
 public class Luzes extends TelaJogo {
 
@@ -15,13 +14,18 @@ public class Luzes extends TelaJogo {
 	public Luzes() {
 		initComponents();
 
-		try {
-			URL som = new URL((getClass().getResource("/sons/spyderman.mid")).toString());
-			Musica = java.applet.Applet.newAudioClip(som);
-			Musica.loop();
-		} catch (MalformedURLException erro) {
-			System.out.println("Caminho do áudio não especificado! " + erro);
-		}
+//		try {
+//			URL som = new URL((getClass().getResource("/sons/spyderman.mid")).toString());
+//			Musica = java.applet.Applet.newAudioClip(som);
+//			Musica.loop();
+//		} catch (MalformedURLException erro) {
+//			System.out.println("Caminho do áudio não especificado! " + erro);
+//		}
+	}
+
+	@Override
+	protected String GetAudioName() {
+		return "spyderman";
 	}
 
     private void initComponents() {//GEN-BEGIN:initComponents
@@ -291,13 +295,15 @@ public class Luzes extends TelaJogo {
     }//GEN-LAST:event_AjudaMouseExited
 
     private void AjudaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AjudaMouseClicked
-		Musica.stop();
-		texto = "-Quando estiver pronto para iniciar o jogo clique no botao Comecar.\n-Uma sequência de cores aparecerá. Repita a mesma sequência usando os botões coloridos.\n-Caso você tenha errado alguma cor, a mesma sequência irá se repetir.\n-Conforme você constrói a sua sequência, os quadradinhos do canto direito vão sendo preenchidos.Assim, você pode conferir se está clicando direitinho em cima dos botões.";
-		Ajuda a = new Ajuda();
-		a.textoajuda.setText(texto);
-		a.aj = 5;
-		a.setVisible(true);
-		this.setVisible(false);
+//		Musica.stop();
+//		texto = "-Quando estiver pronto para iniciar o jogo clique no botao Comecar.\n-Uma sequência de cores aparecerá. Repita a mesma sequência usando os botões coloridos.\n-Caso você tenha errado alguma cor, a mesma sequência irá se repetir.\n-Conforme você constrói a sua sequência, os quadradinhos do canto direito vão sendo preenchidos.Assim, você pode conferir se está clicando direitinho em cima dos botões.";
+//		Ajuda a = new Ajuda();
+//		a.textoajuda.setText(texto);
+//		a.aj = 5;
+//		a.setVisible(true);
+//		this.setVisible(false);
+
+		AbrirAjuda("-Quando estiver pronto para iniciar o jogo clique no botao Comecar.\n-Uma sequência de cores aparecerá. Repita a mesma sequência usando os botões coloridos.\n-Caso você tenha errado alguma cor, a mesma sequência irá se repetir.\n-Conforme você constrói a sua sequência, os quadradinhos do canto direito vão sendo preenchidos.Assim, você pode conferir se está clicando direitinho em cima dos botões.");
     }//GEN-LAST:event_AjudaMouseClicked
 
     private void ComecarMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ComecarMouseMoved
@@ -469,7 +475,7 @@ public class Luzes extends TelaJogo {
 			Erro er = new Erro();
 			er.Pontuacao.setText(String.valueOf(ptos));
 			er.FlagJogo = 5;
-			Musica.stop();
+//			Musica.stop();
 			er.setVisible(true);
 			this.setVisible(false);
 		}
@@ -672,7 +678,7 @@ public class Luzes extends TelaJogo {
 					Acerto ac = new Acerto();
 					ac.Pontuacao.setText(String.valueOf(ptos));
 					ac.FlagJogo = 5;
-					Musica.stop();
+//					Musica.stop();
 					ac.setVisible(true);
 					this.setVisible(false);
 					break;

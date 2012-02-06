@@ -71,20 +71,22 @@ public class TelaAmbiente extends TelaPadrao {
 
     //chama a tela inicial
     private void VoltarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VoltarMouseClicked
-        Musica.stop();
-        
-        Inicial ini=new Inicial();
-        ini.setVisible(true);
-        this.setVisible(false);
+//        Musica.stop();
+//
+//        Inicial ini=new Inicial();
+//        ini.setVisible(true);
+//        this.setVisible(false);
+		AbrirMenu(Inicial.GetInsance());
     }//GEN-LAST:event_VoltarMouseClicked
     
     //chama a tela inicial    
     private void exitForm(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_exitForm
-        Musica.stop();
-        
-        Inicial ini=new Inicial();
-        ini.setVisible(true);
-        this.setVisible(false);
+//        Musica.stop();
+//
+//        Inicial ini=new Inicial();
+//        ini.setVisible(true);
+//        this.setVisible(false);
+		AbrirMenu(Inicial.GetInsance());
     }//GEN-LAST:event_exitForm
        
     //sobrescreve a fun��o add para que as figuras fiquem na ordem correta

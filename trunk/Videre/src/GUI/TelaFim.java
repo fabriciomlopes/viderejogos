@@ -261,11 +261,12 @@ public class TelaFim extends TelaPadrao {
     
     //volta para a Tela Inicial do sistema Videre    
     private void exitForm(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_exitForm
-        Musica.stop();
-        
-        Inicial ini=new Inicial();
-        ini.setVisible(true);
-        this.setVisible(false);
+//        Musica.stop();
+//
+//        Inicial ini=new Inicial();
+//        ini.setVisible(true);
+//        this.setVisible(false);
+		AbrirMenu(Inicial.GetInsance());
     }//GEN-LAST:event_exitForm
     
     

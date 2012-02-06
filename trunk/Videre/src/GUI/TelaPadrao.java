@@ -6,7 +6,7 @@ public class TelaPadrao extends java.awt.Frame {
     //coloca o icone na tela
     protected Image icone=new javax.swing.ImageIcon(getClass().getResource("/imagens/icone.gif")).getImage();
     //cria a variavel musica
-    protected java.applet.AudioClip Musica = null;
+    //protected java.applet.AudioClip Musica = null;
     
     public TelaPadrao() {
         initComponents();
@@ -56,7 +56,7 @@ public class TelaPadrao extends java.awt.Frame {
 	public <T extends TelaPadrao> void AbrirMenu(T menu){
 		
 		// parar de tocar a musica
-		Musica.stop();
+		//Musica.stop();
 
 		// #TODO: fazer funfar
 		//Carregando.Mostrar();
@@ -67,6 +67,8 @@ public class TelaPadrao extends java.awt.Frame {
 		this.setVisible(false);
 
 		menu.OnOpen();
+
+		classes.UtilidadesVidere.TocarMusicaMIDI(menu.GetAudioName());
 		//Carregando.Ocultar();
 	}
 
@@ -82,4 +84,12 @@ public class TelaPadrao extends java.awt.Frame {
 		
 	}
 
+	/**
+	 *
+	 * esse metodo deve ser sobreposto para que
+	 * possa tocar uma musica especifica pra cada menu
+	 */
+	protected String GetAudioName(){
+		return "";
+	}
 }

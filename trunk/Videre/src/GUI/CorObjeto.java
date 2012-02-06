@@ -1,7 +1,6 @@
 package GUI;
 
 import javax.swing.*;
-import java.net.*;
 
 public class CorObjeto extends TelaJogo {
 
@@ -9,13 +8,18 @@ public class CorObjeto extends TelaJogo {
 
 	public CorObjeto() {
 		initComponents();
-		try {
-			URL som = new URL((getClass().getResource("/sons/mortalkombat.mid")).toString());
-			Musica = java.applet.Applet.newAudioClip(som);
-			Musica.loop();
-		} catch (MalformedURLException erro) {
-			System.out.println("Caminho do áudio não especificado! " + erro);
-		}
+//		try {
+//			URL som = new URL((getClass().getResource("/sons/mortalkombat.mid")).toString());
+//			Musica = java.applet.Applet.newAudioClip(som);
+//			Musica.loop();
+//		} catch (MalformedURLException erro) {
+//			System.out.println("Caminho do áudio não especificado! " + erro);
+//		}
+	}
+	
+	@Override
+	protected String GetAudioName() {
+		return "mortalkombat";
 	}
 
     private void initComponents() {//GEN-BEGIN:initComponents
@@ -384,13 +388,15 @@ public class CorObjeto extends TelaJogo {
     }//GEN-END:initComponents
 
     private void AjudaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AjudaMouseClicked
-		Musica.stop();
-		Ajuda a = new Ajuda();
-		texto = "- Em cada fase aparecerá um desenho.\n\n- Observe o tom predominante da cor deste desenho.\n\n- Em seguida clique em cima da cor correta, logo abaixo da figura";
-		a.textoajuda.setText(texto);
-		a.aj = 4;
-		a.setVisible(true);
-		this.setVisible(false);
+//		Musica.stop();
+//		Ajuda a = new Ajuda();
+//		texto = "- Em cada fase aparecerá um desenho.\n\n- Observe o tom predominante da cor deste desenho.\n\n- Em seguida clique em cima da cor correta, logo abaixo da figura";
+//		a.textoajuda.setText(texto);
+//		a.aj = 4;
+//		a.setVisible(true);
+//		this.setVisible(false);
+
+		AbrirAjuda("- Em cada fase aparecerá um desenho.\n\n- Observe o tom predominante da cor deste desenho.\n\n- Em seguida clique em cima da cor correta, logo abaixo da figura");
     }//GEN-LAST:event_AjudaMouseClicked
 
     private void AjudaMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AjudaMouseMoved
@@ -452,7 +458,7 @@ public class CorObjeto extends TelaJogo {
 			Erro er = new Erro();
 			er.Pontuacao.setText(String.valueOf(ptos));
 			er.FlagJogo = 4;
-			Musica.stop();
+//			Musica.stop();
 			er.setVisible(true);
 			this.setVisible(false);
 		}
@@ -1058,7 +1064,7 @@ public class CorObjeto extends TelaJogo {
 					Acerto ac = new Acerto();
 					ac.Pontuacao.setText(String.valueOf(ptos));
 					ac.FlagJogo = 4;
-					Musica.stop();
+//					Musica.stop();
 					ac.setVisible(true);
 					this.setVisible(false);
 					break;

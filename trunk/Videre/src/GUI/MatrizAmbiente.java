@@ -1,22 +1,26 @@
 package GUI;
 
-import java.net.*;
-
 public class MatrizAmbiente extends TelaAmbiente {
 
 	public MatrizAmbiente() {
 		initComponents();
 
 		//inicia musica
-		try {
-			URL som = new URL((getClass().getResource("/sons/peterpan.mid")).toString());
-			Musica = java.applet.Applet.newAudioClip(som);
-			Musica.loop();
-		} catch (MalformedURLException erro) {
-			System.out.println("Caminho do áudio não especificado! " + erro);
-		}
+//		try {
+//			URL som = new URL((getClass().getResource("/sons/peterpan.mid")).toString());
+//			Musica = java.applet.Applet.newAudioClip(som);
+//			Musica.loop();
+//		} catch (MalformedURLException erro) {
+//			System.out.println("Caminho do áudio não especificado! " + erro);
+//		}
 	}
 
+
+	@Override
+	protected String GetAudioName() {
+		return "peterpan";
+	}
+	
     private void initComponents() {//GEN-BEGIN:initComponents
         FormasGeometricas = new javax.swing.JButton();
         Figuras = new javax.swing.JButton();
@@ -78,11 +82,12 @@ public class MatrizAmbiente extends TelaAmbiente {
 
 	//chama o jogo Matriz - Formas Geometricas
     private void FormasGeometricasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FormasGeometricasMouseClicked
-		Musica.stop();
-
-		MatrizGeometrica mg = new MatrizGeometrica();
-		mg.setVisible(true);
-		this.setVisible(false);
+//		Musica.stop();
+//
+//		MatrizGeometrica mg = new MatrizGeometrica();
+//		mg.setVisible(true);
+//		this.setVisible(false);
+		AbrirMenu(new MatrizGeometrica());
     }//GEN-LAST:event_FormasGeometricasMouseClicked
 
 	//muda a cor do botao para verde quando o mouse e pressionado
@@ -117,11 +122,12 @@ public class MatrizAmbiente extends TelaAmbiente {
 
 	//chama o jogo Matriz Figuras
     private void FigurasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FigurasMouseClicked
-		Musica.stop();
-
-		MatrizFigura mf = new MatrizFigura();
-		mf.setVisible(true);
-		this.setVisible(false);
+//		Musica.stop();
+//
+//		MatrizFigura mf = new MatrizFigura();
+//		mf.setVisible(true);
+//		this.setVisible(false);
+		AbrirMenu(new MatrizFigura());
     }//GEN-LAST:event_FigurasMouseClicked
 
 	public static void main(String args[]) {

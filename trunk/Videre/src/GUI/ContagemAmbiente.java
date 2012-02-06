@@ -1,22 +1,25 @@
 package GUI;
 
-import java.net.*;
-
 public class ContagemAmbiente extends TelaAmbiente {
 
 	public ContagemAmbiente() {
 		initComponents();
 
 		//inicia musica
-		try {
-			URL som = new URL((getClass().getResource("/sons/peterpan.mid")).toString());
-			Musica = java.applet.Applet.newAudioClip(som);
-			Musica.loop();
-		} catch (MalformedURLException erro) {
-			System.out.println("Caminho do áudio não especificado! " + erro);
-		}
+//		try {
+//			URL som = new URL((getClass().getResource("/sons/peterpan.mid")).toString());
+//			Musica = java.applet.Applet.newAudioClip(som);
+//			Musica.loop();
+//		} catch (MalformedURLException erro) {
+//			System.out.println("Caminho do áudio não especificado! " + erro);
+//		}
 	}
 
+	@Override
+	protected String GetAudioName() {
+		return "peterpan";
+	}
+	
     private void initComponents() {//GEN-BEGIN:initComponents
         AcheLetras = new javax.swing.JButton();
         AcheNumeros = new javax.swing.JButton();
@@ -111,11 +114,12 @@ public class ContagemAmbiente extends TelaAmbiente {
 
 	//chama o jogo Ache as Letras
     private void AcheLetrasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AcheLetrasMouseClicked
-		Musica.stop();
-
-		Contagem c = new Contagem();
-		c.setVisible(true);
-		this.setVisible(false);
+//		Musica.stop();
+//
+//		Contagem c = new Contagem();
+//		c.setVisible(true);
+//		this.setVisible(false);
+		AbrirMenu(new Contagem());
     }//GEN-LAST:event_AcheLetrasMouseClicked
 
 	//muda a cor do botao para verde quando e pressionado
@@ -145,11 +149,13 @@ public class ContagemAmbiente extends TelaAmbiente {
 
 	//chama o jogo Ache os Numeros
     private void AcheNumerosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AcheNumerosMouseClicked
-		Musica.stop();
+//		Musica.stop();
+//
+//		Contagem1 co1 = new Contagem1();
+//		co1.setVisible(true);
+//		this.setVisible(false);
 
-		Contagem1 co1 = new Contagem1();
-		co1.setVisible(true);
-		this.setVisible(false);
+		AbrirMenu(new Contagem1());
     }//GEN-LAST:event_AcheNumerosMouseClicked
 
 	//muda a cor do botao para amarelo quando o mouse passa em cima
@@ -169,11 +175,12 @@ public class ContagemAmbiente extends TelaAmbiente {
 
 	//chama o jogo Ache as Figuras
     private void AcheFigurasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AcheFigurasMouseClicked
-		Musica.stop();
-
-		Contagem2 c2 = new Contagem2();
-		c2.setVisible(true);
-		this.setVisible(false);
+//		Musica.stop();
+//
+//		Contagem2 c2 = new Contagem2();
+//		c2.setVisible(true);
+//		this.setVisible(false);
+		AbrirMenu(new Contagem2());
     }//GEN-LAST:event_AcheFigurasMouseClicked
 
 	public static void main(String args[]) {

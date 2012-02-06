@@ -1,6 +1,5 @@
 package GUI;
 import javax.swing.*;
-import java.net.*;
 
 public class MatrizFigura extends TelaJogo {
     private Icon img=null,id=null, m1,m2,m3,m4,c1,c2,c3,c4,f1,f2,f3,f4;
@@ -8,15 +7,20 @@ public class MatrizFigura extends TelaJogo {
     public MatrizFigura() {
         initComponents();
         
-        try{
-            URL som= new URL((getClass().getResource("/sons/charliebrown.mid")).toString());
-            Musica = java.applet.Applet.newAudioClip(som);
-            Musica.loop();
-        }catch(MalformedURLException erro){
-            System.out.println("Caminho do áudio não especificado! "+erro);
-        }
+//        try{
+//            URL som= new URL((getClass().getResource("/sons/charliebrown.mid")).toString());
+//            Musica = java.applet.Applet.newAudioClip(som);
+//            Musica.loop();
+//        }catch(MalformedURLException erro){
+//            System.out.println("Caminho do áudio não especificado! "+erro);
+//        }
     }
-    
+
+	@Override
+	protected String GetAudioName() {
+		return "charliebrown";
+	}
+	
     private void initComponents() {//GEN-BEGIN:initComponents
         Aviao2 = new javax.swing.JLabel();
         Celular4 = new javax.swing.JLabel();
@@ -1511,13 +1515,14 @@ public class MatrizFigura extends TelaJogo {
     }//GEN-LAST:event_Aviao2MouseClicked
     
     private void AjudaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AjudaMouseClicked
-        Musica.stop();
-        texto="-Em cada fase aparecem quatro figuras.\n\n-você deverá repetir a mesma sequência, que está sendo mostrada.\n\n-Para isso, clique nas figurinhas logo acima.Preste atenção na ordem dos cliques. A sequência deverá ser a mesma!";
-        Ajuda a=new Ajuda();
-        a.textoajuda.setText(texto);
-        a.aj=6;
-        a.setVisible(true);
-        this.setVisible(false);
+//        Musica.stop();
+//        texto="-Em cada fase aparecem quatro figuras.\n\n-você deverá repetir a mesma sequência, que está sendo mostrada.\n\n-Para isso, clique nas figurinhas logo acima.Preste atenção na ordem dos cliques. A sequência deverá ser a mesma!";
+//        Ajuda a=new Ajuda();
+//        a.textoajuda.setText(texto);
+//        a.aj=6;
+//        a.setVisible(true);
+//        this.setVisible(false);
+		AbrirAjuda("-Em cada fase aparecem quatro figuras.\n\n-você deverá repetir a mesma sequência, que está sendo mostrada.\n\n-Para isso, clique nas figurinhas logo acima.Preste atenção na ordem dos cliques. A sequência deverá ser a mesma!");
     }//GEN-LAST:event_AjudaMouseClicked
     
     private void AjudaMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AjudaMouseMoved
@@ -1565,7 +1570,7 @@ public class MatrizFigura extends TelaJogo {
             Erro er=new Erro();
             er.Pontuacao.setText(String.valueOf(ptos));
             er.FlagJogo=6;
-            Musica.stop();
+//            Musica.stop();
             er.setVisible(true);
             this.setVisible(false);
         }
@@ -1799,7 +1804,7 @@ public class MatrizFigura extends TelaJogo {
                     Acerto ac=new Acerto();
                     ac.Pontuacao.setText(String.valueOf(ptos));
                     ac.FlagJogo=6;
-                    Musica.stop();
+//                    Musica.stop();
                     ac.setVisible(true);
                     this.setVisible(false);
                     AumentaPontos();

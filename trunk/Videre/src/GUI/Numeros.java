@@ -1,7 +1,6 @@
 package GUI;
 
 import javax.swing.*;
-import java.net.*;
 
 public class Numeros extends TelaJogo {
 
@@ -12,14 +11,20 @@ public class Numeros extends TelaJogo {
 	public Numeros() {
 		initComponents();
 
-		try {
-			URL som = new URL((getClass().getResource("/sons/temacirco.mid")).toString());
-			Musica = java.applet.Applet.newAudioClip(som);
-			Musica.loop();
-		} catch (MalformedURLException erro) {
-			System.out.println("Caminho do áudio não especificado! " + erro);
-		}
+//		try {
+//			URL som = new URL((getClass().getResource("/sons/temacirco.mid")).toString());
+//			Musica = java.applet.Applet.newAudioClip(som);
+//			Musica.loop();
+//		} catch (MalformedURLException erro) {
+//			System.out.println("Caminho do áudio não especificado! " + erro);
+//		}
 
+	}
+
+
+	@Override
+	protected String GetAudioName() {
+		return "temacirco";
 	}
 
     private void initComponents() {//GEN-BEGIN:initComponents
@@ -508,13 +513,14 @@ public class Numeros extends TelaJogo {
     }//GEN-END:initComponents
 
     private void AjudaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AjudaMouseClicked
-		Musica.stop();
-		texto = "-você deverá completar a cada fase, o dominó dos números.\n\n-Escolha primeiro uma peça que contenha uma figura básica e depois uma com um objeto.\n\n-O número de desenhos que aparece em cada uma das peças, deve ser o mesmo.\n\n- As peças com figuras básicas devem sempre ficar no meio da sequência.";
-		Ajuda a = new Ajuda();
-		a.textoajuda.setText(texto);
-		a.aj = 8;
-		a.setVisible(true);
-		this.setVisible(false);
+//		Musica.stop();
+//		texto = "-você deverá completar a cada fase, o dominó dos números.\n\n-Escolha primeiro uma peça que contenha uma figura básica e depois uma com um objeto.\n\n-O número de desenhos que aparece em cada uma das peças, deve ser o mesmo.\n\n- As peças com figuras básicas devem sempre ficar no meio da sequência.";
+//		Ajuda a = new Ajuda();
+//		a.textoajuda.setText(texto);
+//		a.aj = 8;
+//		a.setVisible(true);
+//		this.setVisible(false);
+		AbrirAjuda("-você deverá completar a cada fase, o dominó dos números.\n\n-Escolha primeiro uma peça que contenha uma figura básica e depois uma com um objeto.\n\n-O número de desenhos que aparece em cada uma das peças, deve ser o mesmo.\n\n- As peças com figuras básicas devem sempre ficar no meio da sequência.");
     }//GEN-LAST:event_AjudaMouseClicked
 
     private void AjudaMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AjudaMouseMoved
@@ -678,7 +684,7 @@ public class Numeros extends TelaJogo {
 			Erro er = new Erro();
 			er.Pontuacao.setText(String.valueOf(ptos));
 			er.FlagJogo = 8;
-			Musica.stop();
+			//Musica.stop();
 			er.setVisible(true);
 			this.setVisible(false);
 		}
@@ -833,7 +839,7 @@ public class Numeros extends TelaJogo {
 					Acerto ac = new Acerto();
 					ac.Pontuacao.setText(String.valueOf(ptos));
 					ac.FlagJogo = 8;
-					Musica.stop();
+					//Musica.stop();
 					ac.setVisible(true);
 					this.setVisible(false);
 					break;

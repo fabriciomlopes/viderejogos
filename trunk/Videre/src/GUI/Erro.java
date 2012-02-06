@@ -23,14 +23,21 @@ public class Erro extends TelaFim {
 		initComponents();
 
 		//inicia a musica da tela erro
-		try {
-			URL som = new URL((getClass().getResource("/sons/passoelefantinho.mid")).toString());
-			Musica = java.applet.Applet.newAudioClip(som);
-			Musica.loop();
-		} catch (MalformedURLException erro) {
-			System.out.println("Caminho do áudio não especificado! " + erro);
-		}
+//		try {
+//			URL som = new URL((getClass().getResource("/sons/passoelefantinho.mid")).toString());
+//			Musica = java.applet.Applet.newAudioClip(som);
+//			Musica.loop();
+//		} catch (MalformedURLException erro) {
+//			System.out.println("Caminho do áudio não especificado! " + erro);
+//		}
+//		classes.UtilidadesVidere.TocarMusicaMIDI("passoelefantinho");
 	}
+
+	@Override
+	protected String GetAudioName() {
+		return "passoelefantinho";
+	}
+	
 
     private void initComponents() {//GEN-BEGIN:initComponents
         jLabel1 = new javax.swing.JLabel();

@@ -1,6 +1,5 @@
 package GUI;
 
-import java.net.*;
 import java.awt.*;
 public class Inicial extends TelaPadrao {
 
@@ -17,15 +16,20 @@ public class Inicial extends TelaPadrao {
 
 		
 		//inicia a m�sica tema do sistema
-		try {
-			URL som = new URL((getClass().getResource("/sons/circleoflife.mid")).toString());
-			Musica = java.applet.Applet.newAudioClip(som);
-			Musica.loop();
-		} catch (MalformedURLException erro) {
-			System.out.println("Caminho do áudio não especificado! " + erro);
-		}
+//		try {
+//			URL som = new URL((getClass().getResource("/sons/circleoflife.mid")).toString());
+//			Musica = java.applet.Applet.newAudioClip(som);
+//			Musica.loop();
+//		} catch (MalformedURLException erro) {
+//			System.out.println("Caminho do áudio não especificado! " + erro);
+//		}
+//		classes.UtilidadesVidere.TocarMusicaMIDI("circleoflife");
 		
-		
+	}
+
+	@Override
+	protected String GetAudioName() {
+		return "circleoflife";
 	}
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -442,6 +446,8 @@ public class Inicial extends TelaPadrao {
 		// inicializando instancia do singleton
 		Inicial.instance = i;
 
+		// tocar primeira musica
+		classes.UtilidadesVidere.TocarMusicaMIDI(i.GetAudioName());
 		
 		Acerto.InicializarSingleton();
 	}

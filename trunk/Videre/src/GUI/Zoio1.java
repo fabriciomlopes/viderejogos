@@ -2,7 +2,6 @@ package GUI;
 
 import javax.swing.*;
 import java.awt.*;
-import java.net.*;
 
 public class Zoio1 extends TelaPadrao {
     public int tela=0;
@@ -12,15 +11,20 @@ public class Zoio1 extends TelaPadrao {
     public Zoio1() {
         initComponents();
                 
-        try{
-            URL som= new URL((getClass().getResource("/sons/belafera.mid")).toString());
-            Musica= java.applet.Applet.newAudioClip(som);
-            Musica.loop();
-        }catch(MalformedURLException erro){
-            System.out.println("Caminho do áudio não especificado! "+erro);
-        }
+//        try{
+//            URL som= new URL((getClass().getResource("/sons/belafera.mid")).toString());
+//            Musica= java.applet.Applet.newAudioClip(som);
+//            Musica.loop();
+//        }catch(MalformedURLException erro){
+//            System.out.println("Caminho do áudio não especificado! "+erro);
+//        }
+		//classes.UtilidadesVidere.TocarMusicaMIDI("belafera");
     }
-    
+
+	@Override
+	protected String GetAudioName() {
+		return "belafera";
+	}
    
     private void initComponents() {                          
         quadro = new javax.swing.JLabel();
