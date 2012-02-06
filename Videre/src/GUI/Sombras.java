@@ -5,7 +5,6 @@ import ConfigFases.FaseSombra;
 import ConfigFases.FaseSombraControlador;
 import java.awt.Rectangle;
 import javax.swing.*;
-import java.net.*;
 
 public class Sombras extends TelaJogo {
 
@@ -66,15 +65,20 @@ public class Sombras extends TelaJogo {
 		initComponents();
 
 		
-		try {
-			URL som = new URL((getClass().getResource("/sons/zipza.mid")).toString());
-			Musica = java.applet.Applet.newAudioClip(som);
-			Musica.loop();
-		} catch (MalformedURLException erro) {
-			System.out.println("Caminho do áudio não especificado! " + erro);
-		}
+//		try {
+//			URL som = new URL((getClass().getResource("/sons/zipza.mid")).toString());
+//			Musica = java.applet.Applet.newAudioClip(som);
+//			Musica.loop();
+//		} catch (MalformedURLException erro) {
+//			System.out.println("Caminho do áudio não especificado! " + erro);
+//		}
+//		classes.UtilidadesVidere.TocarMusicaMIDI("zipza");
 	}
 
+	@Override
+	protected String GetAudioName() {
+		return "zipza";
+	}
     private void initComponents() {                          
 //        srinoceronte = new javax.swing.JLabel();
 //        shipopotamo = new javax.swing.JLabel();
@@ -779,28 +783,28 @@ public class Sombras extends TelaJogo {
 
 
 
-	private void AumentaPontos() {
-		ptos = ptos + 1000;
-		Pontos.setText(String.valueOf(ptos));
-	}
-
-	private void ChamaErro() {
-		ptos = ptos - 500;
-		if (ptos < 0) {
-			ptos = 0;
-		}
-		Pontos.setText(String.valueOf(ptos));
-		vida = vida - 1;
-		NumVidas.setText(String.valueOf(vida));
-		if (vida == 0) {
-			Erro er = new Erro();
-			er.Pontuacao.setText(String.valueOf(ptos));
-			er.FlagJogo = 9;
-			Musica.stop();
-			er.setVisible(true);
-			this.setVisible(false);
-		}
-	}
+//	private void AumentaPontos() {
+//		ptos = ptos + 1000;
+//		Pontos.setText(String.valueOf(ptos));
+//	}
+//
+//	private void ChamaErro() {
+//		ptos = ptos - 500;
+//		if (ptos < 0) {
+//			ptos = 0;
+//		}
+//		Pontos.setText(String.valueOf(ptos));
+//		vida = vida - 1;
+//		NumVidas.setText(String.valueOf(vida));
+//		if (vida == 0) {
+//			Erro er = new Erro();
+//			er.Pontuacao.setText(String.valueOf(ptos));
+//			er.FlagJogo = 9;
+//			Musica.stop();
+//			er.setVisible(true);
+//			this.setVisible(false);
+//		}
+//	}
 
 	public void SetSombraAtual(Icon icone) {
 		Sombra.setIcon(icone);

@@ -5,6 +5,7 @@
 
 package classes;
 
+import java.net.URL;
 import java.util.Random;
 
 /**
@@ -45,6 +46,20 @@ public class UtilidadesVidere {
 		return getShuffleIntegers(0, iMax);
 	}
 
+	/**
+	 * toca um Audio midi
+	 * @param nomeAudio
+	 */
+	public static void TocarMusicaMIDI(String nomeAudio){
+		try {
+			//System.out.println("Tocando audio: " + nomeAudio);
+			URL url = Recursos.GetInsance().getUrl(Defs.audioPath + nomeAudio + ".mid");
+			AudioManager.GetInsance().PlayBGM(url);
+		} catch (Exception e) {
+			System.err.println("nao deu pra tocar: " + nomeAudio);
+		}
+	}
+	
 //	public static void main(String[] args) {
 //
 //		int[] merda = getShuffleIntegers(50);

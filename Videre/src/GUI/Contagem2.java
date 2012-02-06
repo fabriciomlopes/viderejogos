@@ -1,7 +1,6 @@
 package GUI;
 
 import javax.swing.*;
-import java.net.*;
 
 public class Contagem2 extends TelaJogo {
 
@@ -11,13 +10,18 @@ public class Contagem2 extends TelaJogo {
 	public Contagem2() {
 		initComponents();
 
-		try {
-			URL som = new URL((getClass().getResource("/sons/balaomagico.mid")).toString());
-			Musica = java.applet.Applet.newAudioClip(som);
-			Musica.loop();
-		} catch (MalformedURLException erro) {
-			System.out.println("Caminho do áudio não especificado! " + erro);
-		}
+//		try {
+//			URL som = new URL((getClass().getResource("/sons/balaomagico.mid")).toString());
+//			Musica = java.applet.Applet.newAudioClip(som);
+//			Musica.loop();
+//		} catch (MalformedURLException erro) {
+//			System.out.println("Caminho do áudio não especificado! " + erro);
+//		}
+	}
+
+	@Override
+	protected String GetAudioName() {
+		return "balaomagico";
 	}
 
     private void initComponents() {//GEN-BEGIN:initComponents
@@ -420,13 +424,15 @@ public class Contagem2 extends TelaJogo {
     }//GEN-LAST:event_AjudaMouseExited
 
     private void AjudaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AjudaMouseClicked
-		Musica.stop();
-		texto = "-A cada fase, você deverá achar quatro figuras. Clique em cima delas com o mouse.\n\n- O nome das figuras que você deve achar aparece escrito ao lado direito da imagem.\n\n- Cuidado! Ao clicar em cima do fundo, fora das figuras que você precisa encontrar, os pontos diminuem e você perde uma vida!.";
-		Ajuda a = new Ajuda();
-		a.textoajuda.setText(texto);
-		a.aj = 3;
-		a.setVisible(true);
-		this.setVisible(false);
+//		Musica.stop();
+//		texto = "-A cada fase, você deverá achar quatro figuras. Clique em cima delas com o mouse.\n\n- O nome das figuras que você deve achar aparece escrito ao lado direito da imagem.\n\n- Cuidado! Ao clicar em cima do fundo, fora das figuras que você precisa encontrar, os pontos diminuem e você perde uma vida!.";
+//		Ajuda a = new Ajuda();
+//		a.textoajuda.setText(texto);
+//		a.aj = 3;
+//		a.setVisible(true);
+//		this.setVisible(false);
+
+		AbrirAjuda("-A cada fase, você deverá achar quatro figuras. Clique em cima delas com o mouse.\n\n- O nome das figuras que você deve achar aparece escrito ao lado direito da imagem.\n\n- Cuidado! Ao clicar em cima do fundo, fora das figuras que você precisa encontrar, os pontos diminuem e você perde uma vida!.");
     }//GEN-LAST:event_AjudaMouseClicked
 
     private void Objeto2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Objeto2MouseClicked
@@ -483,7 +489,7 @@ public class Contagem2 extends TelaJogo {
 			Erro er = new Erro();
 			er.Pontuacao.setText(String.valueOf(ptos));
 			er.FlagJogo = 3;
-			Musica.stop();
+//			Musica.stop();
 			er.setVisible(true);
 			this.setVisible(false);
 		}
@@ -813,7 +819,7 @@ public class Contagem2 extends TelaJogo {
 				Acerto ac = new Acerto();
 				ac.Pontuacao.setText(String.valueOf(ptos));
 				ac.FlagJogo = 3;
-				Musica.stop();
+//				Musica.stop();
 				ac.setVisible(true);
 				this.setVisible(false);
 				break;

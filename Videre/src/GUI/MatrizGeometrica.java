@@ -1,7 +1,6 @@
 package GUI;
 
 import javax.swing.*;
-import java.net.*;
 
 public class MatrizGeometrica extends TelaJogo {
     private Icon img=null,id=null, m1,m2,m3,m4,c1,c2,c3,c4,f1,f2,f3,f4;
@@ -9,15 +8,19 @@ public class MatrizGeometrica extends TelaJogo {
     public MatrizGeometrica() {
         initComponents();
         
-        try{
-            URL som= new URL((getClass().getResource("/sons/mickeydisney.mid")).toString());
-            Musica= java.applet.Applet.newAudioClip(som);
-            Musica.loop();
-        }catch(MalformedURLException erro){
-            System.out.println("Caminho do áudio não especificado! "+erro);
-        }
+//        try{
+//            URL som= new URL((getClass().getResource("/sons/mickeydisney.mid")).toString());
+//            Musica= java.applet.Applet.newAudioClip(som);
+//            Musica.loop();
+//        }catch(MalformedURLException erro){
+//            System.out.println("Caminho do áudio não especificado! "+erro);
+//        }
     }
-    
+
+	@Override
+	protected String GetAudioName() {
+		return "mickeydisney";
+	}
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -398,15 +401,15 @@ public class MatrizGeometrica extends TelaJogo {
     }//GEN-LAST:event_AjudaMouseMoved
     
     private void AjudaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AjudaMouseClicked
-        Musica.stop();
-        texto="-Em cada fase aparecem quatro figuras.\n\n-você dever� repetir a mesma sequência, que est� sendo mostrada.\n\n-Para isso, clique nas figurinhas do lado direito.Preste aten��o na ordem dos cliques. A sequência dever� ser a mesma!";
-        Ajuda a=new Ajuda();
-        a.textoajuda.setText(texto);
-        a.aj=7;
-        a.setVisible(true);
-        this.setVisible(false);
-        
-        
+//        Musica.stop();
+//        texto="-Em cada fase aparecem quatro figuras.\n\n-você dever� repetir a mesma sequência, que est� sendo mostrada.\n\n-Para isso, clique nas figurinhas do lado direito.Preste aten��o na ordem dos cliques. A sequência dever� ser a mesma!";
+//        Ajuda a=new Ajuda();
+//        a.textoajuda.setText(texto);
+//        a.aj=7;
+//        a.setVisible(true);
+//        this.setVisible(false);
+       
+        AbrirAjuda("-Em cada fase aparecem quatro figuras.\n\n-você dever� repetir a mesma sequência, que est� sendo mostrada.\n\n-Para isso, clique nas figurinhas do lado direito.Preste aten��o na ordem dos cliques. A sequência dever� ser a mesma!");
         
     }//GEN-LAST:event_AjudaMouseClicked
     
@@ -562,7 +565,7 @@ public class MatrizGeometrica extends TelaJogo {
             Erro er=new Erro();
             er.Pontuacao.setText(String.valueOf(ptos));
             er.FlagJogo=7;
-            Musica.stop();
+//            Musica.stop();
             er.setVisible(true);
             this.setVisible(false);
         }
@@ -917,7 +920,7 @@ public class MatrizGeometrica extends TelaJogo {
                     Acerto ac=new Acerto();
                     ac.Pontuacao.setText(String.valueOf(ptos));
                     ac.FlagJogo=7;
-                    Musica.stop();
+//                    Musica.stop();
                     ac.setVisible(true);
                     this.setVisible(false);
                     break;

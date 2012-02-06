@@ -1,7 +1,5 @@
 package GUI;
 
-import java.net.*;
-
 public class Contagem1 extends TelaJogo {
 
 	private String st, st2, c1 = null;
@@ -10,13 +8,18 @@ public class Contagem1 extends TelaJogo {
 		initComponents();
 
 		//inicia musica
-		try {
-			URL som = new URL((getClass().getResource("/sons/cavaleirosdozodiaco.mid")).toString());
-			Musica = java.applet.Applet.newAudioClip(som);
-			Musica.loop();
-		} catch (MalformedURLException erro) {
-			System.out.println("Caminho do áudio não especificado! " + erro);
-		}
+//		try {
+//			URL som = new URL((getClass().getResource("/sons/cavaleirosdozodiaco.mid")).toString());
+//			Musica = java.applet.Applet.newAudioClip(som);
+//			Musica.loop();
+//		} catch (MalformedURLException erro) {
+//			System.out.println("Caminho do áudio não especificado! " + erro);
+//		}
+	}
+
+	@Override
+	protected String GetAudioName() {
+		return "cavaleirosdozodiaco";
 	}
 
     private void initComponents() {//GEN-BEGIN:initComponents
@@ -376,13 +379,15 @@ public class Contagem1 extends TelaJogo {
     }//GEN-LAST:event_AjudaMouseExited
 
     private void AjudaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AjudaMouseClicked
-		Musica.stop();
-		texto = "-Em cada fase aparecerá uma imagem com 1 número.\n\n-Identifique o número que aparece na imagem e clique em cima dele no grupo de números do lado direito";
-		Ajuda aj = new Ajuda();
-		aj.textoajuda.setText(texto);
-		aj.aj = 2;
-		aj.setVisible(true);
-		this.setVisible(false);
+//		Musica.stop();
+//		texto = "-Em cada fase aparecerá uma imagem com 1 número.\n\n-Identifique o número que aparece na imagem e clique em cima dele no grupo de números do lado direito";
+//		Ajuda aj = new Ajuda();
+//		aj.textoajuda.setText(texto);
+//		aj.aj = 2;
+//		aj.setVisible(true);
+//		this.setVisible(false);
+
+		AbrirAjuda("-Em cada fase aparecerá uma imagem com 1 número.\n\n-Identifique o número que aparece na imagem e clique em cima dele no grupo de números do lado direito");
     }//GEN-LAST:event_AjudaMouseClicked
 
     private void NoveMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NoveMouseMoved
@@ -560,7 +565,7 @@ public class Contagem1 extends TelaJogo {
 			Erro er = new Erro();
 			er.Pontuacao.setText(String.valueOf(ptos));
 			er.FlagJogo = 2;
-			Musica.stop();
+//			Musica.stop();
 			er.setVisible(true);
 			this.setVisible(false);
 		}
@@ -706,7 +711,7 @@ public class Contagem1 extends TelaJogo {
 					Acerto ac = new Acerto();
 					ac.Pontuacao.setText(String.valueOf(ptos));
 					ac.FlagJogo = 2;
-					Musica.stop();
+//					Musica.stop();
 					ac.setVisible(true);
 					this.setVisible(false);
 					break;

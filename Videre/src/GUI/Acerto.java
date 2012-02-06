@@ -1,7 +1,5 @@
 package GUI;
 
-import java.net.*;
-
 public class Acerto extends TelaFim {
 
 
@@ -24,15 +22,22 @@ public class Acerto extends TelaFim {
 	public Acerto() {
 		initComponents();
 
-		try {
-			URL som = new URL((getClass().getResource("/sons/looneytuney.mid")).toString());
-			Musica = java.applet.Applet.newAudioClip(som);
-			Musica.loop();
-		} catch (MalformedURLException erro) {
-			System.out.println("Caminho do áudio não especificado! " + erro);
-		}
+//		try {
+//			URL som = new URL((getClass().getResource("/sons/looneytuney.mid")).toString());
+//			Musica = java.applet.Applet.newAudioClip(som);
+//			Musica.loop();
+//		} catch (MalformedURLException erro) {
+//			System.out.println("Caminho do áudio não especificado! " + erro);
+//		}
+//		classes.UtilidadesVidere.TocarMusicaMIDI("looneytuney");
+
 	}
 
+	@Override
+	protected String GetAudioName() {
+		return "looneytuney";
+	}
+	
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
