@@ -1,0 +1,15 @@
+------------------------
+Videre v0.2 (2012/02/06)
+------------------------
+Patch Notes:
+- Major code refactor. Externally, the game is running without much difference.
+Patch Changes:
+[refactor] Sombras game is working just like the first version, although the internal code have been vastly modified.
+[fix] multiple Menus being instantiated and never being closed;
+[fix] Opening Help during a game will not reset player game state;
+
+------------------------
+Videre v0.1 (2011/08/27)
+------------------------
+Patch Notes:
+- First Version
