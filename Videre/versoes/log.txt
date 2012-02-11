@@ -1,4 +1,15 @@
 ------------------------
+Videre v0.3 (2012/02/11)
+------------------------
+Patch Notes:
+- Refactored Numeros minigame. Due to refactor, the game has now dynamic configurations;
+Patch Changes:
+[changed] each scene has a non-repeated-random position, the options to select is also randomized when game starts;
+[new] clicking at the middle image will cancel it's placement;
+Known Issues:
+- BGM (Background Music) is removed temporarily.
+
+------------------------
 Videre v0.2 (2012/02/06)
 ------------------------
 Patch Notes:
