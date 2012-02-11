@@ -4,7 +4,7 @@ import ConfigFases.FaseControladorBase;
 import javax.swing.*;
 import java.awt.*;
 
-public class TelaJogo extends TelaPadrao {
+public abstract class TelaJogo extends TelaPadrao {
 
 	protected int fase = 1, vida = 4, ptos = 0;
 //fase - contador para indicar a fase em que o jogador esta
@@ -190,7 +190,7 @@ public class TelaJogo extends TelaPadrao {
 	}
 
 	public static void main(String args[]) {
-		new TelaJogo().show();
+		//new TelaJogo().show();
 	}
     // Variables declaration - do not modify//GEN-BEGIN:variables
     protected javax.swing.JLabel NumVidas;
@@ -202,9 +202,7 @@ public class TelaJogo extends TelaPadrao {
     // End of variables declaration//GEN-END:variables
 
 	
-	protected FaseControladorBase GetControladorFase(){
-		return null;
-	}
+	protected abstract FaseControladorBase GetControladorFase();
 
 	@Override
 	protected void OnOpen() {

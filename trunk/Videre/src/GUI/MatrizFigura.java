@@ -1,4 +1,5 @@
 package GUI;
+import ConfigFases.FaseControladorBase;
 import javax.swing.*;
 
 public class MatrizFigura extends TelaJogo {
@@ -1970,5 +1971,9 @@ public class MatrizFigura extends TelaJogo {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
-    
+
+	@Override
+	protected FaseControladorBase GetControladorFase() {
+		return null;
+	}
 }
