@@ -1,5 +1,6 @@
 package GUI;
 
+import ConfigFases.FaseControladorBase;
 import javax.swing.*;
 
 public class CorObjeto extends TelaJogo {
@@ -1134,4 +1135,9 @@ public class CorObjeto extends TelaJogo {
     private javax.swing.JLabel Verde;
     private javax.swing.JLabel Vermelho;
     // End of variables declaration//GEN-END:variables
+
+	@Override
+	protected FaseControladorBase GetControladorFase() {
+		return null;
+	}
 }

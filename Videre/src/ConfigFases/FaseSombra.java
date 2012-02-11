@@ -14,19 +14,15 @@ import javax.swing.Icon;
  * Created on : Feb 1, 2012, 7:21:31 PM
  * @author diogo
  */
-public class FaseSombra {
+public class FaseSombra extends Fase {
 
 	public static final String caminhoImg = "sombras/";
 	
-	protected String imagem;
 	protected Rectangle boundsImagem;
-
-	// o numero da fase q pertence. 
-	public int indiceFase;
 	
 
-	public FaseSombra(String imagem, Rectangle boundsImagem) {
-		this.imagem = imagem;
+	public FaseSombra(String nome, Rectangle boundsImagem) {
+		super(nome);
 		this.boundsImagem = boundsImagem;
 		
 	}
@@ -36,14 +32,14 @@ public class FaseSombra {
 		// cria um icone da Sombra da imagem
 
 		//return new javax.swing.ImageIcon(getClass().getResource(caminhoImg + "s" + imagem + ".gif"));
-		return Recursos.GetInsance().getImagem(caminhoImg + "s" + imagem + ".gif");
+		return Recursos.GetInsance().getImagem(caminhoImg + "s" + GetName() + ".gif");
 	}
 
 	public javax.swing.JLabel criarBotao(TelaJogo tela, java.awt.event.MouseAdapter listener){
 		// cria um botao clicavel
 		javax.swing.JLabel botao = new javax.swing.JLabel();
 		
-		botao.setIcon(Recursos.GetInsance().getImagem(caminhoImg + imagem + ".jpg"));
+		botao.setIcon(Recursos.GetInsance().getImagem(caminhoImg + GetName() + ".jpg"));
 
 		//System.out.println("icon nulo?" + (botao.getIcon() == null));
 		botao.addMouseListener(listener);

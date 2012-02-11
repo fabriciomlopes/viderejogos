@@ -326,7 +326,7 @@ public class Inicial extends TelaPadrao {
 	//chama o jogo dos numeros
     private void NumerosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NumerosMouseClicked
 		
-		AbrirMenu(new Numeros());
+		AbrirMenu(GUI.Numeros.GetInsance());
     }//GEN-LAST:event_NumerosMouseClicked
 
 	//muda a cor do botao para amarelo quando o mouse passa em cima

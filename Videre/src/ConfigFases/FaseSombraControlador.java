@@ -7,7 +7,6 @@ package ConfigFases;
 
 import GUI.Sombras;
 import GUI.TelaJogo;
-import GUI.TelaPadrao;
 import javax.swing.JLabel;
 
 /**
@@ -15,7 +14,7 @@ import javax.swing.JLabel;
  * @author diogo
  * contem fases
  */
-public class FaseSombraControlador extends FaseControladorBase{
+public class FaseSombraControlador extends FaseControladorBase {
 
 	protected FaseSombra[] fases;
 	protected Sombras telaSombra;
@@ -24,12 +23,10 @@ public class FaseSombraControlador extends FaseControladorBase{
 		this.fases = fases;
 		this.telaSombra = tela;
 		
-		iCenarioAtual = 0;
-
 		for (int indice = 0; indice < fases.length; indice++) {
 			FaseSombra faseSombra = fases[indice];
 
-			faseSombra.indiceFase = indice;
+			
 			//System.out.println("setando indice fase : " + indice + " para " + faseSombra.imagem);
 			
 			javax.swing.JLabel botao = faseSombra.criarBotao(
@@ -42,7 +39,7 @@ public class FaseSombraControlador extends FaseControladorBase{
 						}
 					});
 					
-			botao.setName(faseSombra.imagem);
+			botao.setName(faseSombra.GetName());
 			
 		}
 
@@ -78,8 +75,8 @@ public class FaseSombraControlador extends FaseControladorBase{
 	}
 
 	public boolean ClicouCerto(String imagemClicada){
-		System.out.println("imagem clicada: " + imagemClicada + ", comparando: " + fases[GetCurrentScene()].imagem);
-		return imagemClicada.equals(fases[GetCurrentScene()].imagem);
+		//System.out.println("imagem clicada: " + imagemClicada + ", comparando: " + fases[GetCurrentScene()].GetName());
+		return imagemClicada.equals(fases[GetCurrentScene()].GetName());
 		
 		//return true; // testes
 	}

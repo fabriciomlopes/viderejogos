@@ -1,8 +1,6 @@
 package GUI;
 
-import ConfigFases.FaseControladorBase;
-import ConfigFases.FaseSombra;
-import ConfigFases.FaseSombraControlador;
+import ConfigFases.*;
 import java.awt.Rectangle;
 import javax.swing.*;
 

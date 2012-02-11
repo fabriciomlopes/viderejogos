@@ -1,5 +1,7 @@
 package GUI;
 
+import ConfigFases.FaseControladorBase;
+
 public class Contagem1 extends TelaJogo {
 
 	private String st, st2, c1 = null;
@@ -752,4 +754,9 @@ public class Contagem1 extends TelaJogo {
     private javax.swing.JLabel Um;
     private javax.swing.JLabel Zero;
     // End of variables declaration//GEN-END:variables
+
+	@Override
+	protected FaseControladorBase GetControladorFase() {
+		return null;
+	}
 }

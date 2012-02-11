@@ -16,6 +16,7 @@ import java.net.URL;
  */
 public class AudioManager {
 
+	public static final boolean DISABLE_SOUNDS = true; // faster to open menus when true
 
 	// <editor-fold defaultstate="collapsed" desc="Singleton">
 	private static AudioManager instance;
@@ -35,7 +36,9 @@ public class AudioManager {
     protected AudioClip currentAudio = null;
 	
 	public void PlayBGM(URL audioFile) {
-
+		if (DISABLE_SOUNDS) {
+			return;
+		}
 		// stop current audio
 		if (currentAudio != null) {
 			currentAudio.stop();

@@ -1,0 +1,107 @@
+tudo dumavez: 
+rename 's/gd\.jpg$/_grande_desenho\.jpg/' *.jpg && 
+rename 's/gf\.jpg$/_grande_figura\.jpg/' *.jpg &&
+rename 's/f\.jpg$/_figura\.jpg/' *.jpg &&
+rename 's/d\.jpg$/_desenho\.jpg/' *.jpg &&
+rename 's/g\.jpg$/_numero\.jpg/' *.jpg &&
+
+rename 's/_grande_figura/_figura_grande/' *.jpg &&
+rename 's/_grande_desenho/_desenho_grande/' *.jpg
+
+
+---------------------------------------------------------------------
+anotar depoois eu lembro o q fiz
+## gd -> _grande_desenho;
+rename -v 's/gd\.jpg$/_grande_desenho\.jpg/' *.jpg
+10gd.jpg renamed as 10_grande_desenho.jpg
+1gd.jpg renamed as 1_grande_desenho.jpg
+2gd.jpg renamed as 2_grande_desenho.jpg
+3gd.jpg renamed as 3_grande_desenho.jpg
+4gd.jpg renamed as 4_grande_desenho.jpg
+5gd.jpg renamed as 5_grande_desenho.jpg
+6gd.jpg renamed as 6_grande_desenho.jpg
+7gd.jpg renamed as 7_grande_desenho.jpg
+8gd.jpg renamed as 8_grande_desenho.jpg
+9gd.jpg renamed as 9_grande_desenho.jpg
+
+## gf -> _grande_figura;
+rename -v 's/gf\.jpg$/_grande_figura\.jpg/' *.jpg
+10gf.jpg renamed as 10_grande_figura.jpg
+1gf.jpg renamed as 1_grande_figura.jpg
+2gf.jpg renamed as 2_grande_figura.jpg
+3gf.jpg renamed as 3_grande_figura.jpg
+4gf.jpg renamed as 4_grande_figura.jpg
+5gf.jpg renamed as 5_grande_figura.jpg
+6gf.jpg renamed as 6_grande_figura.jpg
+7gf.jpg renamed as 7_grande_figura.jpg
+8gf.jpg renamed as 8_grande_figura.jpg
+9gf.jpg renamed as 9_grande_figura.jpg
+
+
+## f -> _figura;
+rename -v 's/f\.jpg$/_figura\.jpg/' *.jpg
+10f.jpg renamed as 10_figura.jpg
+1f.jpg renamed as 1_figura.jpg
+2f.jpg renamed as 2_figura.jpg
+3f.jpg renamed as 3_figura.jpg
+4f.jpg renamed as 4_figura.jpg
+5f.jpg renamed as 5_figura.jpg
+6f.jpg renamed as 6_figura.jpg
+7f.jpg renamed as 7_figura.jpg
+8f.jpg renamed as 8_figura.jpg
+9f.jpg renamed as 9_figura.jpg
+
+
+## d -> _desenho;
+rename -v 's/d\.jpg$/_desenho\.jpg/' *.jpg
+10d.jpg renamed as 10_desenho.jpg
+1d.jpg renamed as 1_desenho.jpg
+2d.jpg renamed as 2_desenho.jpg
+3d.jpg renamed as 3_desenho.jpg
+4d.jpg renamed as 4_desenho.jpg
+5d.jpg renamed as 5_desenho.jpg
+6d.jpg renamed as 6_desenho.jpg
+7d.jpg renamed as 7_desenho.jpg
+8d.jpg renamed as 8_desenho.jpg
+9d.jpg renamed as 9_desenho.jpg
+
+## g -> _numero;
+rename -v 's/g\.jpg$/_numero\.jpg/' *.jpg
+10g.jpg renamed as 10_numero.jpg
+1g.jpg renamed as 1_numero.jpg
+2g.jpg renamed as 2_numero.jpg
+3g.jpg renamed as 3_numero.jpg
+4g.jpg renamed as 4_numero.jpg
+5g.jpg renamed as 5_numero.jpg
+6g.jpg renamed as 6_numero.jpg
+7g.jpg renamed as 7_numero.jpg
+8g.jpg renamed as 8_numero.jpg
+9g.jpg renamed as 9_numero.jpg
+
+### trocando o lugar do 'grande' para facilitar no codigo
+## figuras
+rename -v 's/_grande_figura/_figura_grande/' *.jpg
+10_grande_figura.jpg renamed as 10_figura_grande.jpg
+1_grande_figura.jpg renamed as 1_figura_grande.jpg
+2_grande_figura.jpg renamed as 2_figura_grande.jpg
+3_grande_figura.jpg renamed as 3_figura_grande.jpg
+4_grande_figura.jpg renamed as 4_figura_grande.jpg
+5_grande_figura.jpg renamed as 5_figura_grande.jpg
+6_grande_figura.jpg renamed as 6_figura_grande.jpg
+7_grande_figura.jpg renamed as 7_figura_grande.jpg
+8_grande_figura.jpg renamed as 8_figura_grande.jpg
+9_grande_figura.jpg renamed as 9_figura_grande.jpg
+
+## desenho
+rename -v 's/_grande_desenho/_desenho_grande/' *.jpg
+10_grande_desenho.jpg renamed as 10_desenho_grande.jpg
+1_grande_desenho.jpg renamed as 1_desenho_grande.jpg
+2_grande_desenho.jpg renamed as 2_desenho_grande.jpg
+3_grande_desenho.jpg renamed as 3_desenho_grande.jpg
+4_grande_desenho.jpg renamed as 4_desenho_grande.jpg
+5_grande_desenho.jpg renamed as 5_desenho_grande.jpg
+6_grande_desenho.jpg renamed as 6_desenho_grande.jpg
+7_grande_desenho.jpg renamed as 7_desenho_grande.jpg
+8_grande_desenho.jpg renamed as 8_desenho_grande.jpg
+9_grande_desenho.jpg renamed as 9_desenho_grande.jpg
+
