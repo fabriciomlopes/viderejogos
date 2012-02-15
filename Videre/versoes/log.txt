@@ -1,5 +1,16 @@
 ------------------------
-Videre v0.3 (2012/02/11)
+Videre v0.9.4 (2012/02/15)
+------------------------
+Patch Notes:
+- Minor change on Version names, since we are at Beta;
+- Refactored MatrizGeometrica minigame. Due to refactor, the game has now dynamic configurations;
+Patch Changes:
+[changed] each scene has a non-repeated-random sequence, the options to select is also randomized when a new game starts;
+[new] clicking at the images of your sequence will cancel the latest placement;
+
+
+------------------------
+Videre v0.9.3 (2012/02/11)
 ------------------------
 Patch Notes:
 - Refactored Numeros minigame. Due to refactor, the game has now dynamic configurations;
@@ -10,7 +21,7 @@ Known Issues:
 - BGM (Background Music) is removed temporarily.
 
 ------------------------
-Videre v0.2 (2012/02/06)
+Videre v0.9.2 (2012/02/06)
 ------------------------
 Patch Notes:
 - Major code refactor. Externally, the game is running without much difference.
@@ -20,7 +31,7 @@ Patch Changes:
 [fix] Opening Help during a game will not reset player game state;
 
 ------------------------
-Videre v0.1 (2011/08/27)
+Videre v0.9.1 (2011/08/27)
 ------------------------
 Patch Notes:
 - First Version
