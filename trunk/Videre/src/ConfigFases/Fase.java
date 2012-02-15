@@ -5,6 +5,8 @@
 
 package ConfigFases;
 
+import GUI.TelaJogo;
+
 /**
  * Created on : Feb 9, 2012, 8:24:11 PM
  * @author diogo
@@ -20,5 +22,6 @@ public abstract class Fase {
 	public String GetName() {
 		return sName;
 	}
-	
+
+	public abstract void InitComponents(TelaJogo tela, java.awt.event.MouseAdapter listener);
 }

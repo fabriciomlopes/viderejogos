@@ -29,7 +29,7 @@ public class FaseSombraControlador extends FaseControladorBase {
 			
 			//System.out.println("setando indice fase : " + indice + " para " + faseSombra.imagem);
 			
-			javax.swing.JLabel botao = faseSombra.criarBotao(
+			faseSombra.InitComponents(
 					tela,
 					new java.awt.event.MouseAdapter() {
 
@@ -39,7 +39,6 @@ public class FaseSombraControlador extends FaseControladorBase {
 						}
 					});
 					
-			botao.setName(faseSombra.GetName());
 			
 		}
 

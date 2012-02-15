@@ -1228,9 +1228,9 @@ public class Sombras extends TelaJogo {
 //		}
 //	}
 //
-	public static void main(String args[]) {
-		new Sombras().show();
-	}
+//	public static void main(String args[]) {
+//		new Sombras().show();
+//	}
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Sombra;
 //    private javax.swing.JLabel abacaxi;
