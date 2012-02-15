@@ -1,0 +1,23 @@
+rename -v 's/^p/small_/' *.jpg &&
+
+rename -v 's/small_/small/' *.jpg &&
+
+rename -v 's/quadrado/_square/' *.jpg &&
+rename -v 's/triangulo/_triangle/' *.jpg &&
+rename -v 's/estrela/_star/' *.jpg &&
+rename -v 's/elipse/_ellipse/' *.jpg &&
+rename -v 's/hexagono/_hexagon/' *.jpg &&
+
+rename -v 's/^_/big_/' *.jpg
+
+		Blue,
+		Green,
+		Red,
+		Yellow,
+		
+rename -v 's/azul/_blue/' *.jpg &&
+rename -v 's/verde/_green/' *.jpg &&
+rename -v 's/vermelho/_red/' *.jpg &&
+rename -v 's/vermelha/_red/' *.jpg &&
+rename -v 's/amarelo/_yellow/' *.jpg &&
+rename -v 's/amarela/_yellow/' *.jpg

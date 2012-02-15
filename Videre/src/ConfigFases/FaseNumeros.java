@@ -50,7 +50,7 @@ public class FaseNumeros extends Fase {
 	}
 	
 	
-	public void criarBotoes(TelaJogo tela, java.awt.event.MouseAdapter listener){
+	public void InitComponents(TelaJogo tela, java.awt.event.MouseAdapter listener){
 		String sName;
 
 		// criar Figura Basica:

@@ -59,7 +59,33 @@ public class UtilidadesVidere {
 			System.err.println("nao deu pra tocar: " + nomeAudio);
 		}
 	}
-	
+
+	/**
+	 * join an integer array into a string.
+	 * each value is separated by a sepearator
+	 * @param sSeparator
+	 * @param vSequence
+	 * @return "1,2,3"
+	 */
+	public static String JoinInt(String sSeparator, int [] vSequence) {
+		StringBuilder output = new StringBuilder();
+		
+		for (int index = 0; index < vSequence.length; index++) {
+			int i = vSequence[index];
+
+			output.append(String.valueOf(i));
+
+			// next is last index?
+			if (index+1 <= vSequence.length) {
+				// no, then add separator
+				output.append(sSeparator);
+			}
+			
+		}
+		
+		return output.toString();
+	}
+
 //	public static void main(String[] args) {
 //
 //		int[] merda = getShuffleIntegers(50);
