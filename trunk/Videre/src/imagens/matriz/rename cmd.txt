@@ -1,0 +1,188 @@
+# pequenas
+rename -v 's/Cópia/Copia/' *.*
+
+# move all to parent folder
+mv -v *.* ../
+# at parent folder
+rename -v 's/Copia de /small_/' *.*
+
+# rename normais to big
+cd normais/
+
+# move all normais to parent folder
+mv -v *.* ../
+
+# rename everyone to be ordered as 1,2,3,4 instead of random 1,4,7,123 or 4,23,64,1908 and so on.
+
+## se der errado:
+rm -v *.jpg && 
+rm -v *.gif && 
+cp ./backup/*.jpg ./  && 
+cp ./backup/*.gif ./
+## 
+
+
+
+## AVIAO
+rename -v 's/_aviao2/_aviao1/' *.* &&
+rename -v 's/_aviao3/_aviao2/' *.* &&
+rename -v 's/_aviao5/_aviao3/' *.* &&
+rename -v 's/_aviao6/_aviao4/' *.* &&
+
+## BLUSA
+#rename -v 's/_blusa1/_blusa1/' *.* &&
+rename -v 's/_blusa4/_blusa2/' *.* &&
+rename -v 's/_blusa8/_blusa3/' *.* &&
+rename -v 's/_blusa9/_blusa4/' *.* &&
+
+## BLUSINHA
+rename -v 's/_blusinha3/_blusinha4/' *.* &&
+rename -v 's/_blusinha2/_blusinha3/' *.* &&
+rename -v 's/_blusinha1/_blusinha2/' *.* &&
+rename -v 's/_blusinha.jpg/_blusinha1.jpg/' *.* &&
+
+## CACHORRO
+#rename -v 's/_cachorro1/_cachorro1/' *.* &&
+rename -v 's/_cachorro6/_cachorro2/' *.* &&
+rename -v 's/_cachorro7/_cachorro3/' *.* &&
+rename -v 's/_cachorro9/_cachorro4/' *.* &&
+
+## CANETA
+rename -v 's/_caneta4/_caneta4/' *.* &&
+rename -v 's/_caneta2/_caneta3/' *.* &&
+rename -v 's/_caneta1/_caneta2/' *.* &&
+rename -v 's/_caneta.jpg/_caneta1.jpg/' *.* &&
+
+## CARRO
+rename -v 's/_carro14/_carro1/' *.* &&
+rename -v 's/_carro16/_carro2/' *.* &&
+rename -v 's/_carro22/_carro3/' *.* &&
+rename -v 's/_carro5/_carro4/' *.* &&
+
+## CELULAR
+rename -v 's/_celular2/_celular1/' *.* &&
+rename -v 's/_celular4/_celular2/' *.* &&
+rename -v 's/_celular5/_celular3/' *.* &&
+rename -v 's/_celular9/_celular4/' *.* &&
+
+## FLOR
+rename -v 's/_flor2/_flor1/' *.* &&
+rename -v 's/_flor4/_flor2/' *.* &&
+rename -v 's/_flor5/_flor3/' *.* &&
+rename -v 's/_flor6/_flor4/' *.* &&
+
+## LIVRO
+#rename -v 's/_livro1/_livro1/' *.* &&
+#rename -v 's/_livro2/_livro2/' *.* &&
+rename -v 's/_livro5/_livro3/' *.* &&
+rename -v 's/_livro7/_livro4/' *.* &&
+
+## MULHER
+rename -v 's/_mulher4/_mulher4/' *.* &&
+rename -v 's/_mulher2/_mulher3/' *.* &&
+rename -v 's/_mulher1/_mulher2/' *.* &&
+rename -v 's/_mulher.jpg/_mulher1.jpg/' *.* &&
+
+## PEIXE
+rename -v 's/_peixe2/_peixe1/' *.* &&
+rename -v 's/_peixe4/_peixe2/' *.* &&
+rename -v 's/_peixe5/_peixe3/' *.* &&
+rename -v 's/_peixe7/_peixe4/' *.* &&
+
+## SAPO
+rename -v 's/_sapo3/_sapo4/' *.jpg &&
+rename -v 's/_sapo1/_sapo3/' *.jpg &&
+rename -v 's/_sapo.gif/_sapo1.gif/' *.gif &&
+rename -v 's/_sapo.jpg/_sapo2.jpg/' *.jpg &&
+
+## TAMBOR
+rename -v 's/_tambor3/_tambor4/' *.* &&
+rename -v 's/_tambor2/_tambor3/' *.* &&
+rename -v 's/_tambor1/_tambor2/' *.* &&
+rename -v 's/_tambor.jpg/_tambor1.jpg/' *.* &&
+
+## TAMBOR
+rename -v 's/_televisao4/_televisao4/' *.* &&
+rename -v 's/_televisao3/_televisao3/' *.* &&
+rename -v 's/_televisao2/_televisao2/' *.* &&
+rename -v 's/_televisao.jpg/_televisao1.jpg/' *.*
+
+## rename tudo, separando o numero do objeto.
+rename -v 's/1/_1/' *.* && 
+rename -v 's/2/_2/' *.* && 
+rename -v 's/3/_3/' *.* && 
+rename -v 's/4/_4/' *.*
+
+
+####: original
+## aviao2.jpg
+## aviao3.jpg
+## aviao5.jpg
+## aviao6.jpg
+## 
+## blusa1.jpg
+## blusa4.jpg
+## blusa8.jpg
+## blusa9.jpg
+## 
+## blusinha1.jpg
+## blusinha2.jpg
+## blusinha3.jpg
+## blusinha.jpg
+## 
+## cachorro1.gif
+## cachorro6.jpg
+## cachorro7.jpg
+## cachorro9.jpg
+## 
+## caneta1.jpg
+## caneta2.jpg
+## caneta4.jpg
+## caneta.jpg
+## 
+## carro14.jpg
+## carro16.jpg
+## carro22.jpg
+## carro5 .jpg
+## 
+## celular2.jpg
+## celular4.jpg
+## celular5.jpg
+## celular9.jpg
+## 
+## flor2.jpg
+## flor4.jpg
+## flor5.jpg
+## flor6.jpg
+## 
+## livro1.jpg
+## livro2.jpg
+## livro5.jpg
+## livro7.jpg
+## 
+## mulher1.jpg
+## mulher2.jpg
+## mulher4.jpg
+## mulher.jpg
+## 
+## peixe2.jpg
+## peixe4.jpg
+## peixe5.jpg
+## peixe7.jpg
+## 
+## sapo1.jpg
+## sapo3.jpg
+## sapo.gif
+## sapo.jpg
+## 
+## tambor1.jpg
+## tambor2.jpg
+## tambor3.jpg
+## tambor.jpg
+## 
+## televisao2.jpg
+## televisao3.jpg
+## televisao4.jpg
+## televisao.jpg
+
+

@@ -1,7 +1,7 @@
 package GUI;
 
 import ConfigFases.FaseControladorBase;
-import ConfigFases.FaseMatrizGeometrica;
+import ConfigFases.FaseMatriz;
 import ConfigFases.FaseMatrizGeometricaControlador;
 
 public class MatrizGeometrica extends TelaJogo {
@@ -29,29 +29,29 @@ public class MatrizGeometrica extends TelaJogo {
 
 		controlaFase = new FaseMatrizGeometricaControlador(this,
 				//								   FORMS,              COLORS
-				new FaseMatrizGeometrica(new int[]{0,0,2,1}, new int[]{3,2,2,1}), // fase  1
-				new FaseMatrizGeometrica(new int[]{1,1,3,2}, new int[]{1,3,3,2}), // fase  2
-				new FaseMatrizGeometrica(new int[]{2,1,3,0}, new int[]{1,3,0,2}), // fase  3
-				new FaseMatrizGeometrica(new int[]{3,2,0,1}, new int[]{3,3,1,2}), // fase  4
-				new FaseMatrizGeometrica(new int[]{0,3,1,3}, new int[]{0,0,3,2}), // fase  5
-				new FaseMatrizGeometrica(new int[]{1,1,3,0}, new int[]{0,2,3,0}), // fase  6
-				new FaseMatrizGeometrica(new int[]{2,0,1,3}, new int[]{0,0,2,2}), // fase  7
-				new FaseMatrizGeometrica(new int[]{0,0,1,1}, new int[]{0,0,1,1}), // fase  8
-				new FaseMatrizGeometrica(new int[]{0,0,0,2}, new int[]{2,3,1,0}), // fase  9
-				new FaseMatrizGeometrica(new int[]{1,3,2,0}, new int[]{2,3,1,0}), // fase 10
-				new FaseMatrizGeometrica(new int[]{2,2,0,3}, new int[]{2,1,0,0}), // fase 11
-				new FaseMatrizGeometrica(new int[]{3,2,3,0}, new int[]{2,0,0,3}), // fase 12
-				new FaseMatrizGeometrica(new int[]{0,3,1,2}, new int[]{1,2,2,2}), // fase 13
-				new FaseMatrizGeometrica(new int[]{1,0,2,3}, new int[]{3,3,3,3}), // fase 14
-				new FaseMatrizGeometrica(new int[]{2,2,1,1}, new int[]{3,3,1,1}), // fase 15
-				new FaseMatrizGeometrica(new int[]{3,3,0,0}, new int[]{3,0,2,2}), // fase 16
-				new FaseMatrizGeometrica(new int[]{3,3,1,1}, new int[]{2,1,2,3}), // fase 17
-				new FaseMatrizGeometrica(new int[]{0,1,3,2}, new int[]{3,2,0,1}), // fase 18
-				new FaseMatrizGeometrica(new int[]{1,0,2,3}, new int[]{2,2,0,0}), // fase 19
-				new FaseMatrizGeometrica(new int[]{2,0,1,3}, new int[]{1,2,3,0}), // fase 10
-				new FaseMatrizGeometrica(new int[]{1,2,3,0}, new int[]{0,2,3,1}), // fase 21
-				new FaseMatrizGeometrica(new int[]{2,0,2,3}, new int[]{3,3,0,1}), // fase 22
-				new FaseMatrizGeometrica(new int[]{3,2,1,0}, new int[]{1,2,0,3})  // fase 23                              
+				new FaseMatriz(new int[]{0,0,2,1}, new int[]{3,2,2,1}), // fase  1
+				new FaseMatriz(new int[]{1,1,3,2}, new int[]{1,3,3,2}), // fase  2
+				new FaseMatriz(new int[]{2,1,3,0}, new int[]{1,3,0,2}), // fase  3
+				new FaseMatriz(new int[]{3,2,0,1}, new int[]{3,3,1,2}), // fase  4
+				new FaseMatriz(new int[]{0,3,1,3}, new int[]{0,0,3,2}), // fase  5
+				new FaseMatriz(new int[]{1,1,3,0}, new int[]{0,2,3,0}), // fase  6
+				new FaseMatriz(new int[]{2,0,1,3}, new int[]{0,0,2,2}), // fase  7
+				new FaseMatriz(new int[]{0,0,1,1}, new int[]{0,0,1,1}), // fase  8
+				new FaseMatriz(new int[]{0,0,0,2}, new int[]{2,3,1,0}), // fase  9
+				new FaseMatriz(new int[]{1,3,2,0}, new int[]{2,3,1,0}), // fase 10
+				new FaseMatriz(new int[]{2,2,0,3}, new int[]{2,1,0,0}), // fase 11
+				new FaseMatriz(new int[]{3,2,3,0}, new int[]{2,0,0,3}), // fase 12
+				new FaseMatriz(new int[]{0,3,1,2}, new int[]{1,2,2,2}), // fase 13
+				new FaseMatriz(new int[]{1,0,2,3}, new int[]{3,3,3,3}), // fase 14
+				new FaseMatriz(new int[]{2,2,1,1}, new int[]{3,3,1,1}), // fase 15
+				new FaseMatriz(new int[]{3,3,0,0}, new int[]{3,0,2,2}), // fase 16
+				new FaseMatriz(new int[]{3,3,1,1}, new int[]{2,1,2,3}), // fase 17
+				new FaseMatriz(new int[]{0,1,3,2}, new int[]{3,2,0,1}), // fase 18
+				new FaseMatriz(new int[]{1,0,2,3}, new int[]{2,2,0,0}), // fase 19
+				new FaseMatriz(new int[]{2,0,1,3}, new int[]{1,2,3,0}), // fase 10
+				new FaseMatriz(new int[]{1,2,3,0}, new int[]{0,2,3,1}), // fase 21
+				new FaseMatriz(new int[]{2,0,2,3}, new int[]{3,3,0,1}), // fase 22
+				new FaseMatriz(new int[]{3,2,1,0}, new int[]{1,2,0,3})  // fase 23
 				);
 
         initComponents();
