@@ -1,4 +1,14 @@
 ------------------------
+Videre v0.9.5 (2012/02/17)
+------------------------
+Patch Notes:
+- Refactored MatrizFigura minigame. Due to refactor, the game has now dynamic configurations;
+Patch Changes:
+[changed] each scene has a non-repeated-random sequence, the options to select is also randomized when a new game starts;
+[new] clicking at the images of your sequence will cancel the latest placement;
+
+
+------------------------
 Videre v0.9.4 (2012/02/15)
 ------------------------
 Patch Notes:
@@ -20,6 +30,7 @@ Patch Changes:
 Known Issues:
 - BGM (Background Music) is removed temporarily.
 
+
 ------------------------
 Videre v0.9.2 (2012/02/06)
 ------------------------
@@ -29,6 +40,7 @@ Patch Changes:
 [refactor] Sombras game is working just like the first version, although the internal code have been vastly modified.
 [fix] multiple Menus being instantiated and never being closed;
 [fix] Opening Help during a game will not reset player game state;
+
 
 ------------------------
 Videre v0.9.1 (2011/08/27)
