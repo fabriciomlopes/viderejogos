@@ -46,6 +46,7 @@ public class UtilidadesVidere {
 		return getShuffleIntegers(0, iMax);
 	}
 
+
 	/**
 	 * toca um Audio midi
 	 * @param nomeAudio
@@ -86,13 +87,30 @@ public class UtilidadesVidere {
 		return output.toString();
 	}
 
-//	public static void main(String[] args) {
+	public static void main(String[] args) {
+
+//		int [] shh = getShuffleIntegers(4);
+//		int [] shh_ = getShuffleIntegers(4);
 //
-//		int[] merda = getShuffleIntegers(50);
-//		for (int index = 0; index  < merda.length; index ++) {
-//			System.out.println(index + ": " + merda[index]);
+//		for (int i= 0; i < 4; i++) {
+//			int [] shh2 = getShuffleIntegers(7);
+//			for (int j= 0; j < 7; j++) {
+////				System.out.print(i + "," + j + "; ");
+//				System.out.print(shh[i] + "," + shh2[j] + "; ");
+//			}
+//			System.out.println("");
 //		}
-//
-//	}
+
+		int[] sh = getShuffleIntegers(4*7);
+		for (int i= 0; i < 4; i++) {
+			int [] shh2 = getShuffleIntegers(7);
+			for (int j= 0; j < 7; j++) {
+				int nu = sh[4*i+j];
+				System.out.print((nu % 4) + "," + (nu % 7) + "; ");
+			}
+			System.out.println("");
+		}
+
+	}
 	
 }
