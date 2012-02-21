@@ -1,4 +1,15 @@
 ------------------------
+Videre v0.9.6 (2012/02/21)
+------------------------
+Patch Notes:
+- Refactored Esconder Letras and Esconder Numeros minigames. Due to refactor, the game has now dynamic configurations;
+Patch Changes:
+[changed] each scene of the refactored games has now a non-repeated-random sequence;
+Known Issues:
+- BGM (Background Music) is still temporarily removed.
+- Luzes game is still not currently working due to previously rename of images.
+
+------------------------
 Videre v0.9.5 (2012/02/17)
 ------------------------
 Patch Notes:
@@ -6,6 +17,9 @@ Patch Notes:
 Patch Changes:
 [changed] each scene has a non-repeated-random sequence, the options to select is also randomized when a new game starts;
 [new] clicking at the images of your sequence will cancel the latest placement;
+Known Issues:
+- BGM (Background Music) is still temporarily removed.
+- Luzes game is still not currently working due to previously rename of images.
 
 
 ------------------------
@@ -17,7 +31,9 @@ Patch Notes:
 Patch Changes:
 [changed] each scene has a non-repeated-random sequence, the options to select is also randomized when a new game starts;
 [new] clicking at the images of your sequence will cancel the latest placement;
-
+Known Issues:
+- BGM (Background Music) is still temporarily removed.
+- Luzes game is not currently working due to rename of images.
 
 ------------------------
 Videre v0.9.3 (2012/02/11)
