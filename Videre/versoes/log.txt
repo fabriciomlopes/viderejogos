@@ -1,4 +1,15 @@
 ------------------------
+Videre v0.9.7 (2012/02/24)
+------------------------
+Patch Notes:
+- Refactored Esconder Figuras minigame. Due to refactor, the game has now dynamic configurations;
+Patch Changes:
+[changed] the click area of objects is now twice bigger.
+Known Issues:
+- BGM (Background Music) is still temporarily removed.
+- Luzes game is still not currently working due to previously rename of images.
+
+------------------------
 Videre v0.9.6 (2012/02/21)
 ------------------------
 Patch Notes:
