@@ -1460,9 +1460,9 @@ public class Contagem extends TelaJogo {
 //		}
 //	}
 //
-	public static void main(String args[]) {
-		new Contagem().show();
-	}
+//	public static void main(String args[]) {
+//		new Contagem().show();
+//	}
     // Variables declaration - do not modify//GEN-BEGIN:variables
 //    private javax.swing.JLabel A;
     private javax.swing.JButton Ajuda;

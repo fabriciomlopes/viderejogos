@@ -23,5 +23,5 @@ public abstract class Fase {
 		return sName;
 	}
 
-	public abstract void InitComponents(TelaJogo tela, java.awt.event.MouseAdapter listener);
+	public abstract void InitComponents(FaseControladorBase controller, java.awt.event.MouseAdapter listener);
 }

@@ -23,7 +23,7 @@ public class FaseEsconder extends Fase {
 	}
 
 	@Override
-	public void InitComponents(TelaJogo tela, MouseAdapter listener) {
+	public void InitComponents(FaseControladorBase controller, MouseAdapter listener) {
 //		throw new UnsupportedOperationException("Not supported yet.");
 	}
 
