@@ -35,7 +35,7 @@ public class FaseSombra extends Fase {
 		return Recursos.GetInsance().getImagem(caminhoImg + "s" + GetName() + ".gif");
 	}
 
-	public void InitComponents(TelaJogo tela, java.awt.event.MouseAdapter listener){
+	public void InitComponents(FaseControladorBase controller, java.awt.event.MouseAdapter listener){
 		// cria um botao clicavel
 		javax.swing.JLabel botao = new javax.swing.JLabel();
 		
@@ -45,7 +45,7 @@ public class FaseSombra extends Fase {
 		botao.addMouseListener(listener);
 		//botao.setIcon(new javax.swing.ImageIcon(getClass().getResource(caminhoImg + imagem + ".jpg")));
 		
-		tela.add(botao);
+		controller.GetTela().add(botao);
 		
 		botao.setName(GetName());
 		botao.setBounds(boundsImagem);

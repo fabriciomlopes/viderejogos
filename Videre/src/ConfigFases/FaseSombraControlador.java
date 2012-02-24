@@ -30,7 +30,7 @@ public class FaseSombraControlador extends FaseControladorBase {
 			//System.out.println("setando indice fase : " + indice + " para " + faseSombra.imagem);
 			
 			faseSombra.InitComponents(
-					tela,
+					this,
 					new java.awt.event.MouseAdapter() {
 
 						@Override

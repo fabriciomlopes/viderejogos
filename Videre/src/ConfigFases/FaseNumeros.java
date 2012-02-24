@@ -50,7 +50,7 @@ public class FaseNumeros extends Fase {
 	}
 	
 	
-	public void InitComponents(TelaJogo tela, java.awt.event.MouseAdapter listener){
+	public void InitComponents(FaseControladorBase controller, java.awt.event.MouseAdapter listener){
 		String sName;
 
 		// criar Figura Basica:
@@ -59,7 +59,7 @@ public class FaseNumeros extends Fase {
 		basicFigure.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 		basicFigure.setIcon(getImage(sName));
         basicFigure.addMouseListener(listener);
-        tela.add(basicFigure);
+        controller.GetTela().add(basicFigure);
 		basicFigure.setSize(60, 60);
 		basicFigure.setName(sName);
 
@@ -69,7 +69,7 @@ public class FaseNumeros extends Fase {
         objectView.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 		objectView.setIcon(getImage(sName));
         objectView.addMouseListener(listener);
-        tela.add(objectView);
+        controller.GetTela().add(objectView);
         objectView.setSize(60, 60);
 		objectView.setName(sName);
 		

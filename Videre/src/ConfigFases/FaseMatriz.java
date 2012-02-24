@@ -40,7 +40,7 @@ public class FaseMatriz extends Fase {
 
 
 	@Override
-	public void InitComponents(TelaJogo tela, MouseAdapter listener) {
+	public void InitComponents(FaseControladorBase controller, MouseAdapter listener) {
 		//InitComponents(tela);
 	}
 

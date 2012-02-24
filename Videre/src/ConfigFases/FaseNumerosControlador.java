@@ -53,7 +53,7 @@ public class FaseNumerosControlador extends FaseControladorBase {
 			FaseNumeros faseNumero = new FaseNumeros(String.valueOf(indice + 1));
 			fases[indice] = faseNumero;
 
-			faseNumero.InitComponents(tela, new java.awt.event.MouseAdapter() {
+			faseNumero.InitComponents(this, new java.awt.event.MouseAdapter() {
 
 				@Override
 				public void mouseClicked(java.awt.event.MouseEvent evt) {
