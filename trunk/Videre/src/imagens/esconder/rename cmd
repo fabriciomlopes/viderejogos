@@ -1,0 +1,9 @@
+## renamed all images that started with 'f' to 'background_'
+
+rename -v 's/^f/background_/' *.*
+
+## put 'object_' for everyone
+rename -v 's/^/object_/' *.*
+
+## remove 'object_' from backgrounds
+rename -v 's/object_background/background/' *.*
