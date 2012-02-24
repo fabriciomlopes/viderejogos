@@ -834,7 +834,7 @@ public class Contagem extends TelaJogo {
 //		a.setVisible(true);
 //		this.setVisible(false);
 
-		AbrirAjuda("-Em cada fase aparecer� uma imagem com duas letras.\n\n-Identifique as letras que aparecem na imagem e clique em cima delas no grupo de letras do lado direito");
+		AbrirAjuda("-Em cada fase aparecerá uma imagem com duas letras.\n\n-Identifique as letras que aparecem na imagem e clique em cima delas no grupo de letras do lado direito");
     }//GEN-LAST:event_AjudaMouseClicked
 
 //	//muda a cor das label�s para amarelo quando o mouse passa em cima delas
