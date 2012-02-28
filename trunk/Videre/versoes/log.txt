@@ -1,4 +1,13 @@
 ------------------------
+Videre v0.9.8 (2012/02/27)
+------------------------
+Patch Notes:
+- Refactored Cor Objeto minigame. Due to refactor, the game has now dynamic level configurations;
+Known Issues:
+- BGM (Background Music) is still temporarily removed.
+- Luzes game is still not currently working due to previously rename of images.
+
+------------------------
 Videre v0.9.7 (2012/02/24)
 ------------------------
 Patch Notes:
