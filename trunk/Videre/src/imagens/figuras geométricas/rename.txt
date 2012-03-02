@@ -20,4 +20,7 @@ rename -v 's/verde/_green/' *.jpg &&
 rename -v 's/vermelho/_red/' *.jpg &&
 rename -v 's/vermelha/_red/' *.jpg &&
 rename -v 's/amarelo/_yellow/' *.jpg &&
-rename -v 's/amarela/_yellow/' *.jpg
+rename -v 's/amarela/_yellow/' *.jpg &&
+
+
+rename -v 's/^l_/square_/' *.jpg
