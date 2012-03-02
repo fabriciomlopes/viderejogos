@@ -1,4 +1,13 @@
 ------------------------
+Videre v0.9.9 (2012/03/01)
+------------------------
+Patch Notes:
+- Refactored Luzes minigame. Due to refactor, the game has now dynamic level configurations;
+Patch Changes:
+[fix] BGM is now playing properly;
+[fix] Minor fixes on Luzes glitches of the color update;
+
+------------------------
 Videre v0.9.8 (2012/02/27)
 ------------------------
 Patch Notes:
