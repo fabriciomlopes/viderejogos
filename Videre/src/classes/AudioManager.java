@@ -5,8 +5,10 @@
 
 package classes;
 
-import java.applet.AudioClip;
 import java.net.URL;
+import javax.sound.midi.MidiSystem;
+import javax.sound.midi.Sequence;
+import javax.sound.midi.Sequencer;
 
 
 /**
@@ -16,7 +18,7 @@ import java.net.URL;
  */
 public class AudioManager {
 
-	public static final boolean DISABLE_SOUNDS = true; // faster to open menus when true
+	public static final boolean DISABLE_SOUNDS = false; // 
 
 	// <editor-fold defaultstate="collapsed" desc="Singleton">
 	private static AudioManager instance;
@@ -25,6 +27,7 @@ public class AudioManager {
 		InicializarSingleton();
 		return instance;
 	}
+
 	public static void InicializarSingleton() {
 		if (instance == null) {
 			instance = new AudioManager();
@@ -32,28 +35,42 @@ public class AudioManager {
 	}
 	// </editor-fold>
 
+//    protected AudioClip currentAudio = null;
+	/**
+	 * The midi Player (this is better than AudioClip).
+	 * It seems that it loads the midi file in 
+	 * another thread so that it wouldn't freeze our game.
+	 */
+	protected Sequencer currentSequencer; 
 
-    protected AudioClip currentAudio = null;
-	
 	public void PlayBGM(URL audioFile) {
 		if (DISABLE_SOUNDS) {
 			return;
 		}
-		// stop current audio
-		if (currentAudio != null) {
-			currentAudio.stop();
-		}
 
-		if (audioFile != null) {
-			
-			try {
-				currentAudio = java.applet.Applet.newAudioClip(audioFile);
-				currentAudio.loop();
-			} catch (Exception e) {
-				System.err.println("Arquivo nao achado: " + audioFile.getPath());
+		try {
+			if (currentSequencer != null) {
+				currentSequencer.stop();
+			} else {
+				// init the currentSequencer
+				currentSequencer = MidiSystem.getSequencer();
+				// set as loop
+				currentSequencer.setLoopCount(currentSequencer.LOOP_CONTINUOUSLY);
 			}
-			
+
+			if (audioFile != null) {
+				Sequence sequenceToPlay = MidiSystem.getSequence(audioFile);
+				currentSequencer.setSequence(sequenceToPlay);
+
+				currentSequencer.open();
+				currentSequencer.start();
+//				
+//				currentAudio = java.applet.Applet.newAudioClip(audioFile);
+//				currentAudio.loop();
+			}
+		} catch (Exception e) {
+			System.err.println("Arquivo nao achado: " + audioFile.getPath());
+			System.out.println("ERRO: " + e.getMessage());
 		}
 	}
-	
 }
