@@ -59,12 +59,12 @@ public class Acerto extends TelaFim {
         setBounds((screenSize.width-800)/2, (screenSize.height-600)/2, 800, 600);
     }// </editor-fold>//GEN-END:initComponents
 
-	public static void main(String args[]) {
-//        new Acerto().show();
-		
-		//new Acerto().initComponents();
-		Acerto.GetInsance().initComponents();
-	}
+//	public static void main(String args[]) {
+////        new Acerto().show();
+//		
+//		//new Acerto().initComponents();
+//		Acerto.GetInsance().initComponents();
+	//}
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel FiguraAcerto;
     private javax.swing.JLabel FiguraZoio;

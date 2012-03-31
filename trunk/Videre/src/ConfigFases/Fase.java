@@ -5,8 +5,6 @@
 
 package ConfigFases;
 
-import GUI.TelaJogo;
-
 /**
  * Created on : Feb 9, 2012, 8:24:11 PM
  * @author diogo

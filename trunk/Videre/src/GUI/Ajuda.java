@@ -188,9 +188,9 @@ public class Ajuda extends TelaPadrao {
 		VoltarMenu();
 	}
 
-	public static void main(String args[]) {
-		new Ajuda().show();
-	}
+//	public static void main(String args[]) {
+//		new Ajuda().show();
+//	}
 
 	public Component add(Component comp) {
 		Component retValue;

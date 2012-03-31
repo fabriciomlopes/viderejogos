@@ -348,9 +348,9 @@ public class Zoio1 extends TelaPadrao {
     }                         
     
   
-    public static void main(String args[]) {
-        new Zoio1().show();
-    }
+//    public static void main(String args[]) {
+//        new Zoio1().show();
+//    }
     
     public Component add(Component comp) {
         Component retValue;

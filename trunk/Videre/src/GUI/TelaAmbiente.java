@@ -101,9 +101,9 @@ public class TelaAmbiente extends TelaPadrao {
         return retValue;
     } 
     
-    public static void main(String args[]) {
-        new TelaAmbiente().show();
-    }
+//    public static void main(String args[]) {
+//        new TelaAmbiente().show();
+//    }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel SkateAmbiente;

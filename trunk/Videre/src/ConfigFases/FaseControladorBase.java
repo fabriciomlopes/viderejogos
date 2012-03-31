@@ -5,6 +5,8 @@
 
 package ConfigFases;
 
+import Analise.GameData;
+import Analise.PlayerManager;
 import GUI.Acerto;
 import GUI.Erro;
 import GUI.TelaFim;
@@ -28,7 +30,10 @@ public abstract class FaseControladorBase {
 	// dados sobre o jogador
 	protected int iVidas; // quantidade de vidas restantes
 	protected int iPontos; // quantidade de pontos feitos
-	
+
+	// game data, for player. serialized
+	protected GameData gameData;
+	protected boolean bAddedData; // starts as false. this prevents adding EMPTY datas to save.
 
 	public FaseControladorBase() {
 	}
@@ -36,10 +41,12 @@ public abstract class FaseControladorBase {
 
 	public void Init(){
 		iFaseAtual = 0;
+		gameData = new GameData(getClass());
+		bAddedData = false;
 
 		SetPontos(0);
 		SetVidas(4);
-
+		
 		// embaralha e seta na primeira fase
 		EmbaralhaFases();
 		SetCenario(GetCurrentScene());
@@ -80,7 +87,9 @@ public abstract class FaseControladorBase {
 	public void OnPlayerRight(){
 		// System.out.println("Acertou: " + iCenarioAtual + ", vai ate "+ GetMaxLevel());
 		SetPontos(iPontos + 500);
-
+		gameData.AddScore(500);
+		gameData.IncreaseRightCount();
+		
 		if (iFaseAtual+1 < GetMaxLevel()) {
 			iFaseAtual++;
 			SetCenario(GetCurrentScene());
@@ -89,10 +98,15 @@ public abstract class FaseControladorBase {
 		else {
 			OnGameComplete();
 		}
+
+		SavePoint();
+		
 	}
 
 	public void OnPlayerMistake(){
 		SetPontos(iPontos - 250);
+		gameData.AddScore(-250);
+		gameData.IncreaseMistakeCount();
 		
 		if (iVidas -1 <= 0) {
 			OnGameOver();
@@ -100,6 +114,7 @@ public abstract class FaseControladorBase {
 		else {
 			SetVidas(iVidas-1);
 		}
+		SavePoint();
 	}
 	
 
@@ -107,6 +122,7 @@ public abstract class FaseControladorBase {
 	 * chamado quando termina o jogo
 	 */
 	protected void OnGameComplete(){
+		gameData.SetGameState(GameData.GAME_STATE.Completed);
 		TelaFim telaFim = Acerto.GetInsance();
 
 		if (telaFim != null) {
@@ -120,7 +136,7 @@ public abstract class FaseControladorBase {
 	 * chamado quando acaba todas vidas
 	 */
 	protected void OnGameOver(){
-
+		gameData.SetGameState(GameData.GAME_STATE.GameOver);
 		TelaFim telaFim = Erro.GetInsance();
 
 		if (telaFim != null) {
@@ -156,5 +172,18 @@ public abstract class FaseControladorBase {
 		this.iPontos = Math.max(0, iPontos);
 
 		GetTela().SetPontos(this.iPontos);
+	}
+
+	/**
+	 * Call this method to save current game.
+	 */
+	protected void SavePoint() {
+
+		if (!bAddedData) {
+			PlayerManager.GetInstance().GetCurrentPlayerData().lGameDatas.add(gameData);
+			bAddedData = true;
+		}
+		
+		PlayerManager.Save();
 	}
 }

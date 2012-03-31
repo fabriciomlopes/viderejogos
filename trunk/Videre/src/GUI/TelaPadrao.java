@@ -36,15 +36,20 @@ public class TelaPadrao extends java.awt.Frame {
         setBounds((screenSize.width-800)/2, (screenSize.height-600)/2, 800, 600);
     }// </editor-fold>//GEN-END:initComponents
     
-    public static void main(String args[]) {
-        new TelaPadrao().show();
-    }
-    
-   //sai do sistema       
+//    public static void main(String args[]) {
+//        new TelaPadrao().show();
+//    }
+
+	
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     protected javax.swing.JLabel Fundo;
     // End of variables declaration//GEN-END:variables
+
+	private static TelaPadrao currentScreen;
+	public static TelaPadrao GetCurrentScreen(){
+		return currentScreen;
+	}
 
 	public TelaPadrao menuAnterior;
 
@@ -53,7 +58,7 @@ public class TelaPadrao extends java.awt.Frame {
 	 * @param <T>
 	 * @param menu
 	 */
-	public <T extends TelaPadrao> void AbrirMenu(T menu){
+	public void AbrirMenu(TelaPadrao menu){
 		
 		// parar de tocar a musica
 		//Musica.stop();
@@ -61,15 +66,22 @@ public class TelaPadrao extends java.awt.Frame {
 		// #TODO: fazer funfar
 		//Carregando.Mostrar();
 
-
+		
 		menu.setVisible(true);
 		menu.menuAnterior = this;
 		this.setVisible(false);
-
+		currentScreen = menu;
 		menu.OnOpen();
 
 		classes.UtilidadesVidere.TocarMusicaMIDI(menu.GetAudioName());
 		//Carregando.Ocultar();
+	}
+
+	public void AbrirMenu(){
+		currentScreen = this;
+		this.setVisible(true);
+		classes.UtilidadesVidere.TocarMusicaMIDI(GetAudioName());
+		
 	}
 
 	protected void VoltarMenu(){
