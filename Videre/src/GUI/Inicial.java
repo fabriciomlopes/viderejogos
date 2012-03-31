@@ -1,5 +1,6 @@
 package GUI;
 
+import Analise.PlayerManager;
 import java.awt.*;
 public class Inicial extends TelaPadrao {
 
@@ -7,6 +8,9 @@ public class Inicial extends TelaPadrao {
 	private static Inicial instance;
 
 	public static Inicial GetInsance() {
+		if (instance == null) {
+			instance = new Inicial();
+		}
 		return instance;
 	}
 	// </editor-fold>
@@ -32,7 +36,7 @@ public class Inicial extends TelaPadrao {
 		return "circleoflife";
 	}
 
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//noGEN-BEGIN:initComponents
     private void initComponents() {
 
         ConhecaZoio = new javax.swing.JButton();
@@ -46,7 +50,11 @@ public class Inicial extends TelaPadrao {
         FiguraZoio = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+		labelWelcome = new javax.swing.JLabel();
 
+		buttonChangeUser = new javax.swing.JButton();
+        buttonConfigs = new javax.swing.JButton();
+		
         setTitle("Vídere - Jogos de Estimulação Visual");
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -78,6 +86,44 @@ public class Inicial extends TelaPadrao {
         add(ConhecaZoio);
         ConhecaZoio.setBounds(370, 470, 350, 60);
 
+		// WElcome label..
+		labelWelcome.setFont(new java.awt.Font("Comic Sans MS", 1, 28));
+        labelWelcome.setForeground(new java.awt.Color(255, 0, 0));
+		labelWelcome.setText("");
+		add(labelWelcome);
+		labelWelcome.setBounds(270, -3, 380, 50);
+
+		// change user button
+		buttonChangeUser.setFont(new java.awt.Font("Comic Sans MS", 1, 28));
+        buttonChangeUser.setBackground(new java.awt.Color(244, 244, 246));
+        buttonChangeUser.setForeground(new java.awt.Color(255, 0, 0));
+        buttonChangeUser.setText("Trocar");
+        buttonChangeUser.setToolTipText("Identifique as cores dos objetos");
+        buttonChangeUser.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buttonChangeUserMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                buttonChangeUserMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                buttonChangeUserMousePressed(evt);
+            }
+        });
+        buttonChangeUser.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                buttonChangeUserMouseMoved(evt);
+            }
+        });
+        add(buttonChangeUser);
+		buttonChangeUser.setBounds(640, 4, 140, 34);
+		
+		// menu button config
+		int iCountY = 0;
+		int iStartY = 50;
+		int iDistY = 62;
+		int iSizeY = 60;
+		
         Cores.setBackground(new java.awt.Color(244, 244, 246));
         Cores.setFont(new java.awt.Font("Comic Sans MS", 1, 33));
         Cores.setForeground(new java.awt.Color(255, 0, 0));
@@ -100,8 +146,10 @@ public class Inicial extends TelaPadrao {
             }
         });
         add(Cores);
-        Cores.setBounds(50, 90, 210, 60);
-
+        //Cores.setBounds(50, 90, 210, 60);
+        Cores.setBounds(50, iStartY + iCountY++ * iDistY, 210, iSizeY);
+        
+        
         Esconder.setBackground(new java.awt.Color(244, 244, 246));
         Esconder.setFont(new java.awt.Font("Comic Sans MS", 1, 31));
         Esconder.setForeground(new java.awt.Color(255, 0, 0));
@@ -124,7 +172,8 @@ public class Inicial extends TelaPadrao {
             }
         });
         add(Esconder);
-        Esconder.setBounds(50, 150, 210, 60);
+//        Esconder.setBounds(50, 150, 210, 60);
+        Esconder.setBounds(50, iStartY + iCountY++ * iDistY, 210, iSizeY);
 
         Luzes.setBackground(new java.awt.Color(244, 244, 246));
         Luzes.setFont(new java.awt.Font("Comic Sans MS", 1, 33));
@@ -148,7 +197,8 @@ public class Inicial extends TelaPadrao {
             }
         });
         add(Luzes);
-        Luzes.setBounds(50, 210, 210, 60);
+//        Luzes.setBounds(50, 210, 210, 60);
+        Luzes.setBounds(50, iStartY + iCountY++ * iDistY, 210, iSizeY);
 
         Matriz.setBackground(new java.awt.Color(244, 244, 246));
         Matriz.setFont(new java.awt.Font("Comic Sans MS", 1, 33));
@@ -172,7 +222,8 @@ public class Inicial extends TelaPadrao {
             }
         });
         add(Matriz);
-        Matriz.setBounds(50, 270, 210, 60);
+//        Matriz.setBounds(50, 270, 210, 60);
+        Matriz.setBounds(50, iStartY + iCountY++ * iDistY, 210, iSizeY);
 
         Numeros.setBackground(new java.awt.Color(244, 244, 246));
         Numeros.setFont(new java.awt.Font("Comic Sans MS", 1, 33));
@@ -196,7 +247,8 @@ public class Inicial extends TelaPadrao {
             }
         });
         add(Numeros);
-        Numeros.setBounds(50, 330, 210, 60);
+//        Numeros.setBounds(50, 330, 210, 60);
+        Numeros.setBounds(50, iStartY + iCountY++ * iDistY, 210, iSizeY);
 
         jlSombras.setBackground(new java.awt.Color(244, 244, 246));
         jlSombras.setFont(new java.awt.Font("Comic Sans MS", 1, 33));
@@ -220,7 +272,39 @@ public class Inicial extends TelaPadrao {
             }
         });
         add(jlSombras);
-        jlSombras.setBounds(50, 390, 210, 60);
+        //jlSombras.setBounds(50, 390, 210, 60);
+        jlSombras.setBounds(50, iStartY + iCountY++ * iDistY, 210, iSizeY);
+
+		/// Configurations Button
+
+        buttonConfigs.setBackground(new java.awt.Color(244, 244, 246));
+        buttonConfigs.setFont(new java.awt.Font("Comic Sans MS", 1, 33));
+        buttonConfigs.setForeground(new java.awt.Color(255, 0, 0));
+        buttonConfigs.setText("SISTEMA");
+        buttonConfigs.setToolTipText("Opções do Sistema");
+        buttonConfigs.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buttonConfigsMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                buttonConfigsMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                buttonConfigsMousePressed(evt);
+            }
+        });
+        buttonConfigs.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                buttonConfigsMouseMoved(evt);
+            }
+        });
+        add(buttonConfigs);
+        //buttonConfigs.setBounds(50, 390, 210, 60);
+        buttonConfigs.setBounds(50,10 + iStartY + iCountY++ * iDistY, 210, iSizeY);
+
+
+
+
 
         Sair.setBackground(new java.awt.Color(244, 244, 246));
         Sair.setFont(new java.awt.Font("Comic Sans MS", 1, 33));
@@ -244,7 +328,7 @@ public class Inicial extends TelaPadrao {
             }
         });
         add(Sair);
-        Sair.setBounds(50, 450, 210, 60);
+        Sair.setBounds(50, 10+ iStartY + iCountY++ * iDistY, 210, iSizeY);
 
         FiguraZoio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/zoio.gif"))); // NOI18N
         add(FiguraZoio);
@@ -260,7 +344,7 @@ public class Inicial extends TelaPadrao {
 
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
         setBounds((screenSize.width-800)/2, (screenSize.height-600)/2, 800, 600);
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>//noGEN-END:initComponents
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
 		System.exit(0);
@@ -325,7 +409,7 @@ public class Inicial extends TelaPadrao {
 
 	//chama o jogo dos numeros
     private void NumerosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NumerosMouseClicked
-		
+		//PlayerManagement.GetInsance().OpenMenu();
 		AbrirMenu(GUI.Numeros.GetInsance());
     }//GEN-LAST:event_NumerosMouseClicked
 
@@ -412,7 +496,6 @@ public class Inicial extends TelaPadrao {
 
 		AbrirMenu(new CorObjeto());
 		
-		
     }//GEN-LAST:event_CoresMouseClicked
 
 	//muda a cor do botao para amarelo quando o mouse passa em cima
@@ -438,19 +521,63 @@ public class Inicial extends TelaPadrao {
 		AbrirMenu(new Zoio1());
     }//GEN-LAST:event_ConhecaZoioMouseClicked
 
-	//sai do sistema v�dere
-	public static void main(String args[]) {
-		Inicial i = new Inicial();
-		i.show();
-		
-		// inicializando instancia do singleton
-		Inicial.instance = i;
 
-		// tocar primeira musica
-		classes.UtilidadesVidere.TocarMusicaMIDI(i.GetAudioName());
+	//muda a cor do botao para amarelo quando o mouse passa em cima
+    private void buttonChangeUserMouseMoved(java.awt.event.MouseEvent evt) {
+		buttonChangeUser.setBackground(new java.awt.Color(255, 255, 102));
+    }
+
+	//muda a cor do botao para verde quando o botao é pressionado
+    private void buttonChangeUserMousePressed(java.awt.event.MouseEvent evt) {
+		buttonChangeUser.setBackground(new java.awt.Color(102, 204, 0));
+    }
+
+	//volta a cor do botao para o normal quando o mouse sai de cima
+    private void buttonChangeUserMouseExited(java.awt.event.MouseEvent evt) {
+		buttonChangeUser.setBackground(new java.awt.Color(244, 244, 246));
+    }
+    private void buttonChangeUserMouseClicked(java.awt.event.MouseEvent evt) {
+
+		//PlayerManagement.GetInsance().OpenMenu();
+		PlayerChange.GetInsance().OpenMenu(this);
 		
-		Acerto.InicializarSingleton();
-	}
+    }
+	//muda a cor do botao para amarelo quando o mouse est� em cima
+    private void buttonConfigsMouseMoved(java.awt.event.MouseEvent evt) {
+		buttonConfigs.setBackground(new java.awt.Color(255, 255, 102));
+    }
+
+	//muda a cor do botao para verde quando é pressionado
+    private void buttonConfigsMousePressed(java.awt.event.MouseEvent evt) {
+		buttonConfigs.setBackground(new java.awt.Color(102, 204, 0));
+    }
+
+	//volta cor do botao ao normal quando o mouse não está em cima
+    private void buttonConfigsMouseExited(java.awt.event.MouseEvent evt) {
+		buttonConfigs.setBackground(new java.awt.Color(244, 244, 246));
+    }
+
+	//chama o jogo das sombras
+    private void buttonConfigsMouseClicked(java.awt.event.MouseEvent evt) {
+		PlayerManagement.GetInsance().OpenMenu();
+    }     
+
+
+	//sai do sistema v�dere
+//	public static void main(String args[]) {
+//		Inicial i = new Inicial();
+//		i.show();
+//
+//
+//		// inicializando instancia do singleton
+//		Inicial.instance = i;
+//
+//		// tocar primeira musica
+//		classes.UtilidadesVidere.TocarMusicaMIDI(i.GetAudioName());
+//
+//
+//		Acerto.InicializarSingleton();
+//	}
 
 	public Component add(Component comp) {
 		Component retValue;
@@ -474,5 +601,24 @@ public class Inicial extends TelaPadrao {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JButton jlSombras;
+    
+    private javax.swing.JLabel labelWelcome;
+    private javax.swing.JButton buttonChangeUser;
+    
     // End of variables declaration//GEN-END:variables
+	private javax.swing.JButton buttonConfigs;
+	
+	public void SetWelcomeText(String sText) {
+		labelWelcome.setText(sText);
+	}
+
+	public void SetCurrentPlayer(String sName){
+// the last player name really exists?
+		if (PlayerManager.GetInstance().ContainsNameInSave(sName)) {
+			Inicial.GetInsance().SetWelcomeText("Bem vindo " + sName + "!");
+		}
+		else {
+			Inicial.GetInsance().SetWelcomeText("Nenhum usuario!");
+		}
+	}
 }

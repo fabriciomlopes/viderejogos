@@ -282,9 +282,9 @@ public class TelaFim extends TelaPadrao {
         return retValue;
     }
     
-    public static void main(String args[]) {
-        new TelaFim().show();
-    }
+//    public static void main(String args[]) {
+//        new TelaFim().show();
+//    }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JogarNovamente;

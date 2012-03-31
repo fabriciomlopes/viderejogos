@@ -130,9 +130,9 @@ public class MatrizAmbiente extends TelaAmbiente {
 		AbrirMenu(new MatrizFigura());
     }//GEN-LAST:event_FigurasMouseClicked
 
-	public static void main(String args[]) {
-		new MatrizAmbiente().show();
-	}
+//	public static void main(String args[]) {
+//		new MatrizAmbiente().show();
+//	}
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Figuras;
     private javax.swing.JButton FormasGeometricas;

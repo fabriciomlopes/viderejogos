@@ -56,9 +56,9 @@ public class Erro extends TelaFim {
         setBounds((screenSize.width-800)/2, (screenSize.height-600)/2, 800, 600);
     }//GEN-END:initComponents
 
-	public static void main(String args[]) {
-		new Erro().show();
-	}
+//	public static void main(String args[]) {
+//		new Erro().show();
+//	}
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

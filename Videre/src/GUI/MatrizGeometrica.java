@@ -988,9 +988,9 @@ public class MatrizGeometrica extends TelaJogo {
 //        }
 //    }
     
-    public static void main(String args[]) {
-        new MatrizGeometrica().show();
-    }
+//    public static void main(String args[]) {
+//        new MatrizGeometrica().show();
+//    }
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

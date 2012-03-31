@@ -189,9 +189,9 @@ public abstract class TelaJogo extends TelaPadrao {
 		return retValue;
 	}
 
-	public static void main(String args[]) {
-		//new TelaJogo().show();
-	}
+//	public static void main(String args[]) {
+//		//new TelaJogo().show();
+//	}
     // Variables declaration - do not modify//GEN-BEGIN:variables
     protected javax.swing.JLabel NumVidas;
     protected javax.swing.JLabel Pontos;

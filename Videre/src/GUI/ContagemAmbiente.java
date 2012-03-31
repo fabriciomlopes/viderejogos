@@ -183,9 +183,9 @@ public class ContagemAmbiente extends TelaAmbiente {
 		AbrirMenu(new Contagem2());
     }//GEN-LAST:event_AcheFigurasMouseClicked
 
-	public static void main(String args[]) {
-		new ContagemAmbiente().show();
-	}
+//	public static void main(String args[]) {
+//		new ContagemAmbiente().show();
+//	}
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AcheFiguras;
     private javax.swing.JButton AcheLetras;
