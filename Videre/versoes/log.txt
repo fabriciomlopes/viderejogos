@@ -1,4 +1,16 @@
 ------------------------
+Videre v0.9.10 (2012/03/30)
+------------------------
+Patch Notes:
+- Player Saving System added.
+Patch Changes:
+[new] Included JFreeChart.
+[new] Added new GUI for managing players (Create and Change).
+Known Issues:
+- by clicking 'Estisticas' button a sample graphic is opened on purpose;
+
+
+------------------------
 Videre v0.9.9 (2012/03/01)
 ------------------------
 Patch Notes:
@@ -6,6 +18,7 @@ Patch Notes:
 Patch Changes:
 [fix] BGM is now playing properly;
 [fix] Minor fixes on Luzes glitches of the color update;
+
 
 ------------------------
 Videre v0.9.8 (2012/02/27)
@@ -27,6 +40,7 @@ Known Issues:
 - BGM (Background Music) is still temporarily removed.
 - Luzes game is still not currently working due to previously rename of images.
 
+
 ------------------------
 Videre v0.9.6 (2012/02/21)
 ------------------------
@@ -37,6 +51,7 @@ Patch Changes:
 Known Issues:
 - BGM (Background Music) is still temporarily removed.
 - Luzes game is still not currently working due to previously rename of images.
+
 
 ------------------------
 Videre v0.9.5 (2012/02/17)
