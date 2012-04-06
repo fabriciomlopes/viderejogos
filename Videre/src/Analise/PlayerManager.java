@@ -55,11 +55,18 @@ public class PlayerManager {
 		System.out.println(msg.toString());
 	}
 
-
-
-
 	private PlayerData currentPlayer;
 	private boolean  bPlayerChanged; // true when SetLatestPlayer is called
+
+	public void Init() {
+		// init directories
+		new File(Defs.savePath).mkdir();
+		new File(Defs.playerSavePath).mkdir();
+
+		this.bPlayerChanged = true;
+		this.currentPlayer = null;
+	}
+
 
 // <editor-fold defaultstate="collapsed" desc="Get/Set Latest Player Name">
 	protected String GetLatestPlayerPath() {
@@ -210,15 +217,6 @@ public class PlayerManager {
 		return false;
 	}
 
-	public void Init() {
-		// init directories
-		new File(Defs.savePath).mkdir();
-		new File(Defs.playerSavePath).mkdir();
-
-		this.bPlayerChanged = true;
-		this.currentPlayer = null;
-	}
-
 	/**
 	 * Validates the name.
 	 * return null if not valid player.
@@ -244,6 +242,28 @@ public class PlayerManager {
 
 
 		return sName;
+	}
+
+	/**
+	 * Reads all names in the player names file in HD
+	 * and load them as player Data.
+	 * @return All player data based on saved Player List. Returns null if no players is loaded
+	 */
+	public PlayerData[] GetAllPlayerDatas() {
+		String[] vAllNames = GetAllPlayersNames();
+
+		if (vAllNames == null) {
+			return null;
+		}
+
+		PlayerData[] playerDatas = new PlayerData[vAllNames.length];
+
+		for (int i = 0; i < vAllNames.length; i++) {
+			playerDatas[i] = PlayerData.Load(vAllNames[i]);
+			System.out.println("lodando "+ vAllNames[i]);
+		}
+
+		return playerDatas;
 	}
 
 }

@@ -6,6 +6,7 @@
 package Analise;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -13,6 +14,9 @@ import java.util.Date;
  * @author diogo
  */
 public final class GameData implements Serializable {
+
+	// 
+	private static final long serialVersionUID = 301077366599181567L;
 
 	public enum GAME_STATE {
 		Playing,	// player still playing the game.
@@ -27,7 +31,6 @@ public final class GameData implements Serializable {
 	protected int iMistakes;	// how many mistakes made
 	protected GAME_STATE eGameState;	// the final game state.
 	protected Date dDate;		// the saved date
-
 	
 	public GameData(Class<?> type) {
 		//type  = T;
@@ -37,6 +40,8 @@ public final class GameData implements Serializable {
 		this.iMistakes = 0;
 		this.eGameState = GAME_STATE.Playing;
 		this.dDate = new Date();
+
+		
 	}
 
 	
@@ -66,6 +71,28 @@ public final class GameData implements Serializable {
 		this.eGameState = state;
 	}
 
+
+	/**
+	 * Gets the date as string.
+	 * Format is yyyy/MM/dd.
+	 * @return a date like this: "2012/12/31"
+	 */
+	public String GetDate(){
+		return GetDate(dDate);
+	}
+
+	public static String GetDate(Date date){
+		return new SimpleDateFormat("yyyy/MM/dd").format(date);
+	}
+
+	public static String GetTypeName(Class<?> type){
+		String sClassName = type.toString(); // "class ConfigFases.FaseCorObjetoControlador"
+		String sStart = ".Fase"; // removed until this string
+		return sClassName.substring(sClassName.lastIndexOf(sStart) + sStart.length(), sClassName.lastIndexOf("Controlador")); // "FaseCorObjetoControlador"
+	}
+	public String GetTypeName() {
+		return GetTypeName(type);
+	}
 
 	/**
 	 * Dump all values.

@@ -9,6 +9,7 @@ import classes.Defs;
 import classes.UtilitySerial;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created on : Mar 26, 2012, 7:06:16 PM
@@ -34,7 +35,6 @@ public class PlayerData implements Serializable{
 			Object obj = UtilitySerial.Read(GetPlayerSavePath(sPlayerName));
 			if (obj instanceof PlayerData) {
 				System.out.println("Loading Player!" + sPlayerName);
-
 				output = (PlayerData) obj;
 			}
 			else if (obj == null) {
@@ -74,7 +74,35 @@ public class PlayerData implements Serializable{
 		UtilitySerial.saveObject(this, GetPlayerSavePath() );
 	}
 
-	
+	/**
+	 * loops through all games and get it's type.
+	 * adds it into an array without repeating value.
+	 * @return returns null if no games found.
+	 */
+	public Class<?>[] GetAllPlayedGameTypes() {
+		List<Class<?>> list = new ArrayList<Class<?>>();
+
+
+		// look for each played game
+		for (GameData gameData : lGameDatas) {
+			if (!list.contains(gameData.type)) {
+				list.add(gameData.type);
+			}
+		}
+
+		if (list.size() > 0) {
+			Class<?>[] temp = new Class<?>[list.size()];
+
+			return list.toArray(temp);
+		}
+		else {
+			
+			return null;
+		}
+
+	}
+
+
 
 	/**
 	 * Dump all values.
