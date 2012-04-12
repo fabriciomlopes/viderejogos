@@ -18,5 +18,7 @@ public abstract class Defs {
 	
 	public static final String savePath = "save/"; // generic data. we can find here which players exists, and which was the latest to play
 	public static final String playerSavePath = savePath + "players/"; //
-	
+
+	public static final int FREQUENCY_SCORE_AMOUNT = 5; // amount of division for performance Frequency graph
+
 }

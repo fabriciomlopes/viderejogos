@@ -57,9 +57,4 @@ public class Recursos {
 		return icon;
 	}
 
-//	public static void main(String[] args) {
-//		File asdF = new File("teste/tessss/arquivao.txt");
-//				asdF.mkdirs();
-//		System.out.println("onde ta a merda " + asdF.getAbsolutePath());
-//	}
 }

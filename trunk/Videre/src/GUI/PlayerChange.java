@@ -231,7 +231,7 @@ public class PlayerChange extends javax.swing.JFrame {
 	public void UpdateCurrentPlayer(boolean bCreateIfEmpty){
 		String sName = PlayerManager.GetInstance().GetLatestPlayer();
 		if (PlayerManager.GetInstance().ContainsNameInSave(sName)) {
-			labelCurPlayer.setText("Jogador atual: " + sName);
+			labelCurPlayer.setText("Jogador atual: " + sName); // thistextlokaki
 		}
 		else {
 			labelCurPlayer.setText("");

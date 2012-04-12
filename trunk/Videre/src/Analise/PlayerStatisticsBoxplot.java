@@ -11,6 +11,8 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
+import javax.swing.JFrame;
+import javax.swing.WindowConstants;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.axis.CategoryAxis;
@@ -19,20 +21,28 @@ import org.jfree.chart.labels.BoxAndWhiskerToolTipGenerator;
 import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.renderer.category.BoxAndWhiskerRenderer;
 import org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset;
-import org.jfree.ui.ApplicationFrame;
 
 /**
  * Created on : Apr 2, 2012, 8:26:11 PM
  * @author diogo
  */
-public class PlayerStatisticsBoxplot /*extends PlayerStatisticsBase*/ {
+public class PlayerStatisticsBoxplot extends PlayerStatisticsBase {
 
-	protected  PlayerData[] playerDatas;
-
-	public PlayerStatisticsBoxplot(PlayerData[] playerDatas) {
-		//super(playerDatas);
-		this.playerDatas = playerDatas;
+	@Override
+	public void SetPlayerDatas(PlayerData... vPlayerDatas) {
+		super.SetPlayerDatas(vPlayerDatas);
+		vTypes = PlayerManager.GetInstance().GetAllPlayedGameTypes(vPlayerDatas);
 	}
+
+//	protected  PlayerData[] vPlayerDatas;
+//	private Class<?>[] vTypes; // cache value of all types
+
+	
+
+//	public PlayerStatisticsBoxplot(PlayerData[] vPlayerDatas) {
+//		//super(vPlayerDatas);
+//		this.vPlayerDatas = vPlayerDatas;
+//	}
 
 	// <editor-fold defaultstate="collapsed" desc="Game Statistics">
 
@@ -45,15 +55,14 @@ public class PlayerStatisticsBoxplot /*extends PlayerStatisticsBase*/ {
 	 */
 	public void ShowGameStatistics() {
 		
-		Class<?>[] vAllGames = GetAllPlayedGameType();
 		DefaultBoxAndWhiskerCategoryDataset dataSet = new DefaultBoxAndWhiskerCategoryDataset();
 
 		// for each game (series)
 		//for (int i = 0; i < vAllGames.length; i++) {
-		for (Class<?> gameType : vAllGames) {
+		for (Class<?> gameType : vTypes) {
 			// for each player (category)
 //			System.out.println("game: " + GameData.GetTypeName(gameType));
-			for (PlayerData playerData : playerDatas) {
+			for (PlayerData playerData : vPlayerDatas) {
 //				System.out.println("\tplayer: " + playerData.sName);
 				final List list = new ArrayList();
 				// for each played games
@@ -68,33 +77,16 @@ public class PlayerStatisticsBoxplot /*extends PlayerStatisticsBase*/ {
 				}
 
 				if (list.size() > 0) {
-					dataSet.add(list, "Jogo " + GameData.GetTypeName(gameType), playerData.sName);
+					dataSet.add(list, "Jogo " + GameData.GetTypeName(gameType), playerData.sName); // thistextlokaki
 				}
 			}
 
 		}
 
-		OpenGraphic(dataSet, "Boxplot Jogador", "Jogadores", "Pontos");
+		OpenGraphic(dataSet, "Boxplot Jogador", "Jogadores", "Pontos"); // thistextlokaki
 
 	}
 
-	protected Class<?>[] GetAllPlayedGameType() {
-		List<Class<?>> list = new ArrayList<Class<?>>();
-
-		for (int i = 0; i < this.playerDatas.length; i++) {
-			// look for each played game
-			for (GameData gameData : playerDatas[i].lGameDatas) {
-				if (!list.contains(gameData.type)) {
-					list.add(gameData.type);
-				}
-			}
-		}
-		
-		Class<?>[] temp = new Class<?>[list.size()];
-
-		return list.toArray(temp);
-
-	}
 	// </editor-fold>
 
 	// <editor-fold defaultstate="collapsed" desc="Date Statistics">
@@ -114,7 +106,7 @@ public class PlayerStatisticsBoxplot /*extends PlayerStatisticsBase*/ {
 		//for (int i = 0; i < vAllGames.length; i++) {
 		for (Date date : vAllDates) {
 			// for each player (category)
-			for (PlayerData playerData : playerDatas) {
+			for (PlayerData playerData : vPlayerDatas) {
 //				System.out.println("Jogador :"+ playerData.sName);
 				Date firstDate = new Date();
 				Date finalDate = null;
@@ -148,9 +140,9 @@ public class PlayerStatisticsBoxplot /*extends PlayerStatisticsBase*/ {
 				if (list.size() > 0) {
 					String sRowKey = "";
 					if (iDateInterval != 1) {
-						sRowKey = "De " + GameData.GetDate(firstDate) + " ate " + GameData.GetDate(finalDate);
+						sRowKey = "De " + GameData.GetDate(firstDate) + " ate " + GameData.GetDate(finalDate); // thistextlokaki
 					} else {
-						sRowKey = "Dia " + GameData.GetDate(firstDate);
+						sRowKey = "Dia " + GameData.GetDate(firstDate); // thistextlokaki
 					}
 					dataSet.add(list, playerData.sName, sRowKey);
 				}
@@ -159,7 +151,7 @@ public class PlayerStatisticsBoxplot /*extends PlayerStatisticsBase*/ {
 
 		}
 
-		OpenGraphic(dataSet, "Boxplot Datas", "Datas", "Pontos");
+		OpenGraphic(dataSet, "Boxplot Datas", "Datas", "Pontos"); // thistextlokaki
 	}
 
 	/**
@@ -176,9 +168,9 @@ public class PlayerStatisticsBoxplot /*extends PlayerStatisticsBase*/ {
 
 
 
-		for (int i = 0; i < this.playerDatas.length; i++) {
+		for (int i = 0; i < this.vPlayerDatas.length; i++) {
 			// look for each played game
-			for (GameData gameData : playerDatas[i].lGameDatas) {
+			for (GameData gameData : vPlayerDatas[i].lGameDatas) {
 				int iDay = GetDateDayAmount(gameData.dDate, iDayInterval);
 
 				if (!lDays.contains(String.valueOf(iDay))) {
@@ -230,14 +222,13 @@ public class PlayerStatisticsBoxplot /*extends PlayerStatisticsBase*/ {
 	 */
 	public void ShowPlayerStatistics() {
 
-		Class<?>[] vAllGames = GetAllPlayedGameType();
 		DefaultBoxAndWhiskerCategoryDataset dataSet = new DefaultBoxAndWhiskerCategoryDataset();
 
 		// for each game (series)
 		//for (int i = 0; i < vAllGames.length; i++) {
-		for (Class<?> gameType : vAllGames) {
+		for (Class<?> gameType : vTypes) {
 			// for each player (category)
-			for (PlayerData playerData : playerDatas) {
+			for (PlayerData playerData : vPlayerDatas) {
 				final List list = new ArrayList();
 				// for each played games
 				for (GameData gameData : playerData.lGameDatas) {
@@ -250,13 +241,13 @@ public class PlayerStatisticsBoxplot /*extends PlayerStatisticsBase*/ {
 				}
 
 				if (list.size() > 0) {
-					dataSet.add(list, playerData.sName, "Jogo " + GameData.GetTypeName(gameType));
+					dataSet.add(list, playerData.sName, "Jogo " + GameData.GetTypeName(gameType));  // thistextlokaki
 				}
 			}
 
 		}
 
-		OpenGraphic(dataSet, "Boxplot Jogos", "Jogos", "Pontos");
+		OpenGraphic(dataSet, "Boxplot Jogos", "Jogos", "Pontos");  // thistextlokaki
 
 	}
 
@@ -282,25 +273,28 @@ public class PlayerStatisticsBoxplot /*extends PlayerStatisticsBase*/ {
 		final ChartPanel chartPanel = new ChartPanel(chart);
 		chartPanel.setPreferredSize(new java.awt.Dimension(450, 270));
 
-		ApplicationFrame frame = new ApplicationFrame(sTitle);
+		JFrame frame = new JFrame(sTitle);
 		frame.setContentPane(chartPanel);
 		frame.setVisible(true);
 		frame.setSize(800, 600);
 		frame.setLocationRelativeTo(null);
+		frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 		
 	}
 
-	public static void main(String[] args) {
-
-		PlayerStatisticsBoxplot psb = new PlayerStatisticsBoxplot(PlayerManager.GetInstance().GetAllPlayerDatas());
-
-//		psb.ShowGameStatistics(); // OK
-
-		psb.ShowDateStatistics(1); // OK
-
-//		psb.ShowPlayerStatistics(); // OK
-
-	}
+//	public static void main(String[] args) {
+//
+//		//PlayerStatisticsBoxplot psb = new PlayerStatisticsBoxplot(PlayerManager.GetInstance().GetAllPlayerDatas());
+//		PlayerStatisticsBoxplot psb = new PlayerStatisticsBoxplot();
+//		psb.SetPlayerDatas(PlayerManager.GetInstance().GetAllPlayerDatas());
+//
+////		psb.ShowGameStatistics(); // OK
+//
+//		psb.ShowDateStatistics(1); // OK
+//
+////		psb.ShowPlayerStatistics(); // OK
+//
+//	}
 }
 
 //class StatisticsData {
