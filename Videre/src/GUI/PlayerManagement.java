@@ -12,10 +12,8 @@
 package GUI;
 
 import Analise.PlayerManager;
-import charts.Chart;
 import javax.swing.JOptionPane;
 import javax.swing.WindowConstants;
-import org.jfree.data.category.DefaultCategoryDataset;
 
 /**
  *
@@ -187,10 +185,10 @@ public class PlayerManagement extends javax.swing.JFrame {
 	}
 	
 	public static boolean CreatePlayer(){
-		String sName = "Jogador";
+		String sName = "Jogador"; // thistextlokaki
 		
 		while (true) {
-			sName = JOptionPane.showInputDialog(GetInsance(), "Registrar jogador com nome:", sName);
+			sName = JOptionPane.showInputDialog(GetInsance(), "Registrar jogador com nome:", sName); // thistextlokaki
 
 			if (sName == null){
 				break;
@@ -203,7 +201,7 @@ public class PlayerManagement extends javax.swing.JFrame {
 					JOptionPane.showMessageDialog(GetInsance(),
 							"Jogador \"" + sName + "\" registrado com sucesso!",
 							"Sucesso", JOptionPane.INFORMATION_MESSAGE
-							);
+							); // thistextlokaki
 					return true;
 				}
 				else {
@@ -211,7 +209,7 @@ public class PlayerManagement extends javax.swing.JFrame {
 					JOptionPane.showMessageDialog(GetInsance(),
 							"Jogador com o nome \"" + sName + "\" já existe!\nFavor, escolha um nome diferente.",
 							"Erro", JOptionPane.ERROR_MESSAGE
-							);
+							); // thistextlokaki
 				}
 			}
 		}
@@ -219,20 +217,9 @@ public class PlayerManagement extends javax.swing.JFrame {
 	}
 
 	public void OpenStatisticsMenu(){
-		DefaultCategoryDataset dataset = new DefaultCategoryDataset();
-		
-		dataset.addValue(5000, "Jogo1", "293-09-99");
-		dataset.addValue(2000, "Jogo1", "294-09-99");
-		dataset.addValue(1000, "Jogo1", "295-09-99");
-		dataset.addValue(2000, "Jogo1", "296-09-99");
-
-		dataset.addValue(2000, "Jogo2", "293-09-99");
-		dataset.addValue(2500, "Jogo2", "294-09-99");
-		dataset.addValue(3000, "Jogo2", "295-09-99");
-		dataset.addValue(4000, "Jogo2", "296-09-99");
-
-
-		Chart.LineChart(dataset, "Resultados", "X", "Y", true, 0, 0);
+		PlayerStatisticsMenu.GetInsance().setVisible(true);
+		PlayerStatisticsMenu.GetInsance().setLocationRelativeTo(this);
+		PlayerStatisticsMenu.GetInsance().previousMenu = this;
 	}
 
 	public void CloseUI(){
@@ -242,21 +229,5 @@ public class PlayerManagement extends javax.swing.JFrame {
 		this.setVisible(false);
 	}
 
-
-//	public static void main(String[] args) {
-//		// test regex
-//
-//		//String regex = "[\\]\\[!\"#$%&'()*+,./:;<=>?@\\^_`{|}~-]";
-//		String regex = ".*[\\/\\\\\\]\\[0-9!\"#$%&'()*+,./:;<=>?@\\^_`{|}~-].*";
-//
-//
-//		System.out.println("Diogo Mats2umoto".matches(regex));
-//		System.out.println("Matsumoto".matches(regex));
-//		System.out.println("Diogo\\Matsumoto".matches(regex));
-//		System.out.println("松本秀樹".matches(regex));
-//		System.out.println("98/*D1i\\4o;/;g^o Ma)(&-ts+um!@#o'~to'''".replaceAll(PlayerManager.INVALID_CHARS, ""));
-//		System.out.println("98/*D1i\\4o;/;g^o Ma)(&-ts+um!@#o'~to''ção é'".replaceAll(PlayerManager.INVALID_CHARS, ""));
-//
-//	}
 
 }

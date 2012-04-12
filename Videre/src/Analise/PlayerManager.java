@@ -8,6 +8,8 @@ package Analise;
 import classes.Defs;
 import classes.UtilitySerial;
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created on : Mar 26, 2012, 7:37:13 PM
@@ -265,5 +267,26 @@ public class PlayerManager {
 
 		return playerDatas;
 	}
+
+	
+	public Class<?>[] GetAllPlayedGameTypes(PlayerData[] playerDatas) {
+		List<Class<?>> list = new ArrayList<Class<?>>();
+
+		/// PlayerData[] playerDatas = GetAllPlayerDatas();
+
+		for (int i = 0; i < playerDatas.length; i++) {
+			// look for each played game
+			for (GameData gameData : playerDatas[i].lGameDatas) {
+				if (!list.contains(gameData.type)) {
+					list.add(gameData.type);
+				}
+			}
+		}
+
+		Class<?>[] temp = new Class<?>[list.size()];
+
+		return list.toArray(temp);
+	}
+
 
 }

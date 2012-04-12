@@ -12,17 +12,25 @@ import org.jfree.data.category.DefaultCategoryDataset;
  * Created on : Apr 5, 2012, 8:58:42 PM
  * @author diogo
  */
-public class PlayerStatisticsLine {
+public class PlayerStatisticsLine extends PlayerStatisticsBase {
 
-	protected PlayerData playerData;
-	protected Class<?>[] vTypes; // cache value of all types.
+//	protected playerData playerData;
+//	protected Class<?>[] vTypes; // cache value of all types.
 	DefaultCategoryDataset dataset;
-	
-	public PlayerStatisticsLine(PlayerData playerData) {
-		this.playerData = playerData;
+	protected PlayerData playerData;
+
+	@Override
+	public void SetPlayerDatas(PlayerData... playerDatas) {
+		super.SetPlayerDatas(playerDatas);
+		playerData = playerDatas[0];
 		vTypes = playerData.GetAllPlayedGameTypes();
 	}
+	
+//	public PlayerStatisticsLine(playerData playerData) {
+//		this.playerData = playerData;
+//	}
 
+	
 
 	public void ShowAllStatistics(){
 
@@ -32,7 +40,7 @@ public class PlayerStatisticsLine {
 			Populate(type);
 		}
 
-		Chart.LineChart(dataset, "Linha de Aprendizagem de Todos os jogos ", "Quantidade de Jogadas", "Pontos", true, 0, 0);
+		Chart.LineChart(dataset, "Linha de Aprendizagem de Todos os jogos ", "Quantidade de Jogadas", "Pontos", true, 0, 0);  // thistextlokaki
 	}
 
 	public void ShowStatisticsFor(Class<?> type) {
@@ -48,18 +56,9 @@ public class PlayerStatisticsLine {
 		
 		Populate(type);
 
-		Chart.LineChart(dataset, "Linha de Aprendizagem do jogo " + sGameName, "Quantidade de Jogadas", "Pontos", true, 0, 0);
+		Chart.LineChart(dataset, "Linha de Aprendizagem do jogo " + sGameName, "Quantidade de Jogadas", "Pontos", true, 0, 0);  // thistextlokaki
 	}
 
-	protected boolean ContainsType(Class<?> type) {
-
-		for (int i = 0; i < vTypes.length; i++) {
-			if (type == vTypes[i]) {
-				return true;
-			}
-		}
-		return false;
-	}
 
 	protected void Populate(Class<?> type) {
 
@@ -75,8 +74,10 @@ public class PlayerStatisticsLine {
 	}
 
 	public static void main(String[] args) {
-		PlayerStatisticsLine psl = new PlayerStatisticsLine(PlayerManager.GetInstance().GetCurrentPlayerData());
-
+//		PlayerStatisticsLine psl = new PlayerStatisticsLine(PlayerManager.GetInstance().GetCurrentPlayerData());
+		PlayerStatisticsLine psl = new PlayerStatisticsLine();
+		psl.SetPlayerDatas(PlayerManager.GetInstance().GetCurrentPlayerData());
+		
 		psl.ShowAllStatistics();
 
 		// OK
