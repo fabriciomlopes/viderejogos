@@ -1,4 +1,13 @@
 ------------------------
+Videre v0.9.11 (2012/03/30)
+------------------------
+Patch Notes:
+- Interface to show the graphics is now available.
+Known Issues:
+- still not included jFreeChart into the jar file. So Graphics will not open.
+
+
+------------------------
 Videre v0.9.10 (2012/03/30)
 ------------------------
 Patch Notes:
