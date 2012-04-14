@@ -13,7 +13,8 @@ package GUI;
 
 import Analise.PlayerManager;
 import Analise.PlayerStatisticsBoxplot;
-import Analise.PlayerStatisticsFrequency;
+import Analise.PlayerStatisticsFrequencyGameUsage;
+import Analise.PlayerStatisticsFrequencyPerformance;
 import Analise.PlayerStatisticsLine;
 import java.awt.Frame;
 import javax.swing.JFrame;
@@ -324,7 +325,7 @@ public class PlayerStatisticsMenu extends javax.swing.JFrame {
 	}
 
 	protected void OnClickPlayerPerformance() {
-		PlayerStatisticsFrequency psf = new PlayerStatisticsFrequency();
+		PlayerStatisticsFrequencyPerformance psf = new PlayerStatisticsFrequencyPerformance();
 		psf.SetPlayerDatas(PlayerManager.GetInstance().GetAllPlayerDatas());
 
 		Class<?>[] types = OpenPopupGetGameTypes(psf.GetTypes());
@@ -340,10 +341,18 @@ public class PlayerStatisticsMenu extends javax.swing.JFrame {
 	}
 
 	protected void OnClickGameUsage() {
+		PlayerStatisticsFrequencyGameUsage psf = new PlayerStatisticsFrequencyGameUsage();
 //		PlayerStatisticsFrequency psf = new PlayerStatisticsFrequency();
-//		psf.SetPlayerDatas(PlayerManager.GetInstance().GetAllPlayerDatas());
+		psf.SetPlayerDatas(PlayerManager.GetInstance().GetAllPlayerDatas());
 
-		
+		int iDaysInterval = OpenPopupGetDay(new int[]{
+			0, 7, 14, 30, 60, 90
+		});
+
+
+		if (iDaysInterval >= 0) {
+			psf.ShowGraphic(iDaysInterval);
+		}
 		
 //		SelectGameMenu selectGam = new SelectGameMenu(this, true);
 //		selectGam.SetAvailableOptions(psf.GetTypes());
@@ -401,12 +410,34 @@ public class PlayerStatisticsMenu extends javax.swing.JFrame {
 		// open..
 		selectGameMenu.setVisible(true);
 
-		if (selectGameMenu.getReturnStatus() == selectGameMenu.RET_OK) {
+		if (selectGameMenu.getReturnStatus() == SelectGameMenu.RET_OK) {
 			// get result.
 			return selectGameMenu.GetSelectedValues();
 		}
 		else {
 			return null;
+		}
+	}
+
+	/**
+	 * open popup for the user to select some game types.
+	 * @return
+	 */
+	protected int OpenPopupGetDay(int[] vDays) {
+
+		// create select types menu..
+		SelectDayAmountMenu selectDayMenu = new SelectDayAmountMenu(this, true);
+		selectDayMenu.SetAvailableOptions(vDays);
+		selectDayMenu.setLocationRelativeTo(this);
+
+		// open..
+		selectDayMenu.setVisible(true);
+
+		if (selectDayMenu.getReturnStatus() == SelectDayAmountMenu.RET_OK) {
+			// get result.
+			return selectDayMenu.GetSelectedDayAmount();
+		} else {
+			return -1;
 		}
 	}
 

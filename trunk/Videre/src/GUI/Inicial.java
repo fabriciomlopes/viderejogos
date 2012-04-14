@@ -91,11 +91,11 @@ public class Inicial extends TelaPadrao {
         labelWelcome.setForeground(new java.awt.Color(255, 0, 0));
 		labelWelcome.setText("");
 		add(labelWelcome);
-		labelWelcome.setBounds(270, -3, 380, 50);
+		labelWelcome.setBounds(270, -3, 510, 50);
 
 		// change user button
-		buttonChangeUser.setFont(new java.awt.Font("Comic Sans MS", 1, 28));
         buttonChangeUser.setBackground(new java.awt.Color(244, 244, 246));
+		buttonChangeUser.setFont(new java.awt.Font("Comic Sans MS", 1, 28));
         buttonChangeUser.setForeground(new java.awt.Color(255, 0, 0));
         buttonChangeUser.setText("Trocar");
         buttonChangeUser.setToolTipText("Identifique as cores dos objetos");
@@ -116,8 +116,12 @@ public class Inicial extends TelaPadrao {
             }
         });
         add(buttonChangeUser);
-		buttonChangeUser.setBounds(640, 4, 140, 34);
-		
+		//buttonChangeUser.setBounds(640, 4, 140, 34);
+//		buttonChangeUser.setBounds(240, 54, 150, 104); // ok
+		buttonChangeUser.setBounds(290, 44, 140, 34);
+
+
+
 		// menu button config
 		int iCountY = 0;
 		int iStartY = 50;
@@ -536,6 +540,7 @@ public class Inicial extends TelaPadrao {
     private void buttonChangeUserMouseExited(java.awt.event.MouseEvent evt) {
 		buttonChangeUser.setBackground(new java.awt.Color(244, 244, 246));
     }
+
     private void buttonChangeUserMouseClicked(java.awt.event.MouseEvent evt) {
 
 		//PlayerManagement.GetInsance().OpenMenu();
