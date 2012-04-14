@@ -5,6 +5,7 @@
 
 package Analise;
 
+import classes.UtilidadesVidere;
 import java.awt.Font;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -117,7 +118,7 @@ public class PlayerStatisticsBoxplot extends PlayerStatisticsBase {
 
 
 					// same day period?
-					if (GetDateDayAmount(date, iDateInterval) == GetDateDayAmount(gameData.dDate, iDateInterval)) {
+					if (UtilidadesVidere.GetDateDayAmount(date, iDateInterval) == UtilidadesVidere.GetDateDayAmount(gameData.dDate, iDateInterval)) {
 						
 						// find the smallest first date
 						if (firstDate.getTime() > gameData.dDate.getTime()) {
@@ -171,7 +172,7 @@ public class PlayerStatisticsBoxplot extends PlayerStatisticsBase {
 		for (int i = 0; i < this.vPlayerDatas.length; i++) {
 			// look for each played game
 			for (GameData gameData : vPlayerDatas[i].lGameDatas) {
-				int iDay = GetDateDayAmount(gameData.dDate, iDayInterval);
+				int iDay = UtilidadesVidere.GetDateDayAmount(gameData.dDate, iDayInterval);
 
 				if (!lDays.contains(String.valueOf(iDay))) {
 					lDays.add(String.valueOf(iDay));
@@ -193,21 +194,7 @@ public class PlayerStatisticsBoxplot extends PlayerStatisticsBase {
 
 	}
 
-	protected int GetDateDayAmount(Date date, int iDayInterval) {
-//		return (int) (date.getTime() / (1000 * 60 * 60 * 24 * iDayInterval));
-		Calendar cal = Calendar.getInstance();
-
-		cal.setTime(date);
-
-		int iTotalDays =
-				(cal.get(Calendar.YEAR) * 365) +
-				(cal.get(Calendar.MONTH) * 30) +
-				(cal.get(Calendar.DAY_OF_MONTH))
-				;
-		
-		return iTotalDays/iDayInterval;
-
-	}
+	
 	// </editor-fold>
 
 	

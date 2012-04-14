@@ -6,6 +6,8 @@
 package classes;
 
 import java.net.URL;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Random;
 
 /**
@@ -87,6 +89,20 @@ public class UtilidadesVidere {
 		return output.toString();
 	}
 
+	public static int GetDateDayAmount(Date date, int iDayInterval) {
+//		return (int) (date.getTime() / (1000 * 60 * 60 * 24 * iDayInterval));
+		Calendar cal = Calendar.getInstance();
+
+		cal.setTime(date);
+
+		int iTotalDays =
+				(cal.get(Calendar.YEAR) * 365)
+				+ (cal.get(Calendar.MONTH) * 30)
+				+ (cal.get(Calendar.DAY_OF_MONTH));
+
+		return iTotalDays / iDayInterval;
+
+	}
 	public static void main(String[] args) {
 
 //		int [] shh = getShuffleIntegers(4);
@@ -112,5 +128,6 @@ public class UtilidadesVidere {
 		}
 
 	}
+
 	
 }
