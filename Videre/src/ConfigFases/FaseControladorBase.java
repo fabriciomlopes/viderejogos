@@ -87,7 +87,7 @@ public abstract class FaseControladorBase {
 	public void OnPlayerRight(){
 		// System.out.println("Acertou: " + iCenarioAtual + ", vai ate "+ GetMaxLevel());
 		SetPontos(iPontos + 500);
-		gameData.AddScore(500);
+		gameData.SetScore(iPontos);
 		gameData.IncreaseRightCount();
 		
 		if (iFaseAtual+1 < GetMaxLevel()) {
@@ -105,7 +105,8 @@ public abstract class FaseControladorBase {
 
 	public void OnPlayerMistake(){
 		SetPontos(iPontos - 250);
-		gameData.AddScore(-250);
+		//gameData.AddScore(-250);
+		gameData.SetScore(iPontos);
 		gameData.IncreaseMistakeCount();
 		
 		if (iVidas -1 <= 0) {
