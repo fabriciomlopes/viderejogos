@@ -41,7 +41,7 @@ public class PlayerManager {
 			GetInstance().GetCurrentPlayerData().Save();
 
 			//// DEBUG
-			Dump();
+			//Dump();
 		}
 	}
 

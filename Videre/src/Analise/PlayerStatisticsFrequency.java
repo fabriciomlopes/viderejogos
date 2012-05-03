@@ -6,7 +6,6 @@
 package Analise;
 
 import classes.Defs;
-import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
@@ -24,12 +23,12 @@ import org.jfree.ui.RefineryUtilities;
 public abstract class PlayerStatisticsFrequency extends PlayerStatisticsBase {
 
 
-	@Override
-	public void SetPlayerDatas(PlayerData... vPlayerDatas) {
-		super.SetPlayerDatas(vPlayerDatas);
-		vTypes = PlayerManager.GetInstance().GetAllPlayedGameTypes(vPlayerDatas);
-		
-	}
+//	@Override
+//	public void SetPlayerDatas(PlayerData... vPlayerDatas) {
+//		super.SetPlayerDatas(vPlayerDatas);
+//		vTypes = PlayerManager.GetInstance().GetAllPlayedGameTypes(vPlayerDatas);
+//
+//	}
 
 //	public PlayerStatisticsFrequency(PlayerData[] playerDatas) {
 //		this.playerDatas = playerDatas;
@@ -53,7 +52,7 @@ public abstract class PlayerStatisticsFrequency extends PlayerStatisticsBase {
 				false);
 		
 		JPanel jpanel = new ChartPanel(jfreechart);
-		jpanel.setPreferredSize(new Dimension(800, 600));
+		jpanel.setPreferredSize(Defs.DEFAULT_GRAPH_SIZE);
 		janela.setContentPane(jpanel);
 		janela.pack();
 		RefineryUtilities.centerFrameOnScreen(janela);

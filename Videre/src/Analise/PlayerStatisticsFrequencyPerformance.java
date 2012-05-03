@@ -43,9 +43,6 @@ public class PlayerStatisticsFrequencyPerformance extends PlayerStatisticsFreque
 					int iRange = GetRangeIndex(vRanges, gameData.iScore);
 					vRangesAmount[iRange]++;
 
-//
-//					// add to dataset
-//					dataset.addValue(1, sGameName, vRangeNames[iRange]);
 				}
 			}
 		}
@@ -56,7 +53,7 @@ public class PlayerStatisticsFrequencyPerformance extends PlayerStatisticsFreque
 			dataset.addValue(vRangesAmount[i], sGameName, GetRangeName(vRanges, i));
 		}
 
-		OpenGraphic(dataset, "Titulo: " + sGameName, "Pontos", "Quantidade"); // thistextlokaki
+		OpenGraphic(dataset, "Desempenho: " + sGameName, "Intervalo de Pontuação", "Frequência"); // thistextlokaki
 	}
 
 	/**

@@ -37,7 +37,7 @@ public class PlayerStatisticsFrequencyGameUsage extends PlayerStatisticsFrequenc
 		DefaultCategoryDataset dataset = new DefaultCategoryDataset();
 
 
-		String sBarName = "";
+		String sBarName = "Jogo"; // thistextlokaki
 
 		
 		for (Class<?> gameType : vTypes) {
@@ -74,7 +74,7 @@ public class PlayerStatisticsFrequencyGameUsage extends PlayerStatisticsFrequenc
 		}
 
 
-		OpenGraphic(dataset, sTitle, "Frequência", "Jogo"); // thistextlokaki
+		OpenGraphic(dataset, sTitle, "Jogo", "Frequência"); // thistextlokaki
 	}
 
 	

@@ -14,14 +14,12 @@ import org.jfree.data.category.DefaultCategoryDataset;
  */
 public class PlayerStatisticsLine extends PlayerStatisticsBase {
 
-//	protected playerData playerData;
-//	protected Class<?>[] vTypes; // cache value of all types.
 	DefaultCategoryDataset dataset;
 	protected PlayerData playerData;
 
 	@Override
 	public void SetPlayerDatas(PlayerData... playerDatas) {
-		super.SetPlayerDatas(playerDatas);
+		//super.SetPlayerDatas(playerDatas);
 		playerData = playerDatas[0];
 		vTypes = playerData.GetAllPlayedGameTypes();
 	}
@@ -40,7 +38,7 @@ public class PlayerStatisticsLine extends PlayerStatisticsBase {
 			Populate(type);
 		}
 
-		Chart.LineChart(dataset, "Linha de Aprendizagem de Todos os jogos ", "Quantidade de Jogadas", "Pontos", true, 0, 0);  // thistextlokaki
+		Chart.LineChart(dataset, "Linha de Aprendizagem de Todos os jogos (Jogador:" + playerData.sName +")", "Quantidade de Jogadas", "Pontos", true, 0, 0);  // thistextlokaki
 	}
 
 	public void ShowStatisticsFor(Class<?> type) {
@@ -56,7 +54,7 @@ public class PlayerStatisticsLine extends PlayerStatisticsBase {
 		
 		Populate(type);
 
-		Chart.LineChart(dataset, "Linha de Aprendizagem do jogo " + sGameName, "Quantidade de Jogadas", "Pontos", true, 0, 0);  // thistextlokaki
+		Chart.LineChart(dataset, "Linha de Aprendizagem do jogo " + sGameName + " (Jogador:" + playerData.sName +")", "Quantidade de Jogadas", "Pontos", true, 0, 0);  // thistextlokaki
 	}
 
 

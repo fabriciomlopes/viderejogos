@@ -49,6 +49,10 @@ public final class GameData implements Serializable {
 		iScore += iAmount;
 	}
 
+	public void SetScore(int iAmount){
+		iScore = iAmount;
+	}
+
 	/**
 	 * Increases right count by 1
 	 */
