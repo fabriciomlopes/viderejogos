@@ -1,5 +1,13 @@
 ------------------------
-Videre v0.9.11 (2012/03/30)
+Videre v0.9.12 (2012/05/02)
+------------------------
+Patch Notes:
+- Completed All graphic generation;
+Patch Changes:
+[fix] jFreeChart is now batched together with the jar file.
+
+------------------------
+Videre v0.9.11 (2012/04/11)
 ------------------------
 Patch Notes:
 - Interface to show the graphics is now available.
