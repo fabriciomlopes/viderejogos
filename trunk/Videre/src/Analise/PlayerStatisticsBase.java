@@ -5,7 +5,6 @@
 
 package Analise;
 
-import java.lang.Class;
 
 /**
  * Created on : Apr 2, 2012, 8:14:42 PM
@@ -19,6 +18,7 @@ public abstract class PlayerStatisticsBase {
 
 	public void SetPlayerDatas(PlayerData ... vPlayerDatas) {
 		this.vPlayerDatas = vPlayerDatas;
+		this.vTypes = PlayerManager.GetInstance().GetAllPlayedGameTypes(vPlayerDatas);
 	}
 
 	/**

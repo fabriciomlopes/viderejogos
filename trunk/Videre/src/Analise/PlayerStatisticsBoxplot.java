@@ -8,7 +8,6 @@ package Analise;
 import classes.UtilidadesVidere;
 import java.awt.Font;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
@@ -29,11 +28,11 @@ import org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset;
  */
 public class PlayerStatisticsBoxplot extends PlayerStatisticsBase {
 
-	@Override
-	public void SetPlayerDatas(PlayerData... vPlayerDatas) {
-		super.SetPlayerDatas(vPlayerDatas);
-		vTypes = PlayerManager.GetInstance().GetAllPlayedGameTypes(vPlayerDatas);
-	}
+//	@Override
+//	public void SetPlayerDatas(PlayerData... vPlayerDatas) {
+//		super.SetPlayerDatas(vPlayerDatas);
+//		vTypes = PlayerManager.GetInstance().GetAllPlayedGameTypes(vPlayerDatas);
+//	}
 
 //	protected  PlayerData[] vPlayerDatas;
 //	private Class<?>[] vTypes; // cache value of all types
