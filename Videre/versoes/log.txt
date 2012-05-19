@@ -1,4 +1,12 @@
 ------------------------
+Videre v0.9.13 (2012/05/19)
+------------------------
+Patch Notes:
+- Included a new game.
+Patch Changes:
+[new] game added: Tamanho (Sizes).
+
+------------------------
 Videre v0.9.12 (2012/05/02)
 ------------------------
 Patch Notes:
