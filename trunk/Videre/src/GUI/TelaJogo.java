@@ -6,13 +6,13 @@ import java.awt.*;
 
 public abstract class TelaJogo extends TelaPadrao {
 
-	protected int fase = 1, vida = 4, ptos = 0;
+//	protected int fase = 1, vida = 4, ptos = 0;
 //fase - contador para indicar a fase em que o jogador esta
 //vida - numero inicial de vidas
 //ptos - numero inicial de pontos
 	protected Icon figfase;
 //fig fase - recebe a figura da fase atual
-	protected String texto;
+//	protected String texto;
 
 	
 	public TelaJogo() {

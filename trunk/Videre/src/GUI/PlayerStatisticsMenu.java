@@ -54,9 +54,9 @@ public class PlayerStatisticsMenu extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        btnBoxplotPlayer = new javax.swing.JButton();
+        btnBoxplotGames = new javax.swing.JButton();
         btnBoxplotDate = new javax.swing.JButton();
-        btnBoxplotGame = new javax.swing.JButton();
+        btnBoxplotPlayers = new javax.swing.JButton();
         btnScatterPlotGroup = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         btnLearningCurve = new javax.swing.JButton();
@@ -80,11 +80,11 @@ public class PlayerStatisticsMenu extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Estatísticas Coletivas", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 30))); // NOI18N
 
-        btnBoxplotPlayer.setFont(new java.awt.Font("Comic Sans MS", 0, 24));
-        btnBoxplotPlayer.setText("Boxplot - Jogadores");
-        btnBoxplotPlayer.addActionListener(new java.awt.event.ActionListener() {
+        btnBoxplotGames.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
+        btnBoxplotGames.setText("Boxplot - Jogos");
+        btnBoxplotGames.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBoxplotPlayerActionPerformed(evt);
+                btnBoxplotGamesActionPerformed(evt);
             }
         });
 
@@ -96,15 +96,15 @@ public class PlayerStatisticsMenu extends javax.swing.JFrame {
             }
         });
 
-        btnBoxplotGame.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
-        btnBoxplotGame.setText("Boxplot - Jogos");
-        btnBoxplotGame.addActionListener(new java.awt.event.ActionListener() {
+        btnBoxplotPlayers.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
+        btnBoxplotPlayers.setText("Boxplot - Jogadores");
+        btnBoxplotPlayers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBoxplotGameActionPerformed(evt);
+                btnBoxplotPlayersActionPerformed(evt);
             }
         });
 
-        btnScatterPlotGroup.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
+        btnScatterPlotGroup.setFont(new java.awt.Font("Comic Sans MS", 0, 24));
         btnScatterPlotGroup.setText("Histograma");
         btnScatterPlotGroup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,19 +116,19 @@ public class PlayerStatisticsMenu extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnBoxplotPlayer, javax.swing.GroupLayout.DEFAULT_SIZE, 390, Short.MAX_VALUE)
+            .addComponent(btnBoxplotGames, javax.swing.GroupLayout.DEFAULT_SIZE, 390, Short.MAX_VALUE)
             .addComponent(btnBoxplotDate, javax.swing.GroupLayout.DEFAULT_SIZE, 390, Short.MAX_VALUE)
-            .addComponent(btnBoxplotGame, javax.swing.GroupLayout.DEFAULT_SIZE, 390, Short.MAX_VALUE)
+            .addComponent(btnBoxplotPlayers, javax.swing.GroupLayout.DEFAULT_SIZE, 390, Short.MAX_VALUE)
             .addComponent(btnScatterPlotGroup, javax.swing.GroupLayout.DEFAULT_SIZE, 390, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(btnBoxplotPlayer)
+                .addComponent(btnBoxplotGames)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnBoxplotDate)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnBoxplotGame)
+                .addComponent(btnBoxplotPlayers)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnScatterPlotGroup)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -162,7 +162,7 @@ public class PlayerStatisticsMenu extends javax.swing.JFrame {
             }
         });
 
-        btnScatterPlotSolo.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
+        btnScatterPlotSolo.setFont(new java.awt.Font("Comic Sans MS", 0, 24));
         btnScatterPlotSolo.setText("Histograma");
         btnScatterPlotSolo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -192,7 +192,7 @@ public class PlayerStatisticsMenu extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        btnClose.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
+        btnClose.setFont(new java.awt.Font("Comic Sans MS", 0, 24));
         btnClose.setText("Fechar");
         btnClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -229,21 +229,21 @@ public class PlayerStatisticsMenu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-	private void btnBoxplotPlayerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBoxplotPlayerActionPerformed
+	private void btnBoxplotGamesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBoxplotGamesActionPerformed
 		// TODO add your handling code here:
 		OnClickBoxplotPlayers();
 		
-}//GEN-LAST:event_btnBoxplotPlayerActionPerformed
+}//GEN-LAST:event_btnBoxplotGamesActionPerformed
 
 	private void btnBoxplotDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBoxplotDateActionPerformed
 		// TODO add your handling code here:
 		OnClickBoxplotDates();
 	}//GEN-LAST:event_btnBoxplotDateActionPerformed
 
-	private void btnBoxplotGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBoxplotGameActionPerformed
+	private void btnBoxplotPlayersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBoxplotPlayersActionPerformed
 		// TODO add your handling code here:
 		OnClickBoxplotGames();
-	}//GEN-LAST:event_btnBoxplotGameActionPerformed
+	}//GEN-LAST:event_btnBoxplotPlayersActionPerformed
 
 	private void btnLearningCurveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLearningCurveActionPerformed
 		// TODO add your handling code here:
@@ -302,8 +302,8 @@ public class PlayerStatisticsMenu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBoxplotDate;
-    private javax.swing.JButton btnBoxplotGame;
-    private javax.swing.JButton btnBoxplotPlayer;
+    private javax.swing.JButton btnBoxplotGames;
+    private javax.swing.JButton btnBoxplotPlayers;
     private javax.swing.JButton btnClose;
     private javax.swing.JButton btnGameUsage;
     private javax.swing.JButton btnLearningCurve;

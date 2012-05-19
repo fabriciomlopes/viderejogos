@@ -71,20 +71,20 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="btnBoxplotPlayer" alignment="0" pref="390" max="32767" attributes="0"/>
+              <Component id="btnBoxplotGames" alignment="0" pref="390" max="32767" attributes="0"/>
               <Component id="btnBoxplotDate" alignment="0" pref="390" max="32767" attributes="0"/>
-              <Component id="btnBoxplotGame" alignment="0" pref="390" max="32767" attributes="0"/>
+              <Component id="btnBoxplotPlayers" alignment="0" pref="390" max="32767" attributes="0"/>
               <Component id="btnScatterPlotGroup" alignment="0" pref="390" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="btnBoxplotPlayer" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnBoxplotGames" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="btnBoxplotDate" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="btnBoxplotGame" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnBoxplotPlayers" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="btnScatterPlotGroup" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
@@ -93,15 +93,15 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="btnBoxplotPlayer">
+        <Component class="javax.swing.JButton" name="btnBoxplotGames">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Comic Sans MS" size="24" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Boxplot - Jogadores"/>
+            <Property name="text" type="java.lang.String" value="Boxplot - Jogos"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBoxplotPlayerActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBoxplotGamesActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnBoxplotDate">
@@ -115,15 +115,15 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBoxplotDateActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btnBoxplotGame">
+        <Component class="javax.swing.JButton" name="btnBoxplotPlayers">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Comic Sans MS" size="24" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Boxplot - Jogos"/>
+            <Property name="text" type="java.lang.String" value="Boxplot - Jogadores"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBoxplotGameActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBoxplotPlayersActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnScatterPlotGroup">

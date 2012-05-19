@@ -89,7 +89,7 @@ public class PlayerStatisticsScatterPlot extends PlayerStatisticsBase {
 			iCount++;
 		}
 
-		OpenGraph(AllSeries, "ScatterPlot Geral (Todos jogadores)", "Número de vezes jogado", "Score"); // thistextlokaki
+		OpenGraph(AllSeries, "Histograma Coletivo (Todos jogadores)", "Número de vezes jogado", "Score"); // thistextlokaki
 		
 	}
 

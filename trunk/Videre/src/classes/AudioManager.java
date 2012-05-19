@@ -18,7 +18,7 @@ import javax.sound.midi.Sequencer;
  */
 public class AudioManager {
 
-	public static final boolean DISABLE_SOUNDS = true; //
+	public static final boolean DISABLE_SOUNDS = false; //
 
 	// <editor-fold defaultstate="collapsed" desc="Singleton">
 	private static AudioManager instance;
