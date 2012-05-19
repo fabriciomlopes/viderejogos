@@ -86,7 +86,7 @@ public abstract class FaseControladorBase {
 
 	public void OnPlayerRight(){
 		// System.out.println("Acertou: " + iCenarioAtual + ", vai ate "+ GetMaxLevel());
-		SetPontos(iPontos + 500);
+		SetPontos(iPontos + GetRightScore());
 		gameData.SetScore(iPontos);
 		gameData.IncreaseRightCount();
 		
@@ -104,7 +104,7 @@ public abstract class FaseControladorBase {
 	}
 
 	public void OnPlayerMistake(){
-		SetPontos(iPontos - 250);
+		SetPontos(iPontos - GetMistakeScore());
 		//gameData.AddScore(-250);
 		gameData.SetScore(iPontos);
 		gameData.IncreaseMistakeCount();
@@ -118,6 +118,24 @@ public abstract class FaseControladorBase {
 		SavePoint();
 	}
 	
+
+	/**
+	 * calculates the right score for player.
+	 * Called at OnPlayerRight().
+	 * @return an integer higher than 0
+	 */
+	protected int GetRightScore(){
+		return 500;
+	}
+
+	/**
+	 * calculates the amount of score to DECREASE from player.
+	 * Note: should always return <b>positive</b> values
+	 * @return an integer higher than 0
+	 */
+	protected int GetMistakeScore(){
+		return 250;
+	}
 
 	/**
 	 * chamado quando termina o jogo

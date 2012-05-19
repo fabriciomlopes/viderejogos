@@ -22,7 +22,7 @@ public class Init {
 			String os = System.getProperty("os.name").toLowerCase();
 			System.out.println(os);
 			if (os.contains("win") || os.contains("ruindows")) {
-				UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+//				UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
 			} else if (os.contains("nux") || os.contains("nix")) {
 				UIManager.setLookAndFeel("com.sun.java.swing.plaf.gtk.GTKLookAndFeel");
 			}

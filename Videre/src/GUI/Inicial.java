@@ -46,6 +46,7 @@ public class Inicial extends TelaPadrao {
         Matriz = new javax.swing.JButton();
         Numeros = new javax.swing.JButton();
         jlSombras = new javax.swing.JButton();
+        btnFormas = new javax.swing.JButton();
         Sair = new javax.swing.JButton();
         FiguraZoio = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -124,9 +125,9 @@ public class Inicial extends TelaPadrao {
 
 		// menu button config
 		int iCountY = 0;
-		int iStartY = 50;
-		int iDistY = 62;
-		int iSizeY = 60;
+		int iStartY = 45; //50
+		int iDistY = 54;//62
+		int iSizeY = 52;//60
 		
         Cores.setBackground(new java.awt.Color(244, 244, 246));
         Cores.setFont(new java.awt.Font("Comic Sans MS", 1, 33));
@@ -279,6 +280,60 @@ public class Inicial extends TelaPadrao {
         //jlSombras.setBounds(50, 390, 210, 60);
         jlSombras.setBounds(50, iStartY + iCountY++ * iDistY, 210, iSizeY);
 
+
+        btnFormas.setBackground(new java.awt.Color(244, 244, 246));
+        btnFormas.setFont(new java.awt.Font("Comic Sans MS", 1, 33));
+        btnFormas.setForeground(new java.awt.Color(255, 0, 0));
+        btnFormas.setText("FORMAS");
+        btnFormas.setToolTipText("Identifique a forma de um objeto");
+        btnFormas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnFormasMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnFormasMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnFormasMousePressed(evt);
+            }
+        });
+        btnFormas.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                btnFormasMouseMoved(evt);
+            }
+        });
+        add(btnFormas);
+        //btnFormas.setBounds(50, 390, 210, 60);
+        btnFormas.setBounds(50, iStartY + iCountY++ * iDistY, 210, iSizeY);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
 		/// Configurations Button
 
         buttonConfigs.setBackground(new java.awt.Color(244, 244, 246));
@@ -395,6 +450,28 @@ public class Inicial extends TelaPadrao {
 		AbrirMenu(Sombras.GetInsance());
 		
     }//GEN-LAST:event_jlSombrasMouseClicked
+	
+	//muda a cor do botao para amarelo quando o mouse est� em cima
+    private void btnFormasMouseMoved(java.awt.event.MouseEvent evt) {                                     
+		btnFormas.setBackground(new java.awt.Color(255, 255, 102));
+    }                                    
+
+	//muda a cor do botao para verde quando é pressionado
+    private void btnFormasMousePressed(java.awt.event.MouseEvent evt) {                                       
+		btnFormas.setBackground(new java.awt.Color(102, 204, 0));
+    }                                      
+
+	//volta cor do botao ao normal quando o mouse não está em cima
+    private void btnFormasMouseExited(java.awt.event.MouseEvent evt) {                                      
+		btnFormas.setBackground(new java.awt.Color(244, 244, 246));
+    }                                     
+
+	//chama o jogo das sombras
+    private void btnFormasMouseClicked(java.awt.event.MouseEvent evt) {                                       
+		
+		AbrirMenu(new Tamanho());
+		
+    }
 
 	//muda a cor do botao para amarelo quando o mouse passa em cima
     private void NumerosMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NumerosMouseMoved
@@ -611,6 +688,7 @@ public class Inicial extends TelaPadrao {
     private javax.swing.JButton buttonChangeUser;
     
     // End of variables declaration//GEN-END:variables
+	private javax.swing.JButton btnFormas;
 	private javax.swing.JButton buttonConfigs;
 	
 	public void SetWelcomeText(String sText) {
