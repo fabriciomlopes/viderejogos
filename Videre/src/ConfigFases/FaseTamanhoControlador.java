@@ -6,7 +6,6 @@
 package ConfigFases;
 
 import GUI.TelaJogo;
-import classes.UtilidadesVidere;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
@@ -16,42 +15,15 @@ import javax.swing.ImageIcon;
  * Created on : May 17, 2012, 7:44:43 PM
  * @author diogo
  */
-public class FaseTamanhoControlador extends FaseMutanteBase {
+public class FaseTamanhoControlador extends FaseModificaImagemControladorBase {
 
 	
-	private ImageIcon originalIcon;
-
-	// options
-	public enum FORMS {
-		Cross,
-		Ellipse,
-		Square,
-		Star,
-		Hexagon,
-		Triangle,
-		TriangleInverse,
-	};
-
 	
-	// Game Data
-	protected FaseTamanho[] fases;
 
 	public FaseTamanhoControlador(TelaJogo tela, FaseTamanho ... fases) {
-		this.tela = tela;
-		this.fases = fases;
-
-		InitComponents();
+		super(tela, fases);
 	}
 	
-	@Override
-	public int GetMaxLevel() {
-		return fases.length;
-	}
-
-	@Override
-	public TelaJogo GetTela() {
-		return tela;
-	}
 
 //	@Override
 //	protected int GetMistakeScore() {
@@ -67,7 +39,7 @@ public class FaseTamanhoControlador extends FaseMutanteBase {
 	protected int GetRightScore() {
 //		return super.GetRightScore();
 
-		int iMaxZoomLevel = GetCurrentFaseTamanho().GetRescaleFactorValues().length;
+		int iMaxZoomLevel = GetCurrentFaseMutante().GetSublevelFactorValues().length;
 		int iMaxScore = iMaxZoomLevel * 100;
 		int iFinalScore = iMaxScore - (iCurrentSublevel * 100);
 		
@@ -77,109 +49,8 @@ public class FaseTamanhoControlador extends FaseMutanteBase {
 
 	
 
-	/**
-	 * says if the clicked sequence matches form and type
-	 * of the right sequence
-	 * @return
-	 */
-	@Override
-	protected boolean IsRightImage(String sClickedImage) {
-		FaseTamanho faseAtual = GetCurrentFaseTamanho();
 
 
-		// clicked image is the same name as the stage?
-		if (faseAtual.GetCorrectForm().equals(sClickedImage)) {
-			return true;
-		}
-		else {
-			return false;
-		}
-		
-	}
-
-	@Override
-	public void SetCenario(int iCenario) {
-		super.SetCenario(iCenario);
-		FaseTamanho faseAtual = GetCurrentFaseTamanho();
-		// set available options..
-		SetOptions(faseAtual);
-
-		// set the center image
-		originalIcon = GetImage(faseAtual.GetName());
-		objectShowing.setIcon(originalIcon);
-		// start at zoom level 0.
-		SetCurrentSublevel(0);
-	}
-
-	@Override
-	protected void OnClickScreen() {
-		SetCurrentSublevel(iCurrentSublevel + 1);
-	}
-
-	
-
-	/**
-	 * sets the current image zoom level.
-	 * @param iLevel a level starting from 0.
-	 * @return true if set successfully. false if reached max or level is not available
-	 */
-	protected boolean SetCurrentSublevel(int iLevel){
-
-		FaseTamanho faseAtual = GetCurrentFaseTamanho();
-
-		float fResizeFactor = faseAtual.GetRescaleFactor(iLevel);
-		if (fResizeFactor > 0f) {
-
-			ImageIcon newIcon = ResizeIcon(originalIcon, fResizeFactor);
-
-			objectShowing.setIcon(newIcon);
-			iCurrentSublevel = iLevel;
-
-			// update label
-			String sLabel = "";
-			
-			if (fResizeFactor < 1f) {
-				sLabel = String.format( "%.0fx Menor que o ",  Math.pow(fResizeFactor, -1)); // thistextlokaki
-
-				
-			}
-			else if (fResizeFactor > 1f) {
-				sLabel = String.format( "%.0fx Maior que o ",  (fResizeFactor -1f)); // thistextlokaki
-			}
-			sLabel += "Tamanho Original"; // thistextlokaki
-			labelCurrentSublevel.setText(sLabel);
-
-			return true;
-		}
-		else {
-			return false;
-		}
-	}
-
-	/**
-	 * Sets the visible options by ID.
-	 */
-	protected void SetOptions(FaseTamanho faseTamanho){
-
-		// randomize options:
-		int[] vRandomIndices = UtilidadesVidere.getShuffleIntegers(vOptions.length);
-
-		for (int i= 0; i < vOptions.length; i++) {
-			
-			String sName = faseTamanho.vOptionsName[vRandomIndices[i]].toString();
-			vOptions[i].setIcon(GetImage(sName));
-			vOptions[i].setName(sName);
-		}
-
-	}
-
-	/**
-	 * 
-	 * @return
-	 */
-	protected FaseTamanho GetCurrentFaseTamanho() {
-		return fases[GetCurrentScene()];
-	}
 
 	/**
 	 * Resizes a icon.
@@ -190,7 +61,7 @@ public class FaseTamanhoControlador extends FaseMutanteBase {
 	 * @param fFactor the scale factor for new X and Y.
 	 * @return
 	 */
-	protected ImageIcon ResizeIcon(ImageIcon icon, float fFactor){
+	protected ImageIcon ModifyIcon(ImageIcon icon, float fFactor){
 
 		int iSizeX = Math.round( icon.getIconWidth() * fFactor);
 		int iSizeY = Math.round( icon.getIconHeight() * fFactor);
@@ -209,4 +80,22 @@ public class FaseTamanhoControlador extends FaseMutanteBase {
 
 		return newIcon;
 	}
+
+	@Override
+	protected String GetInfoDescription(float fFactor) {
+		String sLabel = "";
+
+		if (fFactor < 1f) {
+			sLabel = String.format("%.0fx Menor que o ", Math.pow(fFactor, -1)); // thistextlokaki
+
+
+		} else if (fFactor > 1f) {
+			sLabel = String.format("%.0fx Maior que o ", (fFactor - 1f)); // thistextlokaki
+		}
+		sLabel += "Tamanho Original"; // thistextlokaki
+
+		return sLabel;
+	}
+
+	
 }
