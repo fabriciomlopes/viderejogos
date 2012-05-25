@@ -5,35 +5,29 @@
 
 package ConfigFases;
 
-import java.awt.event.MouseAdapter;
-
 /**
  * Created on : May 17, 2012, 7:44:51 PM
  * @author diogo
  */
-public class FaseTamanho extends Fase {
+public class FaseTamanho extends FaseMutanteBase {
 
 
-	protected FaseTamanhoControlador.FORMS[] vOptionsName;
+//	protected FaseModificaImagemControladorBase.FORMS[] vOptionsName;
 
-	protected float[] vRescaleFacor;
 
-	protected String sCorrectForm;
 
-	@Override
-	public void InitComponents(FaseControladorBase controller, MouseAdapter listener) {
-//		throw new UnsupportedOperationException("Not supported yet.");
-	}
+	public FaseTamanho(String sName, float[] vFactors, FaseModificaImagemControladorBase.FORMS ... vOptions) {
+		super(sName, vFactors);
 
-	public FaseTamanho(String sName, float[] vFactors, FaseTamanhoControlador.FORMS ... vOptions) {
-		super(sName);
-		sCorrectForm = sName;
-		this.vOptionsName = vOptions;
-		SetRescaleFactor(vFactors);
+		vOptionsName = new String[vOptions.length];
+		for (int i = 0; i < vOptions.length; i++) {
+			vOptionsName[i] = vOptions[i].toString();
+		}
+//		this.vOptionsName = vOptions;
 	}
 
 	
-	public FaseTamanho(FaseTamanhoControlador.FORMS correctForm, FaseTamanhoControlador.FORMS ... vOptions) {
+	public FaseTamanho(FaseModificaImagemControladorBase.FORMS correctForm, FaseModificaImagemControladorBase.FORMS ... vOptions) {
 		this(correctForm.toString(), new float[]
 		{
 			0.0625f,
@@ -50,34 +44,6 @@ public class FaseTamanho extends Fase {
 			vOptions);
 	}
 
-	/**
-	 * gets the rescale factor at a certain index.
-	 * returns -1 if not found index
-	 * @return 
-	 */
-	public float GetRescaleFactor(int iIndex) {
+	
 
-		if (iIndex < 0 || iIndex >= vRescaleFacor.length) {
-			return  -1f;
-		}
-		return vRescaleFacor[iIndex];
-
-	}
-
-	/**
-	 * 
-	 * @return all values of refactor
-	 */
-	public float[] GetRescaleFactorValues(){
-		return vRescaleFacor;
-	}
-
-	private void SetRescaleFactor(float ... vFactors) {
-		vRescaleFacor = vFactors;
-	}
-
-
-	public String GetCorrectForm() {
-		return sCorrectForm;
-	}
 }

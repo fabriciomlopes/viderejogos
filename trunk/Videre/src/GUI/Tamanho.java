@@ -1,10 +1,11 @@
-/*
+	/*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
 package GUI;
 
 import ConfigFases.FaseControladorBase;
+import ConfigFases.FaseModificaImagemControladorBase;
 import ConfigFases.FaseTamanho;
 import ConfigFases.FaseTamanhoControlador;
 
@@ -19,13 +20,13 @@ public class Tamanho extends TelaJogo {
 	public Tamanho() {
 
 		// typeless names
-		FaseTamanhoControlador.FORMS cross = FaseTamanhoControlador.FORMS.Cross;
-		FaseTamanhoControlador.FORMS ellipse = FaseTamanhoControlador.FORMS.Ellipse;
-		FaseTamanhoControlador.FORMS square = FaseTamanhoControlador.FORMS.Square;
-		FaseTamanhoControlador.FORMS star = FaseTamanhoControlador.FORMS.Star;
-		FaseTamanhoControlador.FORMS hexagon = FaseTamanhoControlador.FORMS.Hexagon;
-		FaseTamanhoControlador.FORMS triangle = FaseTamanhoControlador.FORMS.Triangle;
-		FaseTamanhoControlador.FORMS triangleInverse = FaseTamanhoControlador.FORMS.TriangleInverse;
+		FaseModificaImagemControladorBase.FORMS cross = FaseModificaImagemControladorBase.FORMS.Cross;
+		FaseModificaImagemControladorBase.FORMS ellipse = FaseModificaImagemControladorBase.FORMS.Ellipse;
+		FaseModificaImagemControladorBase.FORMS square = FaseModificaImagemControladorBase.FORMS.Square;
+		FaseModificaImagemControladorBase.FORMS star = FaseModificaImagemControladorBase.FORMS.Star;
+		FaseModificaImagemControladorBase.FORMS hexagon = FaseModificaImagemControladorBase.FORMS.Hexagon;
+		FaseModificaImagemControladorBase.FORMS triangle = FaseModificaImagemControladorBase.FORMS.Triangle;
+		FaseModificaImagemControladorBase.FORMS triangleInverse = FaseModificaImagemControladorBase.FORMS.TriangleInverse;
 
 		
 		controlaFase = new FaseTamanhoControlador(this,
