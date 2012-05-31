@@ -7,6 +7,7 @@ package ConfigFases;
 
 import GUI.TelaJogo;
 import classes.Recursos;
+import classes.UtilidadesVidere;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
@@ -24,6 +25,7 @@ import javax.swing.SwingConstants;
 public abstract class FaseMutanteControladorBase extends FaseControladorBase {
 
 	protected static final String caminhoImg = "formas/";
+	protected static final String caminhoDirecao = "direcoes/";
 	protected static final int MAX_OPTIONS = 4;
 
 	// UI References
@@ -50,7 +52,7 @@ public abstract class FaseMutanteControladorBase extends FaseControladorBase {
 	}
 
 //
-	protected  void InitComponents() {
+	protected void InitComponents() {
 		vOptions = new JLabel[MAX_OPTIONS];
 		// init Right side Buttons
 		for (int iOption = 0; iOption < vOptions.length; iOption++) {
@@ -117,6 +119,7 @@ public abstract class FaseMutanteControladorBase extends FaseControladorBase {
 		ImageIcon icon = Recursos.GetInsance().getImagem(caminhoImg + sImageName + ".jpg");
 		return icon;
 	}
+	
 
 	private void onClickForeground(java.awt.event.MouseEvent evt) {
 //		System.out.println("aea: " + evt.getPoint());
@@ -136,6 +139,22 @@ public abstract class FaseMutanteControladorBase extends FaseControladorBase {
 
 		}
 	}
+	/**
+	 * Sets the visible options by ID.
+	 */
+	protected void SetOptions(FaseMutanteBase faseMutanteBase){
+
+		// randomize options:
+		int[] vRandomIndices = UtilidadesVidere.getShuffleIntegers(vOptions.length);
+
+		for (int i= 0; i < vOptions.length; i++) {
+			String sName = faseMutanteBase.vOptionsName[vRandomIndices[i]];
+			vOptions[i].setIcon(GetImage(sName));
+			vOptions[i].setName(sName);
+		}
+
+	}
+
 
 	/**
 	 * checks the current level.

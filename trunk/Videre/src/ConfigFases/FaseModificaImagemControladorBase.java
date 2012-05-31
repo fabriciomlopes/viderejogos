@@ -6,7 +6,6 @@
 package ConfigFases;
 
 import GUI.TelaJogo;
-import classes.UtilidadesVidere;
 import javax.swing.ImageIcon;
 
 /**
@@ -51,21 +50,6 @@ public abstract class FaseModificaImagemControladorBase extends FaseMutanteContr
 		SetCurrentSublevel(0);
 	}
 
-	/**
-	 * Sets the visible options by ID.
-	 */
-	protected void SetOptions(FaseMutanteBase faseMutanteBase){
-
-		// randomize options:
-		int[] vRandomIndices = UtilidadesVidere.getShuffleIntegers(vOptions.length);
-
-		for (int i= 0; i < vOptions.length; i++) {
-			String sName = faseMutanteBase.vOptionsName[vRandomIndices[i]];
-			vOptions[i].setIcon(GetImage(sName));
-			vOptions[i].setName(sName);
-		}
-
-	}
 
 	/**
 	 * sets the current image zoom level.
