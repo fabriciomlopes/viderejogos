@@ -1,0 +1,8 @@
+﻿		Vertical,			// aka: |
+		Horizontal,			// aka: -
+		DiagonalTopLeft,	// aka: \
+		DiagonalTopRight,	// aka: /
+		Square,				// aka: 口
+		MiscTRBMTL,			// aka: \/, Top Right Bottom Mid Top Left
+		MiscBRTMBL,			// aka: /\, Bottom Right Top Mid Bottom Left
+		Delta,				// aka: Δ

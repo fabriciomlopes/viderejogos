@@ -9,6 +9,7 @@ import ConfigFases.FaseConstraste;
 import ConfigFases.FaseContrasteControlador;
 import ConfigFases.FaseControladorBase;
 import ConfigFases.FaseModificaImagemControladorBase.FORMS;
+import classes.UtilidadesVidere;
 
 /**
  * Created on : May 21, 2012, 8:38:41 PM
@@ -44,32 +45,6 @@ public class Constraste extends TelaJogo {
 				new FaseConstraste(triangle, triangle, star, triangleInverse, cross),
 				new FaseConstraste(star, star, triangleInverse, ellipse, cross)
 			);
-//		// typeless names
-//		FaseTamanhoControlador.FORMS cross = FaseTamanhoControlador.FORMS.Cross;
-//		FaseTamanhoControlador.FORMS ellipse = FaseTamanhoControlador.FORMS.Ellipse;
-//		FaseTamanhoControlador.FORMS square = FaseTamanhoControlador.FORMS.Square;
-//		FaseTamanhoControlador.FORMS star = FaseTamanhoControlador.FORMS.Star;
-//		FaseTamanhoControlador.FORMS hexagon = FaseTamanhoControlador.FORMS.Hexagon;
-//		FaseTamanhoControlador.FORMS triangle = FaseTamanhoControlador.FORMS.Triangle;
-//		FaseTamanhoControlador.FORMS triangleInverse = FaseTamanhoControlador.FORMS.TriangleInverse;
-//
-//
-//		controlaFase = new FaseTamanhoControlador(this,
-//				// basicos:
-//				new FaseTamanho(ellipse, ellipse, triangle, square, star),
-//				new FaseTamanho(triangle, ellipse, triangle, square, star),
-//				new FaseTamanho(square, ellipse, triangle, square, star),
-//				new FaseTamanho(star, ellipse, triangle, square, star),
-//				// medios
-//				new FaseTamanho(triangle, triangle, square, hexagon, ellipse),
-//				new FaseTamanho(square, hexagon, square, cross, ellipse),
-//				new FaseTamanho(hexagon, hexagon, square, triangleInverse, ellipse),
-//				new FaseTamanho(hexagon, cross, square, hexagon, ellipse),
-//				// dificeis
-//				new FaseTamanho(triangleInverse, triangleInverse, triangle, star, cross),
-//				new FaseTamanho(triangle, triangleInverse, triangle, star, cross),
-//				new FaseTamanho(star, triangleInverse, triangle, star, cross),
-//				new FaseTamanho(cross, triangleInverse, triangle, star, cross));
 
 		initComponents();
 	}
@@ -104,24 +79,13 @@ public class Constraste extends TelaJogo {
 		Ajuda.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.darkGray, java.awt.Color.gray));
 		Ajuda.addMouseListener(new java.awt.event.MouseAdapter() {
 
+			@Override
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
 				AjudaMouseClicked(evt);
 			}
-
-			public void mouseExited(java.awt.event.MouseEvent evt) {
-				AjudaMouseExited(evt);
-			}
-
-			public void mousePressed(java.awt.event.MouseEvent evt) {
-				AjudaMousePressed(evt);
-			}
 		});
-		Ajuda.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-
-			public void mouseMoved(java.awt.event.MouseEvent evt) {
-				AjudaMouseMoved(evt);
-			}
-		});
+		
+		Ajuda.addMouseListener(UtilidadesVidere.GetCommonMouseEvent());
 		add(Ajuda);
 		Ajuda.setBounds(28, 519, 230, 50);
 
@@ -143,29 +107,18 @@ public class Constraste extends TelaJogo {
 	private javax.swing.JPanel jPanel1;
 	private javax.swing.JPanel jPanel2;
 
-//
-	private void AjudaMouseMoved(java.awt.event.MouseEvent evt) {
-		Ajuda.setBackground(new java.awt.Color(255, 255, 102));
-	}
 
 	private void AjudaMouseClicked(java.awt.event.MouseEvent evt) {
 
-		AbrirAjuda("-Em cada fase aparece uma figura geométrica.\n"
+		AbrirAjuda("-Em cada fase aparece uma figura geométrica coberta por uma sombra.\n"
 				+ "\n"
-				+ "-Você deverá identificar qual é a forma geométrica .\n"
+				+ "-Você deverá identificar qual é a forma geométrica por trás dessa sombra.\n"
 				+ "\n"
 				+ "-Para isso, clique nas figurinhas do lado direito. "
 				+ "\n"
 				+ "Caso não consiga identificar o formato, \n"
-				+ "clique com o mouse para aumentar o tamanho da imagem!");
+				+ "clique com o mouse para aumentar o contraste da imagem!");
 
 	}
 
-	private void AjudaMousePressed(java.awt.event.MouseEvent evt) {
-		Ajuda.setBackground(new java.awt.Color(102, 204, 0));
-	}
-
-	private void AjudaMouseExited(java.awt.event.MouseEvent evt) {
-		Ajuda.setBackground(new java.awt.Color(244, 244, 246));
-	}
 }

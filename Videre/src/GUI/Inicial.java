@@ -50,6 +50,7 @@ public class Inicial extends TelaPadrao {
 		jlSombras = new javax.swing.JButton();
 		btnFormas = new javax.swing.JButton();
 		btnContraste = new javax.swing.JButton();
+		btnMovimento = new javax.swing.JButton();
 		Sair = new javax.swing.JButton();
 		FiguraZoio = new javax.swing.JLabel();
 		jLabel1 = new javax.swing.JLabel();
@@ -115,8 +116,8 @@ public class Inicial extends TelaPadrao {
 		// menu button config
 		int iCountY = 0;
 		int iStartY = 45; //50
-		int iDistY = 52;//62
-		int iSizeY = 49;//60
+		int iDistY = 47;//62
+		int iSizeY = 45;//60
 
 		Cores.setBackground(new java.awt.Color(244, 244, 246));
 		Cores.setFont(new java.awt.Font("Comic Sans MS", 1, 33));
@@ -259,7 +260,24 @@ public class Inicial extends TelaPadrao {
 		//btnContraste.setBounds(50, 390, 210, 60);
 		btnContraste.setBounds(50, iStartY + iCountY++ * iDistY, 210, iSizeY);
 
+		
 
+		btnMovimento.setBackground(new java.awt.Color(244, 244, 246));
+		btnMovimento.setFont(new java.awt.Font("Comic Sans MS", 1, 28));
+		btnMovimento.setForeground(new java.awt.Color(255, 0, 0));
+		btnMovimento.setText("MOVIMENTO");
+		btnMovimento.setToolTipText("Identifique a forma de um objeto");
+		btnMovimento.addMouseListener(new java.awt.event.MouseAdapter() {
+
+			@Override
+			public void mouseClicked(java.awt.event.MouseEvent evt) {
+				btnMovimentoMouseClicked(evt);
+			}
+		});
+		btnMovimento.addMouseListener(UtilidadesVidere.GetCommonMouseEvent());
+		add(btnMovimento);
+		//btnMovimento.setBounds(50, 390, 210, 60);
+		btnMovimento.setBounds(50, iStartY + iCountY++ * iDistY, 210, iSizeY);
 
 
 
@@ -366,6 +384,12 @@ public class Inicial extends TelaPadrao {
 		AbrirMenu(new Constraste());
 
 	}
+	//chama o jogo dos Contraste
+	private void btnMovimentoMouseClicked(java.awt.event.MouseEvent evt) {
+
+		AbrirMenu(new Movimento());
+
+	}
 
 	//chama o jogo dos numeros
     private void NumerosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NumerosMouseClicked
@@ -460,6 +484,7 @@ public class Inicial extends TelaPadrao {
     // End of variables declaration//GEN-END:variables
 	private javax.swing.JButton btnFormas;
 	private javax.swing.JButton btnContraste;
+	private javax.swing.JButton btnMovimento;
 	private javax.swing.JButton buttonConfigs;
 
 	public void SetWelcomeText(String sText) {
