@@ -1,4 +1,22 @@
 ------------------------
+Videre v0.9.15 (2012/06/11)
+------------------------
+Patch Notes:
+- Included a new game.
+Patch Changes:
+[new] game added: Movimento.
+
+
+------------------------
+Videre v0.9.14 (2012/05/24)
+------------------------
+Patch Notes:
+- Included a new game.
+Patch Changes:
+[new] game added: Contrastes.
+
+
+------------------------
 Videre v0.9.13 (2012/05/19)
 ------------------------
 Patch Notes:

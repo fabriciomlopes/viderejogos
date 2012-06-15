@@ -66,7 +66,7 @@ public class Constraste extends TelaJogo {
 		jPanel1 = new javax.swing.JPanel();
 		jPanel2 = new javax.swing.JPanel();
 
-		setTitle("Identifique as Formas!");
+		setTitle("Jogo de Contraste");
 		setLayout(null);
 
 
