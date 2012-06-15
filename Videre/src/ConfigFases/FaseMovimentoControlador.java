@@ -21,7 +21,7 @@ import javax.swing.ImageIcon;
 public class FaseMovimentoControlador extends FaseMutanteControladorBase {
 
 	// frames executed per second recommended is 60.
-	public static final int FPS = 60;
+	public static final int FPS = 15;
 
 	public enum DIRECTIONS {
 		Horizontal,			// aka: |
@@ -68,9 +68,7 @@ public class FaseMovimentoControlador extends FaseMutanteControladorBase {
 		float fFactor = faseAtual.GetSublevelFactor(iLevel);
 		if (fFactor > 0f) {
 			animator.fSpeed = fFactor;
-//			ImageIcon newIcon = ModifyIcon(originalIcon, fFactor);
-
-//			objectShowing.setIcon(newIcon);
+			
 			iCurrentSublevel = iLevel;
 
 			labelCurrentSublevel.setText(String.format("Velocidade: %.0f", (1f/fFactor * 100000f)));
@@ -221,47 +219,25 @@ class Animator extends TimerTask {
 		int deltaX = dest.x - origin.x;
 		int deltaY = dest.y - origin.y;
 
-		// calc new X and Y
 		float fFactor = deltaTime / fSpeed;
-		newPos.x = (int) Math.round(fFactor * (deltaX));
-		newPos.x += origin.x;
-		newPos.y = (int) Math.round(fFactor * (deltaY));
-		newPos.y += origin.y;
 
-		pObjectToAnim.setLocation(newPos);
-
-//		System.out.println("Set Pos = " + newPos + ", Dest = " + dest + ", ORIG = " + origin);
-
-		
-		
-//		boolean bPastDestination = false; // true when past the destination
-//
-//		if (
-//			   (deltaX > 0 && newPos.x >= dest.x )
-//			|| (deltaX < 0 && newPos.x <= dest.x )
-//				) {
-//			bPastDestination = true;
-//		}
-//
-//		else if (
-//				(deltaY > 0 && newPos.y >= dest.y )
-//			||	(deltaY < 0 && newPos.y <= dest.y )
-//			) {
-//
-//			bPastDestination = true;
-//		}
-		
-
-//		if (bPastDestination) {
+		// past final position?
 		if (fFactor >= 1f) {
+			// yes, then set new destination
 			startedTime = new Date().getTime();
 			iCurrentTarget = Math.max( ((iCurrentTarget +1) % vWayPoints.length ), 1 ) ;
 
-//			System.out.println("iCurrent = " + iCurrentTarget);
-//			iCurrentTarget++;
-//			if (iCurrentTarget >= vWayPoints.length) {
-//			}
+			newPos = dest;
 		}
+		else {
+			// no, then calc new X and Y
+			newPos.x = (int) Math.round(fFactor * (deltaX));
+			newPos.x += origin.x;
+			newPos.y = (int) Math.round(fFactor * (deltaY));
+			newPos.y += origin.y;
+		}
+		// set frame's position
+		pObjectToAnim.setLocation(newPos);
 		
 	}
 
