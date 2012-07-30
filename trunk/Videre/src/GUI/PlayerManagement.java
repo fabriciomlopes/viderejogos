@@ -32,6 +32,7 @@ public class PlayerManagement extends javax.swing.JFrame {
 	}
 	// </editor-fold>
 
+	private static final boolean BOGUS = true; // ver depois
 
     /** Creates new form PlayerManagement */
     public PlayerManagement() {
@@ -186,35 +187,77 @@ public class PlayerManagement extends javax.swing.JFrame {
 	
 	public static boolean CreatePlayer(){
 		String sName = "Jogador"; // thistextlokaki
-		
-		while (true) {
-			sName = JOptionPane.showInputDialog(GetInsance(), "Registrar jogador com nome:", sName); // thistextlokaki
 
-			if (sName == null){
-				break;
-			}
-			else {
-				sName = sName.replaceAll(PlayerManager.INVALID_CHARS, "");
-				// added the name?
+        
+		SelectName popupInputName = new SelectName(null, true);
+		popupInputName.SetDefaultName(sName);
+		popupInputName.setLocationRelativeTo(null);
+		popupInputName.setTitle("Novo Jogador"); // thistextlokaki
+        while (true) {
+
+            // open popup
+            popupInputName.setVisible(true);
+
+            if (popupInputName.getReturnStatus() == SelectName.RET_OK) {
+                sName = popupInputName.GetSelectedName();
+
+                sName = sName.replaceAll(PlayerManager.INVALID_CHARS, "");
+
+                // added the name?
 				if (PlayerManager.GetInstance().AddPlayerName(sName)){
 					// yes, then show sucess
-					JOptionPane.showMessageDialog(GetInsance(),
-							"Jogador \"" + sName + "\" registrado com sucesso!",
-							"Sucesso", JOptionPane.INFORMATION_MESSAGE
-							); // thistextlokaki
+					if (BOGUS) {
+						JOptionPane.showMessageDialog(GetInsance(),
+								"Jogador \"" + sName + "\" registrado com sucesso!",
+								"Sucesso", JOptionPane.INFORMATION_MESSAGE
+								); // thistextlokaki
+					}
 					return true;
 				}
 				else {
 					// no, then show error.
-					JOptionPane.showMessageDialog(GetInsance(),
-							"Jogador com o nome \"" + sName + "\" já existe!\nFavor, escolha um nome diferente.",
-							"Erro", JOptionPane.ERROR_MESSAGE
-							); // thistextlokaki
+					if (BOGUS) {
+						JOptionPane.showMessageDialog(GetInsance(),
+								"Jogador com o nome \"" + sName + "\" já existe!\nFavor, escolha um nome diferente.",
+								"Erro", JOptionPane.ERROR_MESSAGE
+								); // thistextlokaki
+					}
 				}
-			}
-		}
-		return false;
-	}
+            } else {
+                return false;
+            }
+        }
+    }
+
+
+//		while (true) {
+//			sName = JOptionPane.showInputDialog(GetInsance(), "Registrar jogador com nome:", sName); // thistextlokaki
+//
+//			if (sName == null){
+//				break;
+//			}
+//			else {
+//				sName = sName.replaceAll(PlayerManager.INVALID_CHARS, "");
+//				// added the name?
+//				if (PlayerManager.GetInstance().AddPlayerName(sName)){
+//					// yes, then show sucess
+//					JOptionPane.showMessageDialog(GetInsance(),
+//							"Jogador \"" + sName + "\" registrado com sucesso!",
+//							"Sucesso", JOptionPane.INFORMATION_MESSAGE
+//							); // thistextlokaki
+//					return true;
+//				}
+//				else {
+//					// no, then show error.
+//					JOptionPane.showMessageDialog(GetInsance(),
+//							"Jogador com o nome \"" + sName + "\" já existe!\nFavor, escolha um nome diferente.",
+//							"Erro", JOptionPane.ERROR_MESSAGE
+//							); // thistextlokaki
+//				}
+//			}
+//		}
+//		return false;
+//	}
 
 	public void OpenStatisticsMenu(){
 		PlayerStatisticsMenu.GetInsance().setVisible(true);
