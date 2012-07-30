@@ -51,7 +51,7 @@ public class Constraste extends TelaJogo {
 
 	@Override
 	protected String GetAudioName() {
-		return "spdriver";
+		return "ready";
 	}
 
 	@Override

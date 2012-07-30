@@ -98,7 +98,7 @@ public class Movimento extends TelaJogo {
 
 	@Override
 	protected String GetAudioName() {
-		return "spdriver";
+		return "joint";
 	}
 
 	@Override
