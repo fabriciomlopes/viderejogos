@@ -1,4 +1,11 @@
 ------------------------
+Videre v0.9.16 (2012/07/30)
+------------------------
+Patch Changes:
+[New] background sound for Movimento and Contraste mini-games;
+[changed] Create new player GUI;
+
+------------------------
 Videre v0.9.15 (2012/06/11)
 ------------------------
 Patch Notes:
